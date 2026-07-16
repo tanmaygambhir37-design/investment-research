@@ -1,6 +1,6 @@
 # Investment Research — Tanmay Gambhir
 
-Independent, institutional-grade investment memos on enterprise AI companies, built entirely from public sources.
+I'm a Master in Management student (Bocconi × ESSEC) exploring venture capital by writing full investment memos on companies I find interesting, built entirely from public sources. Enterprise AI first; more industries to follow.
 
 **Live site:** https://tanmaygambhir37-design.github.io/investment-research/
 
