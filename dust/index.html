@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dust — Investment Committee Memo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#E7EAEE;-webkit-font-smoothing:antialiased}
+  a{color:#2563EB;text-decoration:none}
+  a:hover{color:#0F172A}
+  .drp-h{break-inside:avoid}
+  .page{width:8.5in;min-height:11in;margin:0 auto 24px;box-shadow:0 1px 3px rgba(15,23,42,0.15),0 0 0 1px rgba(15,23,42,0.04)}
+  @media print{
+    body{background:#FFFFFF}
+    .page{box-shadow:none;margin:0;break-after:page}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 01 — COVER ============ -->
+<div class="page" id="cover" style="box-sizing:border-box;background:#0F172A;color:#FAFAFA;padding:72px 64px;display:flex;flex-direction:column;justify-content:space-between;font-family:'Inter',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#94A3B8;text-transform:uppercase">Independent Institutional Research</div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="summary.pdf" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#0F172A;background:#D4AF37;border-radius:999px;padding:7px 16px;font-weight:700;text-decoration:none">↓ 1-Page Summary (PDF)</a>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:6px 14px">Series B Follow-On Review</div>
+    </div>
+  </div>
+
+  <div style="margin-top:110px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#60A5FA;letter-spacing:0.06em;margin-bottom:18px">ENTERPRISE AI · AGENT PLATFORMS · PARIS, FRANCE</div>
+    <h1 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:104px;line-height:0.98;margin:0 0 24px;letter-spacing:-0.03em">Dust</h1>
+    <div style="display:flex;gap:28px;font-size:17px;color:#CBD5E1">
+      <span>Series B (closed)</span>
+      <span style="color:#475569">/</span>
+      <span>July 10, 2026</span>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #1E293B;padding-top:20px">
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span style="font-size:11px;color:#64748B">Prepared by</span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:13px;color:#CBD5E1">Tanmay Gambhir</span>
+      <span style="font-size:11px;color:#475569">— Bocconi × ESSEC MIM</span>
+    </div>
+    <div style="font-size:11px;color:#64748B;letter-spacing:0.04em">Prepared for Investment Committee Review</div>
+  </div>
+</div>
+
+<!-- ============ PAGE 02 — TOC ============ -->
+<div class="page" id="toc" style="box-sizing:border-box;background:#FAFAFA;padding:56px 64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Contents</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:34px;margin:0 0 28px;color:#0F172A">Table of Contents</h2>
+  <a href="#cover" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">01</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Cover</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">1</span>
+  </a>
+  <a href="#toc" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">02</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Table of Contents</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">2</span>
+  </a>
+  <a href="#investment-recommendation" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">03</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Investment Recommendation</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">3</span>
+  </a>
+  <a href="#investment-thesis" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">04</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Investment Thesis</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">4</span>
+  </a>
+  <a href="#company-snapshot" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">05</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Company Snapshot & Funding</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">5</span>
+  </a>
+  <a href="#executive-summary-dashboard" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">06</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Executive Summary Dashboard</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">6</span>
+  </a>
+  <a href="#investment-scorecard" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">07</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Investment Scorecard</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">7</span>
+  </a>
+  <a href="#market-overview" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">08</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Market Overview</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">8</span>
+  </a>
+  <a href="#competitive-landscape" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">09</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Competitive Landscape & Market Map</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">9</span>
+  </a>
+  <a href="#founder-profile" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">10</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Founder Profile</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">10</span>
+  </a>
+  <a href="#product-walkthrough" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">11</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Product Walkthrough</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">11</span>
+  </a>
+  <a href="#product-breakdown" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">12</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Product Breakdown</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">12</span>
+  </a>
+  <a href="#customer-voice" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">13</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Customer Voice</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">13</span>
+  </a>
+  <a href="#business-model" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">14</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Business Model</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">14</span>
+  </a>
+  <a href="#financial-dashboard" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">15</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Financial Dashboard</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">15</span>
+  </a>
+  <a href="#valuation" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">16</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Valuation Reference Points</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">16</span>
+  </a>
+  <a href="#swot" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">17</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">SWOT Analysis</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">17</span>
+  </a>
+  <a href="#porter-s-five-forces" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">18</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Porter's Five Forces</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">18</span>
+  </a>
+  <a href="#risk-matrix" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">19</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Risk Matrix</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">19</span>
+  </a>
+  <a href="#scenario-analysis" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">20</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Scenario Analysis</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">20</span>
+  </a>
+  <a href="#sources" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">21</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Sources</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">21</span>
+  </a>
+  <a href="#appendix" style="display:flex;align-items:baseline;gap:16px;padding:8px 0;border-bottom:1px solid #E2E8F0;text-decoration:none;color:inherit">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94A3B8;width:28px;flex-shrink:0">22</span>
+    <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#0F172A">Appendix</span>
+    <span style="flex:1;border-bottom:1px dotted #CBD5E1;margin:0 8px;transform:translateY(-4px)"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#64748B">22</span>
+  </a>
+</div>
+
+<!-- ============ PAGE 03 — INVESTMENT RECOMMENDATION ============ -->
+<div class="page" id="investment-recommendation" style="box-sizing:border-box;background:#0F172A;color:#F8FAFC;padding:44px 64px;font-family:'Inter',sans-serif;display:flex;flex-direction:column;justify-content:center">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#60A5FA;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px">Investment Recommendation</div>
+  <div style="display:flex;align-items:baseline;gap:20px;margin-bottom:8px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:36px;color:#D4AF37">INVEST — SMALL FOLLOW-ON</div>
+  </div>
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:20px">
+    <span style="letter-spacing:4px;font-size:20px;color:#D4AF37">★★★☆☆</span>
+    <span style="font-size:15px;color:#CBD5E1">Moderate, Bounded Conviction</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+    <div style="background:#1E293B;border-radius:12px;padding:16px 18px">
+      <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:8px">Sizing & Entry Math</div>
+      <div style="font-size:13px;line-height:1.55;color:#E2E8F0">Up to <span style="color:#D4AF37;font-weight:600">$2–3M via secondary</span>, only at or below the Series B implied price (internal estimate $350–500M post). At a $400M reference price, $2–3M buys roughly 0.5–0.75%. This is a monitoring position — a small stake taken mainly to track the company closely; even a total loss does not move fund returns.</div>
+    </div>
+    <div style="background:#1E293B;border-radius:12px;padding:16px 18px">
+      <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:8px">Path to Entry</div>
+      <div style="font-size:13px;line-height:1.55;color:#E2E8F0">The round is closed, so the realistic paths in are employee or early-investor <span style="color:#D4AF37;font-weight:600">secondary</span> if access opens, and in parallel a <span style="color:#D4AF37;font-weight:600">Series C relationship</span> built now, with the investment case re-evaluated on aged-cohort retention and margin disclosure before any larger check.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:720px;margin-bottom:18px">
+    <div style="display:flex;gap:12px;font-size:14px;line-height:1.6;color:#E2E8F0"><span style="color:#D4AF37;flex-shrink:0">—</span><span>Bet on the team before the category. Sequoia's three consecutive re-ups is the strongest signal in the cap table, and a much lower bar than a standalone investor needs to clear.</span></div>
+    <div style="display:flex;gap:12px;font-size:14px;line-height:1.6;color:#E2E8F0"><span style="color:#D4AF37;flex-shrink:0">—</span><span>History says companies in Dust's position usually end in a strategic acquisition (MuleSoft, Segment, Looker), not as independent giants (Snowflake, Okta). The bull case needs a specific product milestone that has not happened yet: workspace memory becoming an asset a customer cannot rebuild elsewhere.</span></div>
+    <div style="display:flex;gap:12px;font-size:14px;line-height:1.6;color:#E2E8F0"><span style="color:#D4AF37;flex-shrink:0">—</span><span>Price to a 3–6x outcome. Any valuation that requires the 20x+ Snowflake outcome to work should be a clean pass, regardless of team quality.</span></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px;margin-bottom:16px">
+    <div style="background:#111827;border:1px solid #14532D;border-radius:12px;padding:16px 18px">
+      <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#4ADE80;margin-bottom:8px">We Become More Bullish If</div>
+      <div style="font-size:12px;line-height:1.55;color:#CBD5E1">Aged (2023–24) cohorts hold retention above 150% at scale · a churned customer measurably loses capability it cannot rebuild · gross margin improves as MCP cuts integration costs · win rate stays strongest in non-Microsoft accounts.</div>
+    </div>
+    <div style="background:#111827;border:1px solid #7F1D1D;border-radius:12px;padding:16px 18px">
+      <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#F87171;margin-bottom:8px">We Become Bearish If</div>
+      <div style="font-size:12px;line-height:1.55;color:#CBD5E1">Aged-cohort retention falls below ~120% · OpenAI or Microsoft ship native connector-plus-agent bundles that win head-to-head deals · the credit-metering repricing churns installed accounts · the Series B turns out to have priced above ~$500M (20x+ ARR).</div>
+    </div>
+  </div>
+
+  <div style="background:#111827;border:1px solid #1E293B;border-radius:12px;padding:16px 20px;max-width:720px;margin-bottom:16px">
+    <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#D4AF37;margin-bottom:10px">Next Steps — What We Are Asking For</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-size:13px;line-height:1.55;color:#CBD5E1">
+      <div>1. Founder meeting to validate aged-cohort (2023–24) retention and gross margin trajectory.</div>
+      <div>2. CFO diligence call: runway, burn, revenue mix, customer concentration.</div>
+      <div>3. Secondary market price discovery via brokers; confirm any transfer restrictions.</div>
+      <div>4. Track win rate in non-Microsoft, multi-cloud accounts ahead of a Series C decision.</div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #1E293B;padding-top:16px;font-size:13px;color:#94A3B8;max-width:720px">
+    The round is closed, so nothing needs to be decided today. Full reasoning follows in the pages behind this one; the thesis in one page is overleaf.
+  </div>
+</div>
+
+<!-- ============ PAGE 04 — INVESTMENT THESIS ============ -->
+<div class="page" id="investment-thesis" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Investment Thesis</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 28px;color:#0F172A">The Thesis, in One Page</h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#2563EB;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.04em">Why Now</div>
+      <div style="font-size:14px;line-height:1.6;color:#334155">ARR grew from roughly €1M at the Series A (mid-2024) to $20M+ by early 2026, roughly 18x in eighteen months. Dust waited and raised the Series B on that stronger number rather than taking a bridge round at $6–7M. The seventeen-month gap since the Series A reads as deliberate capital discipline, not difficulty raising.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#2563EB;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.04em">Path to Entry</div>
+      <div style="font-size:14px;line-height:1.6;color:#334155">The round is closed. The realistic paths in are a small secondary position if access opens, or a Series C entry built on a relationship that starts now. Either is underwritten on Sequoia's third consecutive re-up (seed, A, B co-lead), the strongest signal in the cap table, not on the category being what everyone hopes it is.</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #DC2626;border-radius:12px;padding:20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#DC2626;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.04em">Biggest Risk</div>
+      <div style="font-size:14px;line-height:1.6;color:#334155">MCP standardizes away the 100+ connector library, Dust's clearest current moat, at almost exactly the moment the market is citing it as a strength.</div>
+    </div>
+    <div class="drp-h" style="background:#0F172A;border-radius:12px;padding:20px;color:#F8FAFC">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#94A3B8;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.04em">Recommendation</div>
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+        <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;color:#D4AF37">INVEST — SMALL FOLLOW-ON</span>
+        <span style="letter-spacing:2px;font-size:15px;color:#D4AF37">★★★☆☆</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-left:3px solid #D4AF37;border-radius:0 12px 12px 0;padding:22px 24px;font-family:'Manrope',sans-serif;font-style:italic;font-weight:600;font-size:17px;color:#0F172A;line-height:1.5">
+    "Bet on the team before the category. Price this like MuleSoft, three to six times, not Snowflake at twenty-plus. Any number that requires the exception to be true is a pass, however good the founders are."
+  </div>
+</div>
+
+<!-- ============ PAGE 05 — COMPANY SNAPSHOT & FUNDING ============ -->
+<div class="page" id="company-snapshot" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Company Snapshot & Funding</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">Who is Dust?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 24px;max-width:640px">Dust lets organizations build and run a fleet of AI agents that work inside the same projects, data, and tools as their employees, rather than each person prompting an isolated chat window.</p>
+
+  <div style="display:grid;grid-template-columns:96px 1fr auto;gap:20px;align-items:center;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px;margin-bottom:20px">
+    <div style="width:96px;height:96px;border-radius:10px;background:#FFFFFF;border:1px solid #E2E8F0;display:flex;align-items:center;justify-content:center;overflow:hidden">
+      <img src="assets/logo/dust-logo-square-color.svg" alt="Dust logo" style="width:72px;height:72px;object-fit:contain">
+    </div>
+    <div>
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;color:#0F172A;margin-bottom:8px">Dust</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;background:#EFF4FF;color:#2563EB">Enterprise AI · Agent Platforms</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;background:#FEF3C7;color:#92700B">Series B</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;background:#F1F5F9;color:#475569">Paris, France · dust.tt</span>
+      </div>
+    </div>
+    <img src="assets/hq/dust-hq-paris-map-minimalist.svg" alt="Paris HQ map" style="width:140px;height:96px;object-fit:cover;border-radius:10px">
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Founded</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:#0F172A">2023 · Paris, France</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Total Funding</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:#0F172A">~$61M</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">ARR</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:#0F172A">$20M+ (early 2026)</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Employees</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:#0F172A">~66 <span style="font-size:11px;color:#64748B">(growing post-Series B)</span></div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Stage</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:#0F172A">Series B (closed May 2026)</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(15,23,42,0.05)">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Investors</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:12px;color:#0F172A;line-height:1.5">Sequoia · Abstract (co-leads)<br>Snowflake Ventures · Datadog Ventures</div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:20px 24px;margin-bottom:20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:12px">Funding History — All Three Rounds Sequoia-Anchored</div>
+    <div style="display:grid;grid-template-columns:110px 110px 90px 1fr;gap:6px 16px;font-size:13px;color:#334155">
+      <div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:11px;text-transform:uppercase">Round</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:11px;text-transform:uppercase">Date</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:11px;text-transform:uppercase">Amount</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:11px;text-transform:uppercase">Investors</div>
+      <div style="font-weight:600">Seed</div><div>2023</div><div style="font-family:'JetBrains Mono',monospace">€5M</div><div>Sequoia Capital</div>
+      <div style="font-weight:600">Series A</div><div>June 2024</div><div style="font-family:'JetBrains Mono',monospace">$16M</div><div>Sequoia Capital</div>
+      <div style="font-weight:600">Series B</div><div>May 2026</div><div style="font-family:'JetBrains Mono',monospace">$40M</div><div>Sequoia & Abstract (co-led); Snowflake Ventures, Datadog Ventures</div>
+    </div>
+    <div style="font-size:12px;color:#64748B;margin-top:12px;line-height:1.5">The seventeen-month A-to-B gap is long for this AI cycle and reads as discipline, not difficulty. The strategic checks (Snowflake, Datadog) signal partnership and acquisition positioning more than independent price validation. That supports our base case of a strategic acquisition rather than cutting against it.</div>
+  </div>
+
+  <div style="background:#0F172A;color:#E2E8F0;border-radius:12px;padding:22px 24px;font-size:15px;line-height:1.6">
+    <span style="color:#D4AF37;font-weight:600">Key takeaway —</span> Every headline number here is company-reported and not independently audited. We treat it as directionally credible, corroborated by named customers on the record, but not underwriting-grade fact.
+  </div>
+</div>
+
+<!-- ============ PAGE 06 — EXECUTIVE SUMMARY DASHBOARD ============ -->
+<div class="page" id="executive-summary-dashboard" style="box-sizing:border-box;background:#FAFAFA;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="background:#0F172A;color:#F8FAFC;padding:48px 56px 32px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#60A5FA;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Executive Summary</div>
+    <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#F8FAFC">Why Now?</h2>
+    <p style="font-size:15px;color:#94A3B8;margin:0 0 24px;max-width:640px">ARR roughly tripled in the nine to twelve months before the raise — the round was priced off a much stronger number than was available a year earlier. A company-growth-curve story, not a market-timing one.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
+      <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:8px">ARR</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#F8FAFC">$20M+</div>
+        <div style="font-size:11px;color:#16A34A;margin-top:6px;font-family:'JetBrains Mono',monospace">~18x in 18 mo</div>
+      </div>
+      <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:8px">Net Revenue Retention</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#F8FAFC">240%</div>
+        <div style="font-size:11px;color:#CA8A04;margin-top:6px;font-family:'JetBrains Mono',monospace">2x "best-in-class" — read with caution</div>
+      </div>
+      <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:8px">Customers</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#F8FAFC">3,000+</div>
+        <div style="font-size:11px;color:#CA8A04;margin-top:6px;font-family:'JetBrains Mono',monospace">company-reported, not verifiable</div>
+      </div>
+      <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:8px">Total Raised</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#F8FAFC">~$61M</div>
+        <div style="font-size:11px;color:#16A34A;margin-top:6px;font-family:'JetBrains Mono',monospace">$40M Series B, May 2026</div>
+      </div>
+      <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:8px">Headcount</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#F8FAFC">~66</div>
+        <div style="font-size:11px;color:#94A3B8;margin-top:6px;font-family:'JetBrains Mono',monospace">est. 90–130 post-Series B hiring</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:32px 56px 56px;display:grid;grid-template-columns:1.4fr 1fr;gap:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:22px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:14px">Supporting Analysis</div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+        <span style="color:#2563EB;flex-shrink:0">—</span><span>MCP is dismantling the one asset — the 100+ connector library — the company and the market both currently cite as its clearest moat, at the same time it lowers the cost of building a Dust competitor from scratch.</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+        <span style="color:#2563EB;flex-shrink:0">—</span><span>Model-agnosticism is a genuine, if fragile, wedge: no commercial incentive to route customer data toward improving a foundation model Dust doesn't own, unlike OpenAI, Anthropic, or Google's own enterprise offerings.</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+        <span style="color:#2563EB;flex-shrink:0">—</span><span>Deep penetration at reference accounts (75–86% of headcount at Qonto, Alan, Pennylane) is real usage lock-in. But 3,000+ customers against $20M ARR implies an average ACV in the mid single-digit thousands, so revenue is almost certainly concentrated in a small set of large accounts. Concentration is undisclosed and a first-order diligence item.</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+        <span style="color:#2563EB;flex-shrink:0">—</span><span>The 240% NRR headline, read against Bessemer's 120%+ "best-in-class" ceiling, is more consistent with a small, early-cohort artifact than a durable retention profile.</span>
+      </div>
+    </div>
+    <div class="drp-h" style="background:#0F172A;border-radius:12px;padding:22px;color:#F8FAFC;display:flex;flex-direction:column;justify-content:space-between">
+      <div>
+        <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:10px">Recommendation</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;color:#D4AF37">INVEST — SMALL FOLLOW-ON</div>
+      </div>
+      <div>
+        <div style="letter-spacing:2px;font-size:14px;color:#D4AF37;margin-bottom:8px">★★★☆☆</div>
+        <div style="font-size:13px;color:#CBD5E1">Moderate, Bounded Conviction</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 07 — INVESTMENT SCORECARD ============ -->
+<div class="page" id="investment-scorecard" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Investment Scorecard</div>
+      <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0;color:#0F172A">How Does It Score?</h2>
+    </div>
+    <div style="text-align:center;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:14px 22px">
+      <div style="font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em">Overall</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:28px;color:#0F172A">6.3</div>
+    </div>
+  </div>
+  <p style="font-size:16px;color:#475569;margin:0 0 12px;max-width:640px">Competition and Risk hold the score down. The team and traction are genuinely strong, but several of the conditions the thesis needs are only partially in Dust's control.</p>
+  <p style="font-size:12px;color:#94A3B8;margin:0 0 28px;max-width:640px">Scores match the source research memo (Section 21). "Risk" is an analyst-added category, not scored in the source, and is labeled as such below.</p>
+
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Team</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:90%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">9.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★★★</span><span style="color:#E2E8F0"></span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Market</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:70%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">7.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★★</span><span style="color:#E2E8F0">★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Product</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:70%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">7.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★★</span><span style="color:#E2E8F0">★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Moat</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:50%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">5.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★</span><span style="color:#E2E8F0">★★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Traction</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:75%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">7.5</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★★</span><span style="color:#E2E8F0">★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Financials</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:60%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">6.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★★</span><span style="color:#E2E8F0">★★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Competition</div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:45%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">4.5</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★</span><span style="color:#E2E8F0">★★★</span></div>
+    </div>
+    <div class="drp-h" style="display:grid;grid-template-columns:150px 1fr 60px 110px;align-items:center;gap:16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Risk <span style="font-weight:400;font-size:10px;color:#94A3B8">(analyst-added)</span></div>
+      <div style="height:8px;border-radius:999px;background:#EEF2F7;overflow:hidden"><div style="height:100%;border-radius:999px;background:#2563EB;width:40%"></div></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#0F172A;text-align:right">4.0</div>
+      <div style="font-size:14px;text-align:right;letter-spacing:1px"><span style="color:#D4AF37">★★</span><span style="color:#E2E8F0">★★★</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 09 — MARKET OVERVIEW ============ -->
+<div class="page" id="market-overview" style="box-sizing:border-box;background:#0F172A;padding:56px;font-family:'Inter',sans-serif;color:#F8FAFC">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#60A5FA;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Market Overview</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#F8FAFC">How Big Is the Prize?</h2>
+  <p style="font-size:15px;color:#94A3B8;margin:0 0 20px;max-width:660px">The category is growing fast enough to matter on either definition — the harder question, in Sections 10–11, is whether Dust captures share as it consolidates or gets squeezed as it standardizes.</p>
+
+  <div style="display:grid;grid-template-columns:340px 1fr;gap:32px;align-items:center;margin-bottom:20px">
+    <div style="position:relative;width:320px;height:320px">
+      <div style="position:absolute;inset:0;border-radius:50%;background:rgba(37,99,235,0.14);border:1px solid rgba(37,99,235,0.4)"></div>
+      <div style="position:absolute;inset:60px;border-radius:50%;background:rgba(37,99,235,0.28);border:1px solid rgba(37,99,235,0.55)"></div>
+      <div style="position:absolute;inset:130px;border-radius:50%;background:#D4AF37;display:flex;align-items:center;justify-content:center;text-align:center">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:#0F172A">$20M+</div>
+          <div style="font-size:9px;color:#0F172A;letter-spacing:0.06em">ARR CAPTURED</div>
+        </div>
+      </div>
+      <div style="position:absolute;left:50%;top:14px;transform:translateX(-50%);text-align:center">
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:#F8FAFC">$11.0B</div>
+        <div style="font-size:9px;color:#94A3B8;letter-spacing:0.06em">TAM (2025)</div>
+      </div>
+      <div style="position:absolute;left:50%;top:64px;transform:translateX(-50%);text-align:center;width:180px">
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;color:#DBEAFE;line-height:1.3">Multi-vendor enterprise segment (qualitative)</div>
+        <div style="font-size:9px;color:#94A3B8;letter-spacing:0.06em">SAM</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="drp-h" style="display:grid;grid-template-columns:60px 1fr 100px;align-items:center;gap:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#F8FAFC">TAM</div>
+        <div style="height:10px;border-radius:6px;background:#1E293B;overflow:hidden"><div style="height:100%;border-radius:6px;background:#0F172A;width:100%"></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:#F8FAFC;text-align:right">$11.0B</div>
+      </div>
+      <div class="drp-h" style="display:grid;grid-template-columns:60px 1fr 100px;align-items:center;gap:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#F8FAFC">SAM</div>
+        <div style="height:10px;border-radius:6px;background:#1E293B;overflow:hidden"><div style="height:100%;border-radius:6px;background:#2563EB;width:0%"></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;color:#F8FAFC;text-align:right">Qualitative</div>
+      </div>
+      <div class="drp-h" style="display:grid;grid-template-columns:60px 1fr 100px;align-items:center;gap:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#F8FAFC">SOM</div>
+        <div style="height:10px;border-radius:6px;background:#1E293B;overflow:hidden"><div style="height:100%;border-radius:6px;background:#60A5FA;width:0.2%"></div></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:#F8FAFC;text-align:right">$20M ARR</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px">
+        <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+          <div style="font-size:11px;color:#94A3B8;margin-bottom:6px">CAGR (orchestration)</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:22px;color:#F8FAFC">22.3%</div>
+        </div>
+        <div class="drp-h" style="background:#1E293B;border-radius:10px;padding:16px">
+          <div style="font-size:11px;color:#94A3B8;margin-bottom:6px">Time Horizon</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:22px;color:#F8FAFC">2025–2030</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1E293B;border-radius:12px;padding:18px 22px;font-size:13px;line-height:1.55;color:#CBD5E1;margin-bottom:16px">
+    A broader "AI agents" market definition — which includes vertical and consumer-facing tools far outside Dust's category — is sized larger and growing faster ($8.0B → $48.3B, ~43.3% CAGR, 2025–2030, per MarketsandMarkets / Precedence Research). It conflates markets Dust doesn't compete in, so the narrower AI-orchestration-platform figure above (Fortune Business Insights / MarketsandMarkets / Precedence Research, 2025 estimates) is the more relevant TAM. SAM is not separately sized in any public source; Dust's real addressable segment is qualitative — large enterprises structurally multi-vendor and multi-cloud, not "enterprise AI" broadly (Section 11). The SOM figure shown is Dust's own disclosed ARR, not an independent market-size estimate.
+  </div>
+
+  <div style="font-size:11px;color:#64748B;margin-bottom:16px">Source: Fortune Business Insights, AI Orchestration Market Report, 2025; MarketsandMarkets / Precedence Research, 2025 estimates.</div>
+
+  <div style="background:#1E293B;border-radius:12px;padding:20px 24px;font-size:14px;line-height:1.6;color:#E2E8F0">
+    <span style="color:#D4AF37;font-weight:600">Key takeaway —</span> The category is real and growing 22–43% a year depending on definition, but a large, fast-growing TAM says nothing about who captures it — Sections 12–13 show capital currently rewards narrow, attributable-ROI agents (Sierra) over broad orchestration platforms like Dust.
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — COMPETITIVE LANDSCAPE ============ -->
+<div class="page" id="competitive-landscape" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Competitive Landscape</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">Who's Really the Competitor?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">Not just Glean and Sierra — the biggest threat is the free, bundled agent builder already inside licenses most enterprises have paid for.</p>
+
+  <div style="position:relative;height:380px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:24px">
+    <div style="position:absolute;left:24px;right:24px;top:50%;height:1px;background:#E2E8F0"></div>
+    <div style="position:absolute;top:24px;bottom:24px;left:50%;width:1px;background:#E2E8F0"></div>
+    <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:11px;color:#94A3B8">Broader Platform</div>
+    <div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);font-size:11px;color:#94A3B8">Point Solution</div>
+    <div style="position:absolute;left:8px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:11px;color:#94A3B8">Bundled / Low Price</div>
+    <div style="position:absolute;right:0px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:11px;color:#94A3B8">Premium</div>
+
+    <div class="drp-h" style="position:absolute;left:58%;top:38%;transform:translate(-50%,-50%);text-align:center">
+      <div style="width:62px;height:62px;border-radius:50%;background:#0F172A;color:#D4AF37;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;margin:0 auto 6px;box-shadow:0 2px 8px rgba(15,23,42,0.12)">DU</div>
+      <div style="font-size:11px;color:#475569">Dust <span style="font-family:'JetBrains Mono',monospace;color:#0F172A;font-weight:600">~15–25x ARR</span></div>
+    </div>
+    <div class="drp-h" style="position:absolute;left:72%;top:28%;transform:translate(-50%,-50%);text-align:center">
+      <div style="width:66px;height:66px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;margin:0 auto 6px;box-shadow:0 2px 8px rgba(15,23,42,0.12)">GL</div>
+      <div style="font-size:11px;color:#475569">Glean <span style="font-family:'JetBrains Mono',monospace;color:#0F172A;font-weight:600">~24x</span></div>
+    </div>
+    <div class="drp-h" style="position:absolute;left:78%;top:72%;transform:translate(-50%,-50%);text-align:center">
+      <div style="width:52px;height:52px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;margin:0 auto 6px;box-shadow:0 2px 8px rgba(15,23,42,0.12)">SI</div>
+      <div style="font-size:11px;color:#475569">Sierra <span style="font-family:'JetBrains Mono',monospace;color:#0F172A;font-weight:600">~79x</span></div>
+    </div>
+    <div class="drp-h" style="position:absolute;left:26%;top:26%;transform:translate(-50%,-50%);text-align:center">
+      <div style="width:64px;height:64px;border-radius:50%;background:#F1F5F9;color:#475569;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;margin:0 auto 6px;box-shadow:0 2px 8px rgba(15,23,42,0.12)">MS</div>
+      <div style="font-size:11px;color:#475569">Microsoft Copilot Studio / Agent 365</div>
+    </div>
+    <div class="drp-h" style="position:absolute;left:24%;top:72%;transform:translate(-50%,-50%);text-align:center">
+      <div style="width:54px;height:54px;border-radius:50%;background:#F1F5F9;color:#475569;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;margin:0 auto 6px;box-shadow:0 2px 8px rgba(15,23,42,0.12)">SF</div>
+      <div style="font-size:11px;color:#475569">Salesforce Agentforce</div>
+    </div>
+  </div>
+
+  <div style="margin-top:20px;background:#FFFFFF;border-left:3px solid #2563EB;border-radius:0 12px 12px 0;padding:16px 20px;font-size:13px;line-height:1.6;color:#334155">
+    Sierra's ~79x multiple against Glean's ~24x (Writer trades near ~40x) is direct market evidence that capital currently rewards narrow, attributable-ROI agents over broad orchestration platforms. Dust sits in the most contested quadrant: premium and broad, squeezed between free bundled builders on one side and richly funded point solutions on the other.
+  </div>
+</div>
+
+<!-- ============ PAGE 10 — FOUNDER PROFILE ============ -->
+<div class="page" id="founder-profile" style="box-sizing:border-box;background:#FAFAFA;font-family:'Inter',sans-serif;color:#1E293B;display:grid;grid-template-columns:300px 1fr">
+  <div style="background:#0F172A;padding:44px 32px;display:flex;flex-direction:column;justify-content:space-between">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#60A5FA;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px">Founder Profile</div>
+
+      <img src="assets/founders/hubert.png" alt="Gabriel Hubert" style="width:100%;height:180px;object-fit:cover;border-radius:12px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div style="display:none;width:100%;height:180px;border-radius:12px;background:#1E293B;border:1px solid #334155;align-items:center;justify-content:center"><div style="width:72px;height:72px;border-radius:50%;background:#111827;border:2px solid #D4AF37;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;color:#D4AF37">GH</div></div>
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:17px;color:#F8FAFC;margin-top:12px">Gabriel Hubert</div>
+      <div style="font-size:12px;color:#94A3B8;margin-top:2px;margin-bottom:22px">Co-Founder & CEO</div>
+
+      <img src="assets/founders/polu.png" alt="Stanislas Polu" style="width:100%;height:180px;object-fit:cover;border-radius:12px" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div style="display:none;width:100%;height:180px;border-radius:12px;background:#1E293B;border:1px solid #334155;align-items:center;justify-content:center"><div style="width:72px;height:72px;border-radius:50%;background:#111827;border:2px solid #D4AF37;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;color:#D4AF37">SP</div></div>
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:17px;color:#F8FAFC;margin-top:12px">Stanislas Polu</div>
+      <div style="font-size:12px;color:#94A3B8;margin-top:2px">Co-Founder & CTO</div>
+    </div>
+    <div style="border-top:1px solid #1E293B;padding-top:16px;margin-top:20px">
+      <div style="font-family:'Manrope',sans-serif;font-style:italic;font-weight:600;font-size:13px;color:#D4AF37;line-height:1.5">"Profitability is not what we're optimising for in the near term — the raise is about acceleration, not survival."</div>
+      <div style="font-size:11px;color:#64748B;margin-top:8px">— Gabriel Hubert, Series B announcement interview, Sifted, May 2026</div>
+    </div>
+  </div>
+
+  <div style="padding:44px 48px 44px 40px">
+    <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:30px;margin:0 0 6px;color:#0F172A">Is This the Right Team?</h2>
+    <p style="font-size:15px;color:#475569;margin:0 0 20px;max-width:520px">A repeat-founder pair whose backgrounds map almost exactly onto Dust's two hardest problems: enterprise sales into risk-averse buyers, and frontier-model fluency.</p>
+
+    <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+      <span style="color:#2563EB;flex-shrink:0">—</span><span>Hubert is Alan's former CPO. He sold enterprise health insurance into exactly the risk-averse, compliance-heavy European buyers Dust now serves (Qonto, Pennylane).</span>
+    </div>
+    <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+      <span style="color:#2563EB;flex-shrink:0">—</span><span>Polu spent three years on OpenAI's LLM reasoning team alongside Ilya Sutskever. Frontier-model fluency is built into the founding team, not hired in later.</span>
+    </div>
+    <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+      <span style="color:#2563EB;flex-shrink:0">—</span><span>Both were among Stripe's first 150 employees after it acquired their startup, and worked on AI-heavy fraud and risk systems there. Company-building discipline learned inside one of the best-run startups of its generation.</span>
+    </div>
+    <div style="display:flex;gap:10px;margin-bottom:10px;font-size:14px;line-height:1.55;color:#334155">
+      <span style="color:#2563EB;flex-shrink:0">—</span><span>The repeat-founder signal shows up directly in the cap table: Sequoia backed the team through three consecutive rounds — seed, Series A, and Series B co-lead. The seed partner's own words: "the kind of founders we dream of partnering with" (Konstantine Buhler, Sequoia, July 2023).</span>
+    </div>
+
+    <div style="margin-top:22px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.04em">Prior Experience</div>
+      <div style="position:relative;padding-left:20px">
+        <div style="position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:#E2E8F0"></div>
+        <div style="position:relative;margin-bottom:14px">
+          <div style="position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#2563EB"></div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Co-founded TOTEMS — acquired by Stripe (2013)</div>
+          <div style="font-size:12px;color:#64748B">Prior exit as a pair; both then worked at Stripe</div>
+        </div>
+        <div style="position:relative;margin-bottom:14px">
+          <div style="position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#2563EB"></div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Stripe — product & engineering</div>
+          <div style="font-size:12px;color:#64748B">Post-acquisition; enterprise-grade product discipline</div>
+        </div>
+        <div style="position:relative;margin-bottom:14px">
+          <div style="position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#2563EB"></div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;color:#0F172A">Hubert: CPO, Alan · Polu: OpenAI reasoning team</div>
+          <div style="font-size:12px;color:#64748B">Pre-2023, immediately before founding Dust</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Team Dynamics & Key-Person Risk</div>
+      <div style="font-size:13px;color:#475569;line-height:1.6">This is a two-person founding pair with a decade-plus of working history (TOTEMS, Stripe) and cleanly complementary roles: Sequoia's seed memo describes Polu as "an engineer's engineer" and Hubert as "a product person's product person." That history lowers co-founder-conflict risk, but concentrates it: with only two founders over a ~66-person company, the departure of either would materially impair the business. Key-person dependency is carried on the Risk Matrix.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE NEW — PRODUCT WALKTHROUGH ============ -->
+<div class="page" id="product-walkthrough" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Product Walkthrough</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">The Product in Thirty Seconds</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">One real deployment, end to end: Qonto's content-localization agent ("Tolki"), from problem to measured return.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:8px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">1 · Problem</div>
+      <div style="font-size:12px;color:#334155;line-height:1.55">Marketing content must ship in four languages. Translation agencies take days and lose product terminology.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">2 · Workflow</div>
+      <div style="font-size:12px;color:#334155;line-height:1.55">The team builds an agent in Dust's no-code builder, pointing it at brand guidelines in Notion and past approved translations.</div>
+    </div>
+    <div class="drp-h" style="background:#0F172A;border-radius:12px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#D4AF37;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">3 · Agent</div>
+      <div style="font-size:12px;color:#E2E8F0;line-height:1.55">"Tolki" runs inside the shared workspace: any marketer invokes it from Slack; it reads company context no generic chatbot has.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">4 · Output</div>
+      <div style="font-size:12px;color:#334155;line-height:1.55">On-brand localized copy in minutes, with the agent's sources and steps visible for review before publishing.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #16A34A;border-radius:12px;padding:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#16A34A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">5 · ROI</div>
+      <div style="font-size:12px;color:#334155;line-height:1.55">Qonto reports ~70% faster localization and ~50,000 hours saved per year across all its Dust agents (~24 full-time equivalents).</div>
+    </div>
+  </div>
+  <div style="text-align:center;font-size:11px;color:#94A3B8;margin-bottom:24px">Problem → Workflow → Agent → Output → ROI · Sources: Dust customer story (Qonto); SaaStr; Artefact interview — vendor-reported, directionally credible</div>
+
+  <img src="assets/product/Workspace.png" alt="Dust workspace with deployed agents" style="width:100%;height:250px;object-fit:cover;object-position:top;border-radius:12px;display:block;border:1px solid #E2E8F0;margin-bottom:20px">
+
+  <div style="background:#0F172A;color:#E2E8F0;border-radius:12px;padding:20px 24px;font-size:14px;line-height:1.6">
+    <span style="color:#D4AF37;font-weight:600">Why this matters —</span> The same pattern repeats per team: compliance ("Germi"), support triage, code search. Each agent is cheap to build, runs where employees already work, and adds to a shared library. That is the mechanism behind the 75–86% adoption numbers, and it is why usage compounds inside an account once the first agent lands.
+  </div>
+</div>
+
+<!-- ============ PAGE 12 — PRODUCT BREAKDOWN ============ -->
+<div class="page" id="product-breakdown" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Product Breakdown</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">What Does It Actually Do?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">A shared workspace for humans and agents, not another chat window — the differentiation is real, but every piece of it is also the piece MCP is most likely to commoditize.</p>
+
+  <img src="assets/product/Workspace.png" alt="Dust product workspace screenshot" style="width:100%;height:160px;object-fit:cover;border-radius:12px;display:block;border:1px solid #E2E8F0">
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Shared Agent Workspace</div>
+      <div style="font-size:13px;color:#475569;line-height:1.55">The "multiplayer" claim is concrete: several people and several agents collaborate in shared projects with shared context and permissions, where Copilot or a custom LangChain build defaults to isolated per-user chat sessions. This, not the integrations, is the durable part of the product.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">100+ Connectors</div>
+      <div style="font-size:13px;color:#475569;line-height:1.55">A real, continuously maintained integration library across Notion, Salesforce, Slack, GitHub and more — Dust's clearest current moat, though MCP threatens to commoditize it.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Model-Agnostic Orchestration</div>
+      <div style="font-size:13px;color:#475569;line-height:1.55">No proprietary foundation model — routes across OpenAI, Anthropic, Mistral, and Google, trading margin control for a genuine no-conflict-of-interest trust argument.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:14px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:14px 18px;font-size:12px;line-height:1.55;color:#334155">
+    <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;color:#2563EB;text-transform:uppercase;letter-spacing:0.05em">Founder's frame — </span>
+    Hubert's stated thesis is that companies become multi-human, multi-agent systems sharing memory and work, and that enterprises will trust agents not for intelligence but for manageability: explainability, observability, and policy. He also names enterprise memory management (whose preferences win when personal, team, and company rules conflict) as one of the hardest unsolved problems. That is intellectually honest, and it is the same milestone this memo's bull case turns on: workspace memory becoming genuinely irreplaceable. The founder is betting the company on the outcome we assign 15% (founder interview on agent-native organizations, 2026).
+  </div>
+
+  <div style="margin-top:14px;background:#FEFCE8;border-left:3px solid #CA8A04;border-radius:0 12px 12px 0;padding:14px 18px;font-size:12px;line-height:1.55;color:#334155">
+    <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;color:#CA8A04;text-transform:uppercase;letter-spacing:0.05em">Editor's note — </span>
+    MCP is commoditizing the connector library, the asset most often cited as Dust's moat. Product durability now rests on orchestration UX and accumulated workspace memory, not integrations. This is the central open question about the product (see Risk Matrix). The mid-2026 shift to credit-metered pricing is covered under Business Model.
+  </div>
+</div>
+
+<!-- ============ PAGE NEW — CUSTOMER VOICE ============ -->
+<div class="page" id="customer-voice" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Customer Voice</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">What Do Buyers Actually Say?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 24px;max-width:660px">Qualitative evidence from customers, review platforms, and public interviews. Strongly positive, with one important caveat at the bottom.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+    <div class="drp-h" style="background:#FFFFFF;border-left:3px solid #D4AF37;border-radius:0 12px 12px 0;padding:18px 20px">
+      <div style="font-family:'Manrope',sans-serif;font-style:italic;font-weight:600;font-size:14px;color:#0F172A;line-height:1.55;margin-bottom:10px">"This has translated into thousands of hours saved per year, allowing us to focus on more meaningful tasks."</div>
+      <div style="font-size:11px;color:#64748B">— Aymeric Augustin, CTO, Qonto (Artefact interview). Qonto reports ~two-week payback and a ~20% productivity gain on affected workflows.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border-left:3px solid #D4AF37;border-radius:0 12px 12px 0;padding:18px 20px">
+      <div style="font-family:'Manrope',sans-serif;font-style:italic;font-weight:600;font-size:14px;color:#0F172A;line-height:1.55;margin-bottom:10px">Custom agents that understand internal terminology delivered a "40% reduction in repetitive questions" during onboarding.</div>
+      <div style="font-size:11px;color:#64748B">— G2 reviewer, 2026. Dust holds a 4.9/5 G2 rating across 19 reviews; recurring praise: no-code agent building, sharing agents across teams.</div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px 22px;margin-bottom:16px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:12px">Reported Outcomes Across Reference Accounts <span style="font-weight:400;font-size:11px;color:#94A3B8">(vendor-reported or vendor-adjacent; directional)</span></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <div style="text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#0F172A">70%</div><div style="font-size:11px;color:#64748B;line-height:1.4">weekly usage across Doctolib's 3,000 employees</div></div>
+      <div style="text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#0F172A">100%</div><div style="font-size:11px;color:#64748B;line-height:1.4">adoption at Clay while scaling headcount 4x</div></div>
+      <div style="text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#0F172A">50%</div><div style="font-size:11px;color:#64748B;line-height:1.4">faster support-ticket closing at Malt</div></div>
+      <div style="text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#0F172A">86</div><div style="font-size:11px;color:#64748B;line-height:1.4">custom assistants built by Pennylane's teams</div></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #DC2626;border-radius:12px;padding:16px 20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#DC2626;margin-bottom:10px">Implementation Pain Points (from reviews)</div>
+      <div style="font-size:12px;color:#334155;line-height:1.6">A real learning curve for agent builders (Dust Apps, connection scoping) · gaps in the connector catalog for some data sources · per-seat pricing adds up at org-wide scale · SSO, provisioning, and storage gated to the Enterprise tier · weaker interface localization for non-English teams.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #CA8A04;border-radius:12px;padding:16px 20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#CA8A04;margin-bottom:10px">Adoption Resistance (from the buyer's chair)</div>
+      <div style="font-size:12px;color:#334155;line-height:1.6">Qonto's CTO names initial employee resistance to AI tools as the main rollout challenge, not the technology. The pattern in successful accounts is executive sponsorship plus permission to experiment, which matches the founder's own adoption playbook.</div>
+    </div>
+  </div>
+
+  <div style="background:#FEFCE8;border-left:3px solid #CA8A04;border-radius:0 12px 12px 0;padding:14px 18px;font-size:12px;line-height:1.55;color:#334155">
+    <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;color:#CA8A04;text-transform:uppercase;letter-spacing:0.05em">Caveat — </span>
+    The public record is thin and skews vendor-published: 19 G2 reviews is a small sample, several case studies sit on Dust's own site, and independent critical commentary is scarce. That is normal for a company this young, but it means the customer evidence is directional, not audited — the founder reference calls in Next Steps are how we close this gap.
+  </div>
+</div>
+
+<!-- ============ PAGE 13 — BUSINESS MODEL ============ -->
+<div class="page" id="business-model" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Business Model</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">How Does It Make Money?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 12px;max-width:660px">Credit-metered SaaS, overhauled mid-2026 from a flat €29/seat model — pricing is well-documented, unit economics are not.</p>
+  <p style="font-size:14px;color:#475569;margin:0 0 12px;max-width:660px;line-height:1.6">Why the overhaul: on flat €29 seats, heavy users consumed LLM inference Dust pays for per token, so the heaviest (best) customers were the least profitable. Metering credits re-couples price to cost of goods. Hubert has articulated the logic publicly: pricing will fragment into seat-based (everyday productivity), workload-based (long-running agent tasks), and usage-based layers, and companies that adopted pure token pricing too early tied their economics to a falling cost curve instead of customer value. The overhaul is the right economic move and a real execution risk at once, since repricing an installed base mid-growth invites churn in exactly the accounts the retention story depends on.</p>
+  <p style="font-size:12px;color:#94A3B8;margin:0 0 24px;max-width:660px">CAC, LTV, and payback are shown as "Not Disclosed" rather than estimated. Dust is private and has released no unit-economics breakdown. Sources: Dust pricing page; Series B coverage (Sifted, Tech.eu, May 2026).</p>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">CAC</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#94A3B8">Not Disclosed</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">LTV</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#94A3B8">Not Disclosed</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">LTV:CAC</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#94A3B8">Not Disclosed</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Payback</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#94A3B8">Not Disclosed</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Gross Margin</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#94A3B8;margin-bottom:6px">Not Disclosed</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Structurally driven by third-party LLM inference costs (OpenAI, Anthropic, Mistral, Google) — a price Dust does not set.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Profitability</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#DC2626;margin-bottom:6px">Not profitable</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">CEO has stated profitability is not the near-term priority (Sifted, May 2026). The raise funds acceleration, not survival.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Revenue Mix</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#94A3B8;margin-bottom:6px">Not Disclosed</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">3,000+ customers vs $20M ARR implies mid-single-digit-thousands average ACV; a small set of enterprise accounts likely carries most revenue.</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Free</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:600;font-size:15px;color:#2563EB;margin-bottom:8px">$0</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">500 lifetime credits — trials and occasional users.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Pro</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:600;font-size:15px;color:#2563EB;margin-bottom:8px">$30/mo ($24 annual)</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">8,000 credits/month — individual power users.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Max</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:600;font-size:15px;color:#2563EB;margin-bottom:8px">$150/mo ($120 annual)</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">40,000 credits/month — heavy, workflow-embedded users.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:8px">Enterprise</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:600;font-size:15px;color:#2563EB;margin-bottom:8px">Custom</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Workspace-pooled credits, volume pricing, SSO/SCIM, audit logs, single-tenant options.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 14 — FINANCIAL DASHBOARD ============ -->
+<div class="page" id="financial-dashboard" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Financial Dashboard</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">Are the Financials Healthy?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">Growth is real and roughly 18x in eighteen months; the profitability picture underneath it is entirely undisclosed.</p>
+
+  <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:24px;margin-bottom:20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:4px">ARR Growth (self-reported, $M equivalent)</div>
+    <div style="font-size:11px;color:#94A3B8;margin-bottom:18px">Figures mix EUR and USD as originally disclosed — directional, not precise</div>
+    <div style="display:flex;align-items:flex-end;gap:14px;height:160px">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F172A">$1.1M</div>
+        <div style="width:100%;border-radius:6px 6px 0 0;background:#93C5FD;height:5%"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B">Mid-2024</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F172A">$2.2M</div>
+        <div style="width:100%;border-radius:6px 6px 0 0;background:#93C5FD;height:11%"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B">End-2024</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F172A">$6M</div>
+        <div style="width:100%;border-radius:6px 6px 0 0;background:#93C5FD;height:29%"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B">Mid-2025</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F172A">$20.5M</div>
+        <div style="width:100%;border-radius:6px 6px 0 0;background:#2563EB;height:100%"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B">Early-2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Gross Margin</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#94A3B8">Not Disclosed</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Burn Multiple</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#94A3B8">Not Disclosed</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Runway</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#DC2626">Not Disclosed — critical diligence item</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Rule of 40</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#94A3B8">N/M — margin undisclosed</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Capital Efficiency</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#16A34A;margin-bottom:6px">~$110K ARR / employee</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Estimate at last joint disclosure (~66 employees against ~$7.3M ARR). A real strength: Dust reached $20M+ ARR on ~$21M of pre-Series B capital.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-size:12px;color:#64748B;margin-bottom:8px">Headcount Basis</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#0F172A;margin-bottom:6px">~66 (late 2025)</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Used consistently throughout this memo. Estimated to grow to 90–130 as Series B hiring lands; per-employee figures will compress accordingly.</div>
+    </div>
+  </div>
+
+  <div style="background:#FEFCE8;border-left:3px solid #CA8A04;border-radius:0 12px 12px 0;padding:20px 24px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;color:#CA8A04;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">Watch — No Margin Bridge Shown</div>
+    <div style="font-size:13px;line-height:1.6;color:#334155">COGS, OpEx, and EBITDA are not publicly disclosed, so no Revenue-to-EBITDA waterfall is shown here — plotting one would mean inventing numbers. What is known: Dust's largest variable cost is third-party LLM inference (OpenAI, Anthropic, Mistral, Google), so gross margin is structurally a function of a price Dust does not set, not an internally optimized figure the way a single-model vendor's would be.</div>
+  </div>
+</div>
+
+<!-- ============ PAGE 15 — VALUATION ============ -->
+<div class="page" id="valuation" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Valuation Reference Points</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">Reference Points, Not a Price</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">No Series B valuation has been disclosed — companies with strong pricing momentum usually attach a number to the announcement; its absence is a diligence question, not something to assume away.</p>
+
+  <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:24px;margin-bottom:20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:4px">Comparable ARR Multiple — Internal Estimate Only</div>
+    <div style="font-size:11px;color:#94A3B8;margin-bottom:18px">Low confidence — not a company-disclosed figure; DCF and precedent-transaction methods are not shown, no source supports building them for Dust specifically</div>
+    <div style="display:grid;grid-template-columns:140px 1fr;align-items:center;gap:16px">
+      <div style="font-size:13px;color:#334155">Comparable ARR Multiples</div>
+      <div style="position:relative;height:18px;background:#EEF2F7;border-radius:999px">
+        <div style="position:absolute;top:0;bottom:0;left:15%;width:25%;background:#2563EB;border-radius:999px"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:20px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:12px">Comparable Multiples</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F1F5F9;font-size:13px">
+        <span style="color:#334155">Dust (est.)</span><span style="font-family:'JetBrains Mono',monospace;color:#0F172A">~15–25x ARR</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F1F5F9;font-size:13px">
+        <span style="color:#334155">Glean</span><span style="font-family:'JetBrains Mono',monospace;color:#0F172A">~24x ARR</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F1F5F9;font-size:13px">
+        <span style="color:#334155">Sierra</span><span style="font-family:'JetBrains Mono',monospace;color:#0F172A">~79x ARR</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F1F5F9;font-size:13px">
+        <span style="color:#334155">Writer</span><span style="font-family:'JetBrains Mono',monospace;color:#0F172A">~40x ARR</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F1F5F9;font-size:13px">
+        <span style="color:#334155">Segment (2020 M&amp;A)</span><span style="font-family:'JetBrains Mono',monospace;color:#0F172A">~16–21x ARR</span>
+      </div>
+    </div>
+    <div class="drp-h" style="background:#0F172A;border-radius:12px;padding:20px;color:#F8FAFC">
+      <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:10px">Series B Valuation</div>
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;color:#F8FAFC;margin-bottom:10px">Not Publicly Disclosed</div>
+      <div style="border-top:1px solid #1E293B;padding-top:10px">
+        <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8;margin-bottom:6px">Internal Estimate (Low Confidence)</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:24px;color:#D4AF37">$350–500M</div>
+        <div style="font-size:13px;color:#CBD5E1;margin-top:6px;line-height:1.5">The work: $20.5M ARR × 15–25x (the comps band Dust's positioning supports) = $310–510M, shown as a $350–500M mid-band. No DCF or precedent-transaction method is shown; no public source supports building either for Dust specifically.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 16 — SWOT ============ -->
+<div class="page" id="swot" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">SWOT Analysis</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">Where's the Leverage?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">The strongest strength (Sequoia's re-ups) and the sharpest threat (MCP) both live at the level of signal and standard, not product — that's the real risk profile here.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:460px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #16A34A;border-radius:12px;padding:20px;overflow:auto">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#16A34A;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.04em">Strengths</div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#16A34A">—</span><span>Sequoia's three consecutive re-ups (seed → A → B) — the single strongest cap-table signal, hard to fake</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#16A34A">—</span><span>Elite, well-matched founding team — Stripe/OpenAI/Alan pedigree, ~$110K ARR/employee at last disclosure</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#16A34A">—</span><span>Deep account penetration — 75–86% of headcount actively using dozens of custom agents at reference customers</span></div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #DC2626;border-radius:12px;padding:20px;overflow:auto">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#DC2626;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.04em">Weaknesses</div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#DC2626">—</span><span>No foundation model of its own — gross margin is a function of a price Dust doesn't set</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#DC2626">—</span><span>240% NRR is nearly double the 120% "best-in-class" SaaS benchmark — reads as small-base artifact, not durable retention</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#DC2626">—</span><span>Unit economics are opaque, and what is known cuts the wrong way: gross margin is set by third-party LLM prices, which points to structural margin-compression risk, not just a disclosure gap</span></div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #2563EB;border-radius:12px;padding:20px;overflow:auto">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2563EB;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.04em">Opportunities</div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#2563EB">—</span><span>The multi-vendor, non-Microsoft-committed enterprise segment is real, defensible, and currently underserved by bundled incumbents</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#2563EB">—</span><span>MCP commoditizes connectors for everyone, which also lowers Dust's own COGS — if Dust holds orchestration value while integration costs fall, margins improve. Falsifiable: watch gross margin trend as MCP adoption spreads</span></div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:3px solid #D4AF37;border-radius:12px;padding:20px;overflow:auto">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#D4AF37;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.04em">Threats</div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#D4AF37">—</span><span>MCP standardizes away the connector library and lowers the cost of building a Dust competitor more than it lowers Dust's own cost to build</span></div>
+      <div style="display:flex;gap:8px;margin-bottom:9px;font-size:13px;line-height:1.5;color:#334155"><span style="flex-shrink:0;color:#D4AF37">—</span><span>Microsoft, Salesforce (Agentforce, $1.2B ARR, +205% YoY), and Google can each bundle a competing layer into licenses already paid for</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 17 — PORTER'S FIVE FORCES ============ -->
+<div class="page" id="porter-s-five-forces" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Porter's Five Forces</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">How Much Structural Power?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">Supplier power is the force most memos on AI-native companies underweight — Dust owns no model, so its margin is hostage to four labs' pricing decisions.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:center">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Threat of New Entrants</div>
+      <div style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:#FEE2E2;color:#991B1B;margin-bottom:10px">HIGH</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">MCP removes the primary structural barrier to entry, the connector library. Enterprise trust and orchestration UX still take time to replicate, but the moat is now speed, not structure.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Supplier Power</div>
+      <div style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:#FEE2E2;color:#991B1B;margin-bottom:10px">HIGH</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Total dependency on third-party LLM providers (OpenAI, Anthropic, Mistral, Google) for the core input — gross margin is a price Dust doesn't set.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Buyer Power</div>
+      <div style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:#FEF9C3;color:#854D0E;margin-bottom:10px">MODERATE</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Switching is a project rather than a crisis today, which caps how much lock-in the shared workspace really provides and gives large accounts genuine pricing leverage. Customer concentration is undisclosed.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Threat of Substitutes</div>
+      <div style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:#FEE2E2;color:#991B1B;margin-bottom:10px">HIGH</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Microsoft Copilot Studio/Agent 365, Salesforce Agentforce, and Google Gemini Enterprise all offer bundled, governed agent-building inside licenses already paid for.</div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:18px;grid-column:span 3">
+      <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:8px">Competitive Rivalry</div>
+      <div style="display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:3px 9px;border-radius:999px;background:#FEE2E2;color:#991B1B;margin-bottom:10px">HIGH</div>
+      <div style="font-size:12px;color:#475569;line-height:1.5">Glean ($300M ARR, $7.2B valuation), Sierra ($950M in a single round), Microsoft Copilot Studio / Agent 365, Salesforce Agentforce ($1.2B ARR, +205% YoY), Google Gemini Enterprise, and OpenAI's own enterprise agent tooling are all live competitors. Dust has raised ~$61M in total; Sierra raised $950M in one round. The capital gap is 15–100x.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 18 — RISK MATRIX ============ -->
+<div class="page" id="risk-matrix" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Risk Matrix</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 6px;color:#0F172A">What Could Kill This?</h2>
+  <p style="font-size:16px;color:#475569;margin:0 0 28px;max-width:660px">The two risks in the highest-severity quadrant, MCP commoditization and hyperscaler bundling, are both things Dust's own execution can only partially blunt. If the Series B priced at $400M+ on $20M ARR, that is a 20x+ entry multiple — the undisclosed valuation is a diligence gap with real return consequences, not a footnote.</p>
+
+  <div style="display:grid;grid-template-columns:32px 1fr;gap:10px">
+    <div style="display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);font-size:11px;color:#94A3B8;white-space:nowrap">Impact →</div></div>
+    <div>
+      <div style="position:relative;height:340px;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top right,#DCFCE7,#FEF9C3 45%,#FEE2E2 100%)"></div>
+
+        <div class="drp-h" style="position:absolute;left:75%;bottom:82%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:75%;bottom:82%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">MCP commoditizes connectors</div>
+
+        <div class="drp-h" style="position:absolute;left:68%;bottom:78%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:68%;bottom:78%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">Hyperscaler bundling</div>
+
+        <div class="drp-h" style="position:absolute;left:60%;bottom:62%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:60%;bottom:62%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">NRR reverts as cohorts age</div>
+
+        <div class="drp-h" style="position:absolute;left:85%;bottom:48%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:85%;bottom:48%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">Capital disadvantage (15–100x)</div>
+
+        <div class="drp-h" style="position:absolute;left:52%;bottom:58%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:52%;bottom:58%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">Valuation undisclosed — entry price unknowable</div>
+
+        <div class="drp-h" style="position:absolute;left:45%;bottom:42%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#0F172A;border:2px solid #FFFFFF;box-shadow:0 1px 4px rgba(15,23,42,0.3)"></div>
+        <div style="position:absolute;left:45%;bottom:42%;transform:translate(-50%,-24px);font-size:11px;font-weight:600;color:#0F172A;background:rgba(255,255,255,0.85);padding:2px 6px;border-radius:4px;white-space:nowrap">Key-person dependency (two founders, ~66 staff)</div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:#94A3B8;margin-top:8px">Likelihood →</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 18 — SCENARIO ANALYSIS ============ -->
+<div class="page" id="scenario-analysis" style="box-sizing:border-box;background:#FAFAFA;padding:40px 64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Scenario Analysis</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:30px;margin:0 0 4px;color:#0F172A">What Has to Be True?</h2>
+  <p style="font-size:14px;color:#475569;margin:0 0 6px;max-width:660px">The base case is the underwriting anchor. The bull case is a specific crossing Dust has to achieve, not a natural byproduct of growing ARR.</p>
+  <p style="font-size:12px;color:#94A3B8;margin:0 0 16px;max-width:660px">Probabilities are analyst-assigned, not derived from the source data. The modest bull weight reflects Sequoia's triple re-up set against the unproven memory-asset crossing.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:4px solid #16A34A;border-radius:12px;padding:20px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#16A34A;text-transform:uppercase">Bull</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#16A34A">15%</div>
+      </div>
+      <div style="font-size:12px;color:#475569;line-height:1.5;margin-bottom:10px">Workspace memory becomes a genuine, hard-to-rebuild asset before a well-funded incumbent catches up on features — the path to an independent giant, as with Snowflake or Okta.</div>
+      <div style="font-size:11px;color:#64748B;line-height:1.5;margin-bottom:10px"><span style="font-weight:600;color:#334155">Observable triggers:</span> a churned customer measurably loses capability it cannot rebuild elsewhere; aged (2023–24) cohorts hold NRR above 150% at scale; win rate stays strongest in non-Microsoft, multi-cloud accounts.</div>
+      <div style="border-top:1px solid #F1F5F9;padding-top:12px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:4px">Underwriting Outcome</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#0F172A">Independent giant — 20x+</div>
+      </div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:4px solid #2563EB;border-radius:12px;padding:20px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#2563EB;text-transform:uppercase">Base</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#2563EB">55%</div>
+      </div>
+      <div style="font-size:12px;color:#475569;line-height:1.5;margin-bottom:10px">A strategic infrastructure acquisition — the path MuleSoft, Segment, and Looker took. The team executes well inside the defensible non-Microsoft segment; workspace memory stays convenient rather than irreplaceable.</div>
+      <div style="font-size:11px;color:#64748B;line-height:1.5;margin-bottom:10px"><span style="font-weight:600;color:#334155">Consistent with:</span> the strategic checks already on the cap table (Snowflake Ventures, Datadog Ventures) and the comps band capital assigns broad orchestration platforms.</div>
+      <div style="border-top:1px solid #F1F5F9;padding-top:12px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:4px">Underwriting Outcome</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#0F172A">3–6x — the anchor</div>
+      </div>
+    </div>
+    <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-top:4px solid #DC2626;border-radius:12px;padding:20px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#DC2626;text-transform:uppercase">Bear</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#DC2626">30%</div>
+      </div>
+      <div style="font-size:12px;color:#475569;line-height:1.5;margin-bottom:10px">A bundled incumbent catches up on features before workspace memory becomes a real asset; the 240% retention headline falls back toward normal as customer cohorts age.</div>
+      <div style="font-size:11px;color:#64748B;line-height:1.5;margin-bottom:10px"><span style="font-weight:600;color:#334155">Observable triggers:</span> aged-cohort NRR reverting below ~120%; losses to Copilot/Agentforce in accounts already licensed for them; gross margin compressing as metered pricing fails to hold.</div>
+      <div style="border-top:1px solid #F1F5F9;padding-top:12px">
+        <div style="font-size:11px;color:#94A3B8;margin-bottom:4px">Underwriting Outcome</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:#0F172A">Below 1x on late entries</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:4px">Sensitivity — What Each Shock Does to the Value Case</div>
+    <div style="font-size:11px;color:#94A3B8;margin-bottom:12px">Analyst estimates. Multiples move against the ~15–25x reference band from Valuation Reference Points; no company guidance exists.</div>
+    <div style="display:grid;grid-template-columns:1.1fr 1.5fr 0.9fr;gap:5px 16px;font-size:12px;line-height:1.5;color:#334155">
+      <div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Shock</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Transmission</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Valuation Effect</div>
+      <div style="font-weight:600">NRR falls to ~105%</div><div>Growth story breaks; Dust reprices from "hypergrowth AI" to ordinary SaaS comps</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626">15–25x → ~5–8x</div>
+      <div style="font-weight:600">OpenAI ships native enterprise connectors</div><div>Connector moat gone at the source; orchestration UX is the only remaining differentiation</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626">Bear case accelerates</div>
+      <div style="font-weight:600">Glean bundles agent-building</div><div>The premium-broad quadrant collapses into a feature war against a rival with ~15x Dust's capital</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626">Multiple compresses toward ~10–15x</div>
+      <div style="font-weight:600">Enterprise AI budgets slow</div><div>Category multiples deflate together; an undisclosed and likely rich Series B price raises down-round risk</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626">Down-round risk on entry</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 21 — SOURCES ============ -->
+<div class="page" id="sources" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Sources</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 14px;color:#0F172A">References</h2>
+
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">01</span><a href="https://tech.eu/2026/05/18/dust-raises-40m-series-b-to-build-the-multiplayer-operating-system-for-enterprise-ai/" style="color:#2563EB">Dust raises $40M Series B — Tech.eu</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">02</span><a href="https://sifted.eu/articles/dust-series-b-40m" style="color:#2563EB">Sequoia backs Dust in $40m Series B — Sifted</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">03</span><a href="https://www.globenewswire.com/news-release/2026/05/18/3296726/0/en/dust-raises-40m-to-make-ai-multiplayer-inside-the-enterprise.html" style="color:#2563EB">Dust raises $40M — GlobeNewswire (official release)</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">04</span><a href="https://venturebeat.com/ai/dust-hits-6m-arr-helping-enterprises-build-ai-agents-that-actually-do-stuff-instead-of-just-talking" style="color:#2563EB">Dust hits $6M ARR — VentureBeat</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">05</span><a href="https://techcrunch.com/2024/06/27/dust-grabs-another-16-million-for-its-enterprise-ai-assistants-connected-to-internal-data/" style="color:#2563EB">Dust grabs $16M Series A — TechCrunch</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">06</span><a href="https://www.glean.com/press/glean-raises-150m-series-f-at-7-2b-valuation-to-accelerate-enterprise-ai-agent-innovation-globally" style="color:#2563EB">Glean raises Series F at $7.2B — Glean</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">07</span><a href="https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" style="color:#2563EB">Sierra raises $950M — TechCrunch</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">08</span><a href="https://www.salesforce.com/news/press-releases/2018/03/20/salesforce-signs-definitive-agreement-to-acquire-mulesoft/" style="color:#2563EB">Salesforce to acquire MuleSoft — Salesforce</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">09</span><a href="https://www.twilio.com/en-us/press/releases/twilio-completes-acquisition-segment-market-leading-customer-data-platform" style="color:#2563EB">Twilio completes acquisition of Segment — Twilio</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">10</span><a href="https://techcrunch.com/2019/06/06/google-to-acquire-analytics-startup-looker-for-2-6-billion/" style="color:#2563EB">Google to acquire Looker for $2.6B — TechCrunch</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">11</span><a href="https://www.macrotrends.net/stocks/charts/SNOW/snowflake/market-cap" style="color:#2563EB">Snowflake market cap — MacroTrends</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">12</span><a href="https://www.digitalapplied.com/blog/net-revenue-retention-benchmarks-2026-saas-expansion-data" style="color:#2563EB">2025 SaaS NRR benchmarks — Digital Applied</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">13</span><a href="https://dust.tt/home/pricing" style="color:#2563EB">Dust official pricing page</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">14</span><a href="https://www.fortunebusinessinsights.com/ai-orchestration-market-107177" style="color:#2563EB">AI Orchestration Market sizing — Fortune Business Insights</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">15</span><a href="https://blog.dust.tt/" style="color:#2563EB">Dust official blog — Series B announcement (primary company source)</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">16</span><a href="https://www.sequoiacap.com/article/partnering-with-dust/" style="color:#2563EB">"Partnering with Dust: LLM-Powered Productivity" — Konstantine Buhler, Sequoia Capital, July 3, 2023 (seed announcement)</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">17</span><span style="color:#334155">Gabriel Hubert, founder interview on agent-native organizations (video, 2026) — pricing evolution, trust model, enterprise memory</span></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">18</span><a href="https://www.g2.com/products/dust-dust/reviews" style="color:#2563EB">Dust reviews — G2 (4.9/5, 19 reviews as of mid-2026)</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">19</span><a href="https://www.saastr.com/saastr-ai-app-of-the-week-dust/" style="color:#2563EB">SaaStr AI App of the Week: Dust — adoption metrics (Doctolib, Qonto, Clay, Malt, Alan)</a></div>
+  <div style="display:flex;gap:14px;padding:6px 0;border-bottom:1px solid #E2E8F0;font-size:12px"><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;width:24px;flex-shrink:0">20</span><a href="https://www.artefact.com/blog/aymeric-augustin-cto-at-qonto-and-gabriel-hubert-ceo-co-founder-of-dust-gen-ai-adoption-at-fast-growing-companies/" style="color:#2563EB">Aymeric Augustin (CTO, Qonto) & Gabriel Hubert — gen-AI adoption interview, Artefact</a></div>
+
+  <div style="margin-top:20px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;color:#0F172A;margin-bottom:10px">Data Confidence Levels</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;font-size:12px;line-height:1.6;color:#334155">
+      <div><span style="font-family:'JetBrains Mono',monospace;color:#16A34A;font-weight:600">HIGH</span> — Funding rounds and amounts; pricing tiers</div>
+      <div><span style="font-family:'JetBrains Mono',monospace;color:#CA8A04;font-weight:600">MEDIUM</span> — ARR, customer count, headcount (company-reported)</div>
+      <div><span style="font-family:'JetBrains Mono',monospace;color:#DC2626;font-weight:600">LOW</span> — 240% NRR; the $350–500M internal valuation estimate</div>
+      <div><span style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-weight:600">NOT DISCLOSED</span> — Margins, runway, burn, CAC/LTV, revenue mix</div>
+    </div>
+  </div>
+
+  <div style="margin-top:12px;font-size:11px;color:#64748B;line-height:1.5">Figures marked company-reported are treated as directionally credible, not audited. The underlying internal research memo and its appendices are primary documents for this review. The founder quote on the Founder Profile page is from the Series B announcement interview (Sifted, May 2026).</div>
+</div>
+
+<!-- ============ PAGE 20 — APPENDIX ============ -->
+<div class="page" id="appendix" style="box-sizing:border-box;background:#FAFAFA;padding:64px;font-family:'Inter',sans-serif;color:#1E293B">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2563EB;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Appendix</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;margin:0 0 18px;color:#0F172A">Supplementary Exhibits</h2>
+
+  <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px;margin-bottom:14px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:10px">Exhibit A — Data Confidence by Point</div>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 110px;gap:5px 16px;font-size:12px;color:#334155">
+      <div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Data Point</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Value Used</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Confidence</div>
+      <div>Funding rounds & amounts</div><div style="font-family:'JetBrains Mono',monospace">€5M / $16M / $40M (~$61M)</div><div style="font-family:'JetBrains Mono',monospace;color:#16A34A;font-weight:600">HIGH</div>
+      <div>Pricing tiers</div><div style="font-family:'JetBrains Mono',monospace">$0 / $30 / $150 / custom</div><div style="font-family:'JetBrains Mono',monospace;color:#16A34A;font-weight:600">HIGH</div>
+      <div>ARR</div><div style="font-family:'JetBrains Mono',monospace">$20M+ (early 2026)</div><div style="font-family:'JetBrains Mono',monospace;color:#CA8A04;font-weight:600">MEDIUM</div>
+      <div>Customers</div><div style="font-family:'JetBrains Mono',monospace">3,000+</div><div style="font-family:'JetBrains Mono',monospace;color:#CA8A04;font-weight:600">MEDIUM</div>
+      <div>Headcount</div><div style="font-family:'JetBrains Mono',monospace">~66 (late 2025)</div><div style="font-family:'JetBrains Mono',monospace;color:#CA8A04;font-weight:600">MEDIUM</div>
+      <div>Net revenue retention</div><div style="font-family:'JetBrains Mono',monospace">240% (self-reported)</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626;font-weight:600">LOW</div>
+      <div>Series B valuation</div><div style="font-family:'JetBrains Mono',monospace">$350–500M (internal est.)</div><div style="font-family:'JetBrains Mono',monospace;color:#DC2626;font-weight:600">LOW</div>
+      <div>Gross margin, runway, burn, CAC/LTV, revenue mix</div><div style="font-family:'JetBrains Mono',monospace">—</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-weight:600">NOT DISCLOSED</div>
+    </div>
+  </div>
+
+  <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px;margin-bottom:14px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:10px">Exhibit B — Cap Table Signal Breakdown</div>
+    <div style="display:grid;grid-template-columns:150px 1fr;gap:6px 16px;font-size:12px;line-height:1.55;color:#334155">
+      <div style="font-weight:600">Sequoia Capital</div><div>Three consecutive rounds (seed → A → B co-lead). The strongest signal in the cap table and hard to fake; a re-up requires internal conviction against a live portfolio.</div>
+      <div style="font-weight:600">Abstract</div><div>Growth-stage co-lead; an atypical check for the firm's usual profile. Interpret with caution rather than as independent validation of price.</div>
+      <div style="font-weight:600">Snowflake Ventures</div><div>Strategic, not independent underwriting. Signals data-stack partnership positioning, and keeps an acquirer close — consistent with the MuleSoft-shaped base case.</div>
+      <div style="font-weight:600">Datadog Ventures</div><div>Same read: strategic observability-stack interest, not price discovery.</div>
+    </div>
+  </div>
+
+  <div class="drp-h" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:16px 20px">
+    <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#0F172A;margin-bottom:10px">Exhibit C — Comparable Companies</div>
+    <div style="display:grid;grid-template-columns:120px 1fr 120px 130px;gap:5px 16px;font-size:12px;color:#334155">
+      <div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Company</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Positioning</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Implied Multiple</div><div style="font-family:'JetBrains Mono',monospace;color:#94A3B8;font-size:10px;text-transform:uppercase">Outcome Analog</div>
+      <div style="font-weight:600">Dust</div><div>Broad orchestration platform, premium, model-agnostic</div><div style="font-family:'JetBrains Mono',monospace">~15–25x (est.)</div><div>Open</div>
+      <div style="font-weight:600">Glean</div><div>Broad enterprise search/agents; $300M ARR, $7.2B Series F</div><div style="font-family:'JetBrains Mono',monospace">~24x</div><div>Independent (so far)</div>
+      <div style="font-weight:600">Sierra</div><div>Narrow, attributable-ROI customer agents; $950M single round</div><div style="font-family:'JetBrains Mono',monospace">~79x</div><div>Category darling</div>
+      <div style="font-weight:600">Writer</div><div>Enterprise writing/agents platform</div><div style="font-family:'JetBrains Mono',monospace">~40x</div><div>Independent (so far)</div>
+      <div style="font-weight:600">MuleSoft</div><div>Integration platform; acquired by Salesforce, 2018</div><div style="font-family:'JetBrains Mono',monospace">n/a (M&amp;A)</div><div>Base-case analog</div>
+      <div style="font-weight:600">Segment</div><div>Customer data platform; acquired by Twilio, 2020</div><div style="font-family:'JetBrains Mono',monospace">~16–21x</div><div>Base-case analog</div>
+      <div style="font-weight:600">Looker</div><div>BI platform; acquired by Google, 2019 ($2.6B)</div><div style="font-family:'JetBrains Mono',monospace">n/a (M&amp;A)</div><div>Base-case analog</div>
+      <div style="font-weight:600">Snowflake / Okta</div><div>Independent public giants</div><div style="font-family:'JetBrains Mono',monospace">n/a</div><div>Bull-case analog</div>
+    </div>
+    <div style="font-size:11px;color:#94A3B8;margin-top:12px">"What would change our mind" is carried in Scenario Analysis (observable triggers), not duplicated here.</div>
+  </div>
+</div>
+
+<div style="max-width:8.5in;margin:0 auto 40px;padding:0 8px;font-family:'Inter',sans-serif;font-size:11px;color:#94A3B8;line-height:1.6;text-align:center">Independent research based solely on public sources. Not affiliated with, or endorsed by, Dust. Not investment advice. Founder photographs omitted from the public edition for image-rights reasons.</div>
+</body>
+</html>
