@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partner Red-Team Review — Technogym DCF & Recordati LBO | Tanmay Gambhir</title>
+<meta name="description" content="Adversarial red-team review of both models: which challenges landed, what they changed, and the structural weaknesses recorded on the record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:56px 28px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;margin:38px 0 12px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.04em;margin:24px 0 10px}
+  p,li{font-size:14.5px;color:#CBD5E1;line-height:1.7;margin-bottom:12px}
+  ul,ol{padding-left:22px;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  em{color:#94A3B8}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:22px}
+  .vnote{background:#1E293B;border:1px solid #334155;border-left:3px solid #D4AF37;border-radius:10px;padding:16px 18px;margin:16px 0}
+  .vnote p{margin:0;font-size:13.5px}
+  .verdict{color:#D4AF37;font-style:italic}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← All research</a>
+  <div class="kicker" style="margin-top:26px">Phase 4 · Adversarial Review · v3</div>
+  <h1>Partner Red-Team Review — Both Models</h1>
+  <div class="meta">Role: skeptical IC Partner (Blackstone/KKR/EQT/BlackRock standard). The job is to break both models. Where a challenge lands, the recommendation is revised. Where it doesn't, the defence is recorded.</div>
+
+  <div class="btns">
+    <a class="btn-ghost" href="../technogym/">Technogym IC summary</a>
+    <a class="btn-ghost" href="../recordati/">Recordati IC summary</a>
+  </div>
+
+  <h2>Part A — Technogym DCF (v3 base €15.72, HOLD)</h2>
+  <div class="vnote"><p><strong>v3 reconciliation (18-Jul-26):</strong> the v2 IFRS-16 fix already moved the base to €15.75; v3 additionally <em>isolates the digital P&amp;L</em> (hardware margin expands on its own operating leverage to ~20.75%; digital carries its own ~60% margin). Net effect: base <strong>€15.72 / HOLD (+3.5%)</strong>, bear €8.82, bull €24.05. Isolating digital reveals the option is worth <strong>~€3.3/sh</strong> (not the ~€0.6 it showed when blended) — a redistribution of existing value, so the total base margin is held at the defensible ~23.5% and the rating does not change.</p></div>
+
+  <h3>Challenges that land (and what they change)</h3>
+  <p><strong>A1. "Your margin endpoint is doing the work of a thesis."</strong> 23.5% by 2032 assumes seven more years of net expansion after four exceptional ones. Procurement renegotiation and re-engineering are one-time gains that annualise out; what's left is mix — and the mix shift depends on the digital/services growth you yourself call an option. If margins plateau at 22.5%, fair value drops ~€1.3. <span class="verdict">Verdict: lands, and v3 acts on it. Digital is now isolated at its own margin, so the total-margin endpoint no longer smuggles the mix shift into hardware. Base total margin holds at ~23.5% (hardware ~20.75% standalone + digital ~60%); the honest central read is €15.5–16.0, not a €17.34 point. Present it as HOLD.</span></p>
+  <p><strong>A2. "You answered the drawdown with a hypothesis, not evidence."</strong> The tariff-deferral explanation for Americas +2.5% is unverified. If it's share loss (Matrix/Life Fitness price aggression), the BtoB fade path is too generous. <span class="verdict">Verdict: lands as a timing issue. H1 results print 30 July. Recommendation is conditioned: a BUY is only actionable after the H1 print confirms Americas stabilisation. This is now in the IC summary.</span></p>
+  <p><strong>A3. "A 63% TV share means your explicit period barely matters — and your g of 2.25% embeds an immortality assumption for a consumer-capex brand."</strong> <span class="verdict">Verdict: does not change the number but changes the presentation: the exit-multiple cross-check (Gordon-implied ~9.4x — below today's ~13x) is the stronger defence and is now cited first.</span></p>
+  <p><strong>A4. "Beta 0.95 triangulated is soft."</strong> True: providers range 0.80–1.16, and the WACC sensitivity band (7.0–8.75%) swings value €14.3–22.6. <span class="verdict">Verdict: acceptable because the grid makes the dependence transparent; noted as a known limitation.</span></p>
+
+  <h3>Challenges that don't land</h3>
+  <ul>
+    <li><em>"Digital estimate is invented."</em> It is an explicitly labelled L-confidence estimation block with editable drivers, built precisely because the company won't disclose. The alternative — pretending the platform question can't be analysed — is worse.</li>
+    <li><em>"Comps are junk."</em> Correct that no clean comp exists; the model uses them only for triangulation and says so. JHT 10.5x and Garmin/Amer ~20x bracket the debate accurately.</li>
+    <li><em>"Net cash should fund a buyback assumption."</em> Speculative capital allocation is not underwritten in a DCF; the authorisation is noted as optionality.</li>
+  </ul>
+
+  <h3>Revised judgment — Technogym</h3>
+  <p>Rating: <strong>HOLD (v3). Fair value €15.72 (+3.5% vs €15.19) — below the &gt;20% BUY hurdle.</strong> A BUY would require an H1-26 print (30-Jul-26) confirming Americas stabilisation <em>and</em> a credible first digital-KPI disclosure; entry attractive below €14.50 with margin of safety; conviction MODERATE (6.5/10). The digital option (~€3.3/sh) is real but sits in the bull case, not the base. What would change my mind to BUY: Americas re-acceleration + first digital disclosure. To bear: Americas share loss; first margin decline in 5 years.</p>
+
+  <h2>Part B — Recordati LBO (v3 base ~15% IRR / ~2.0x, PARTICIPATE selectively)</h2>
+  <div class="vnote"><p><strong>v3 reconciliation (18-Jul-26):</strong> two mechanical fixes — (i) the 2031 exit-year BD spend (€400m that bought EBITDA only in 2032, post-exit) is removed, cutting cumulative BD to €1.6bn at a true 9.0x effective; (ii) net debt refinanced is bridged from FY25A gross €2,037m to a close-date estimate ~€1,750m (2026 FCF less dividends). Net: base <strong>~15% IRR / ~2.0x MOIC</strong>, entry 12.6x on close-date net debt (12.9x announced basis). <strong>BD value-creation decomposition:</strong> no-BD floor ~15%; funding BD €400m/yr adds ~0 to −0.1pt (the 9x-in/11.5x-out arbitrage is offset by interest drag on un-swept cash + forfeited deleveraging); exit at entry-flat 12.9x adds <strong>+2.9pt</strong>. The exit multiple is ~100% of the sponsor-consistent case — BD grows MOIC dollars, not the rate.</p></div>
+
+  <h3>Challenges that land</h3>
+  <p><strong>B1. "Your base case both haircuts the exit multiple AND removes the BD machine — that's double conservatism, and it makes the model unable to explain why sophisticated buyers did the deal."</strong> <span class="verdict">Verdict: lands, but v3 corrects the diagnosis. The two levers are NOT worth the same: the decomposition above shows BD ≈ 0pt and the exit multiple ≈ +2.9pt — they are not substitutes ("entry-flat exit OR funded BD" was wrong; the "OR" is deleted). The IC summary now presents: Conservative no-BD floor (~15%), Sponsor-consistent (entry-flat 12.9x exit: ~18%), Full-thesis (12.9x + 6.0x lev + bull ops: ~24%). The recommendation stands; the framing is corrected — the sponsor case is a bet on exit-multiple maintenance, not on the bolt-on machine.</span></p>
+  <p><strong>B2. "Your ΔNWC at 15% of revenue growth is a guess sitting on the fastest-moving part of the model (US RD inventory absorbed €135m in 2025 alone)."</strong> <span class="verdict">Verdict: lands as a sensitivity gap. At 25% of Δrev, cumulative FCF drops ~€200m and exit leverage rises ~0.15x — IRR impact ~−0.6pt. Material but not thesis-breaking; flagged as a build-time refinement (input is editable at 03!B35).</span></p>
+  <p><strong>B3. "Single-flow IRR flatters nothing but hides refinancing/dividend-recap optionality — and conversely ignores the 2026 stub period."</strong> We close 31-Dec-26 using FY26 guidance as the entry year; if closing slips into 2027 or FY26 misses guidance, entry economics shift. <span class="verdict">Verdict: partially lands; documented as a structural simplification. Recap optionality would only improve IRR (~+1pt) — conservative direction.</span></p>
+  <p><strong>B4. "Isturisa is ~35–40% of RD by our own estimate, and relacorilant is a live Phase 3 threat. Where's the product-level bear?"</strong> <span class="verdict">Verdict: lands directionally. The bear scenario (RD +8%→5%) is the proxy; a true product-level model needs disclosure Recordati doesn't provide. Recorded as a known limitation with the register's L-label discipline.</span></p>
+
+  <h3>Challenges that don't land</h3>
+  <ul>
+    <li><em>"12.9x is simply too expensive — Ipsen is 8.4x."</em> The market cleared this exact multiple twice (2018, 2026), with the most sophisticated possible seller-buyer pair. Ipsen is the challenge case, not the proof; the sensitivity grid prices it (at 9–10x exit, IRR 2–7% — that IS the risk statement).</li>
+    <li><em>"100% sweep is unrealistic."</em> It's the conservative modeling default; covenant-lite reality would allow retention, which only reallocates value, and the sweep input is editable.</li>
+    <li><em>"You can't validate against the actual debt structure."</em> Correct until the CONSOB offer document publishes; the model's €5.45bn at bottom of the reported €5.5–6bn range is the right independent posture.</li>
+  </ul>
+
+  <h3>Revised judgment — Recordati</h3>
+  <p>Rating: <strong>PARTICIPATE as co-invest (6/10), unchanged in direction but reframed:</strong> our ~15% is a conservative floor, not a midpoint; the sponsor-consistent read is ~18% and comes entirely from holding the exit multiple at entry (12.9x), not from BD. Decline as a standalone sponsor underwrite at a 20%+ hurdle without conviction that the exit multiple holds at entry — the decomposition shows that is the bet, not the bolt-on machine. What would change my mind positively: relacorilant failure, offer document showing cheaper debt, first post-close bolt-on at &lt;9x. Negatively: FY26 margin miss below 36%, Isturisa US script deceleration.</p>
+
+  <h2>Part C — Structural weaknesses common to both (recorded, not fixable in-scope)</h2>
+  <ol>
+    <li><strong>No mid-year discounting convention</strong> (DCF) — year-end discounting understates value ~3–4%; direction is conservative, documented.</li>
+    <li><strong>Provider-triangulated beta</strong>, not regression-computed (licensed price series unavailable in build environment).</li>
+    <li><strong>Grid 3 approximations</strong> on both sensitivity sheets — documented in-sheet with bias direction.</li>
+    <li><strong>No annotated source screenshots</strong> — table-level citations substitute; primary PDFs linked in Bibliography.</li>
+    <li><strong>Aggregator dependence</strong> for Recordati 2021–24 historicals (standardised vs company-adjusted EBITDA reconciled by note, not by rebuild from ARs).</li>
+    <li><strong>H1-26 (TGYM, 30-Jul) and CONSOB offer document (REC, ~Q3-26) both land within weeks</strong> — both models carry explicit rebase triggers.</li>
+  </ol>
+
+  <div class="btns">
+    <a class="btn-ghost" href="../technogym/">Technogym IC summary →</a>
+    <a class="btn-ghost" href="../recordati/">Recordati IC summary →</a>
+  </div>
+
+  <div class="foot">
+    Published deliberately: where a challenge landed, the number moved against the original thesis — twice.
+    Independent analysis from public sources. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
