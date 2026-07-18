@@ -4,50 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tanmay Gambhir — Investment Research</title>
-<meta name="description" content="Investment memos and institutional financial models (DCF, LBO) by a Master in Management student — researched, red-teamed, and cited from public sources.">
+<meta name="description" content="Investment memos, full DCF valuations, and LBO models of recent deals rebuilt from scratch: researched, red-teamed, and cited from public sources.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tanmay Gambhir — Investment Research">
+<meta property="og:description" content="Venture memos, DCF valuations, and LBO models rebuilt from scratch. Both model conclusions moved against my starting view. That's the point.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
   body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
   a{text-decoration:none}
-  .wrap{max-width:860px;margin:0 auto;padding:72px 28px}
+  .wrap{max-width:860px;margin:0 auto;padding:96px 28px 72px}
   .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:860px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  [data-tip]{position:relative;cursor:help}
+  [data-tip]:hover::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 6px);background:#1E293B;border:1px solid #334155;color:#E0E5F0;font-family:'Inter',sans-serif;font-size:11.5px;line-height:1.5;padding:8px 10px;border-radius:8px;width:220px;z-index:60;text-transform:none;letter-spacing:0}
 </style>
 </head>
 <body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="./">TG · RESEARCH</a>
+  <a href="#coverage">Coverage</a>
+  <a href="#modeling">Models</a>
+  <a href="red-team/">Red-Team</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
 <div class="wrap">
-  <div class="mono" style="font-size:13px;letter-spacing:0.08em;color:#94A3B8;text-transform:uppercase;margin-bottom:14px">Independent Institutional Research</div>
+  <div class="mono" style="font-size:13px;letter-spacing:0.08em;color:#94A3B8;text-transform:uppercase;margin-bottom:14px">Independent Research by a Curious Builder</div>
   <h1 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:44px;letter-spacing:-0.02em;margin-bottom:14px">Tanmay Gambhir</h1>
-  <p style="font-size:17px;color:#CBD5E1;line-height:1.65;max-width:620px;margin-bottom:12px">
-    I'm a Master in Management student (Bocconi × ESSEC) exploring investing by doing the work:
-    venture memos on one side, institutional financial models (DCF / LBO) on the other — all
-    researched and written from public sources. Enterprise AI is where I started; more industries will follow.
+  <p style="font-size:17px;color:#E0E5F0;line-height:1.65;max-width:640px;margin-bottom:12px">
+    I'm a Chartered Accountant with four years of experience at PwC, now starting the Bocconi × ESSEC
+    Master in Management (rotating through Milan, Singapore, and France). I built this portfolio to do the
+    actual work of research, not just read about deals and businesses. Here you'll find venture memos where
+    I try to understand a business deeply, full DCF valuations, and LBO models of recent deals rebuilt from
+    scratch to see if the math actually holds up. Everything is researched and written from public sources.
   </p>
-  <p style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:620px;margin-bottom:24px">
-    These are learning exercises held to a professional standard — every claim is cited, and when a number
-    isn't public, I say so instead of guessing.
+  <p style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:12px">
+    Every number is cited to a public source; when a figure isn't public, I explicitly label it as an estimate rather than guessing.
+  </p>
+  <p style="font-size:14px;color:#E0E5F0;line-height:1.6;max-width:640px;margin-bottom:24px">
+    New here? If you're interested in Enterprise AI, start with the <a href="dust/" style="color:#D4AF37">Dust memo</a> (5 minutes).
+    To see how institutional DCF and LBO models work on real-world deals, dive into the
+    <a href="technogym/" style="color:#D4AF37">Technogym</a> and <a href="recordati/" style="color:#D4AF37">Recordati</a> analyses.
   </p>
 
   <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:56px">
     <a href="https://www.linkedin.com/in/tanmay-g-5432ba203/" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">LinkedIn</a>
     <a href="https://substack.com/@tanmaydiary/posts" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">Substack</a>
-    <a href="https://vc-lab-5mg6vkhrt7uucrxjnowfe3.streamlit.app/" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">VC Lab</a>
-    <a href="https://tanmaygambhir37-design.github.io/#top" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">Website</a>
+    <a href="https://vc-lab-5mg6vkhrt7uucrxjnowfe3.streamlit.app/" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">VC Playbook</a>
     <a href="https://github.com/tanmaygambhir37-design" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">GitHub</a>
+    <a href="mailto:tanmaygambhir37@gmail.com" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">Email</a>
   </div>
 
-  <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:18px">Coverage</div>
+  <div class="mono" id="coverage" style="font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:18px">Coverage</div>
 
   <div style="background:#1E293B;border:1px solid #334155;border-radius:14px;padding:28px 30px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:10px">
       <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:24px">Dust — Series B Follow-On Review</div>
       <div class="mono" style="font-size:12px;color:#D4AF37">JULY 2026 · 22 PAGES</div>
     </div>
-    <div style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:14px">
+    <div style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:10px">
       Enterprise AI agent platform, Paris. $20M+ ARR, Sequoia-anchored cap table, and a moat being dissolved by the
       very standard (MCP) the market credits it for. Recommendation: invest, small follow-on, priced to a
       strategic-acquisition outcome.
+    </div>
+    <div style="font-size:13.5px;color:#E0E5F0;line-height:1.6;max-width:640px;margin-bottom:14px;font-style:italic">
+      I'd put in a small cheque, but only at a price that assumes the company gets acquired, not that it becomes a giant.
     </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap">
       <a href="dust/" class="mono" style="font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:8px 16px">Read the memo →</a>
@@ -55,10 +85,11 @@
     </div>
   </div>
 
-  <div class="mono" style="font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin:56px 0 10px">Financial Modeling</div>
+  <div class="mono" id="modeling" style="font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin:56px 0 10px">Financial Modeling</div>
   <p style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:18px">
-    Two fully-live Excel models with the complete paper trail: research dossier → pre-stated hypothesis →
-    model build → adversarial red-team. Both conclusions moved <em>against</em> the initial thesis — that's the point.
+    Two live Excel models with the complete paper trail: research dossier, a hypothesis written before the build,
+    the model itself, and an adversarial review to break it. Both conclusions moved against my starting view.
+    These are the learning experiences I aim for.
   </p>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
@@ -67,17 +98,18 @@
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
         <div>
           <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:21px;margin-bottom:4px">Recordati — Independent LBO</div>
-          <div style="font-size:13px;color:#94A3B8;line-height:1.5">€10.7bn CVC IX / GBL take-private, underwritten blind at the announced price</div>
+          <div style="font-size:13px;color:#94A3B8;line-height:1.5">Pharma (Milan): A €10.7bn private equity buyout, rebuilt from scratch to test if the price actually makes sense.</div>
         </div>
         <span class="mono" style="font-size:11px;font-weight:700;letter-spacing:0.05em;background:rgba(96,165,250,0.10);color:#7FB0F5;border:1px solid rgba(96,165,250,0.35);border-radius:999px;padding:5px 12px;white-space:nowrap">PARTICIPATE · 6/10</span>
       </div>
+      <div style="font-size:13px;color:#E0E5F0;line-height:1.55;font-style:italic">In short: I'd co-invest a small cheque. The price is defensible, not exciting.</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid #334155;border-bottom:1px solid #334155;padding:12px 0">
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~15.0%</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">Base IRR</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~2.0x</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">MOIC</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">5.5x</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">Entry lev</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">11.5x</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">Exit (12.9x in)</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~15.0%</div><div class="mono" data-tip="Internal Rate of Return: the annualised percentage return on the equity invested in the deal." style="font-size:10px;color:#94A3B8;text-transform:uppercase">Base IRR</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~2.0x</div><div class="mono" data-tip="Multiple on Invested Capital: how many times the original equity cheque is returned at exit." style="font-size:10px;color:#94A3B8;text-transform:uppercase">MOIC</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">5.5x</div><div class="mono" data-tip="Debt at purchase, measured as a multiple of the company's annual operating profit (EBITDA)." style="font-size:10px;color:#94A3B8;text-transform:uppercase">Entry lev</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">11.5x</div><div class="mono" data-tip="Assumed sale price at exit as a multiple of operating profit, versus the 12.9x paid at entry: a deliberately conservative haircut." style="font-size:10px;color:#94A3B8;text-transform:uppercase">Exit (12.9x in)</div></div>
       </div>
-      <div style="font-size:13px;color:#CBD5E1;line-height:1.6;border-left:2px solid #D4AF37;padding-left:12px"><strong style="color:#F8FAFC">Key finding:</strong> the bolt-on machine is IRR-neutral — multiple arbitrage is offset by interest drag. The sponsor case is exit-multiple maintenance (+2.9pt), not BD.</div>
+      <div style="font-size:13px;color:#E0E5F0;line-height:1.6;border-left:2px solid #D4AF37;padding-left:12px"><strong style="color:#F8FAFC">Key finding:</strong> the famous pharma "bolt-on machine" adds almost nothing to the return rate: the interest cost of funding it eats the gain. The sponsor's whole case is a bet that the exit price holds.</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">LBO</span>
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">Private Equity</span>
@@ -85,7 +117,7 @@
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">Red-teamed</span>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="recordati/" class="mono" style="font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:8px 16px">IC summary →</a>
+        <a href="recordati/" class="mono" style="font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:8px 16px">Investment summary →</a>
         <a href="models/Recordati_LBO_Model.xlsx" download class="mono" style="font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:8px 16px">⤓ Model (.xlsx)</a>
       </div>
     </div>
@@ -94,17 +126,18 @@
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
         <div>
           <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:21px;margin-bottom:4px">Technogym — DCF</div>
-          <div style="font-size:13px;color:#94A3B8;line-height:1.5">Does a premium equipment maker deserve platform multiples? The model said no.</div>
+          <div style="font-size:13px;color:#94A3B8;line-height:1.5">Luxury Fitness Equipment (Milan): A valuation model to test if the market should value a hardware maker like a software company.</div>
         </div>
         <span class="mono" style="font-size:11px;font-weight:700;letter-spacing:0.05em;background:rgba(212,175,55,0.12);color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:5px 12px;white-space:nowrap">HOLD · €15.72</span>
       </div>
+      <div style="font-size:13px;color:#E0E5F0;line-height:1.55;font-style:italic">In short: fairly priced today. I wouldn't buy or sell at €15.19.</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;border-top:1px solid #334155;border-bottom:1px solid #334155;padding:12px 0">
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">+3.5%</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">vs spot</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">€8.8–24.1</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">Bear–Bull</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">7.75%</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">WACC</div></div>
-        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~€3.3</div><div class="mono" style="font-size:10px;color:#94A3B8;text-transform:uppercase">Digital opt /sh</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">+3.5%</div><div class="mono" data-tip="Upside of the model's fair value (€15.72) versus the current share price (€15.19)." style="font-size:10px;color:#94A3B8;text-transform:uppercase">vs spot</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">€8.8–24.1</div><div class="mono" data-tip="Fair value per share in the pessimistic (bear) and optimistic (bull) scenarios." style="font-size:10px;color:#94A3B8;text-transform:uppercase">Bear–Bull</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">7.75%</div><div class="mono" data-tip="Weighted Average Cost of Capital: the discount rate applied to future cash flows." style="font-size:10px;color:#94A3B8;text-transform:uppercase">WACC</div></div>
+        <div><div style="font-size:16px;font-weight:650;font-variant-numeric:tabular-nums">~€3.3</div><div class="mono" data-tip="Estimated per-share value of the software/digital business when valued on its own margins, rather than blended into the hardware business." style="font-size:10px;color:#94A3B8;text-transform:uppercase">Digital opt /sh</div></div>
       </div>
-      <div style="font-size:13px;color:#CBD5E1;line-height:1.6;border-left:2px solid #D4AF37;padding-left:12px"><strong style="color:#F8FAFC">Key finding:</strong> isolating the digital P&amp;L at its own margin reveals a real ~€3.3/sh platform option — but it lives in the bull case, and the base is a HOLD.</div>
+      <div style="font-size:13px;color:#E0E5F0;line-height:1.6;border-left:2px solid #D4AF37;padding-left:12px"><strong style="color:#F8FAFC">Key finding:</strong> valuing the software business on its own margins shows it's genuinely worth ~€3.30 a share, but only if it grows. The hardware business alone is worth about what the stock costs today.</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">DCF</span>
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">Equity Research</span>
@@ -112,7 +145,7 @@
         <span class="mono" style="font-size:10px;color:#94A3B8;border:1px solid #334155;border-radius:999px;padding:3px 10px">Red-teamed</span>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="technogym/" class="mono" style="font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:8px 16px">IC summary →</a>
+        <a href="technogym/" class="mono" style="font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:8px 16px">Investment summary →</a>
         <a href="models/Technogym_DCF_Model.xlsx" download class="mono" style="font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:8px 16px">⤓ Model (.xlsx)</a>
       </div>
     </div>
@@ -120,7 +153,7 @@
   </div>
 
   <div style="margin-top:18px">
-    <a href="red-team/" class="mono" style="font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:8px 16px;display:inline-block">Partner red-team review — what broke, what survived →</a>
+    <a href="red-team/" class="mono" style="font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:8px 16px;display:inline-block">The Red-Team Review: I tried to break my own models to see what survived →</a>
   </div>
 
   <div style="margin-top:64px;border-top:1px solid #1E293B;padding-top:22px;font-size:12px;color:#64748B;line-height:1.7">

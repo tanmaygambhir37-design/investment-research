@@ -4,52 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Technogym — DCF Valuation | Tanmay Gambhir</title>
-<meta name="description" content="Driver-based DCF of Technogym: base €15.72 / HOLD. Isolating the digital P&L reveals a ~€3.3/share platform option — but it lives in the bull case.">
+<meta name="description" content="Does a premium equipment maker deserve software company valuation multiples? Base fair value €15.72, HOLD. The software option is worth ~€3.30 a share, but only if it grows.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Technogym: is the software story worth paying for?">
+<meta property="og:description" content="The equipment business alone is worth roughly today's stock price. The software is genuinely worth ~€3.30 a share, but only in the scenario where management proves it can grow it.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/technogym/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0}
   body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
   a{text-decoration:none}
-  .wrap{max-width:780px;margin:0 auto;padding:56px 28px}
+  .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
   .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
   .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
   h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
   h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin:34px 0 10px;padding-bottom:8px;border-bottom:1px solid #1E293B}
-  p,li{font-size:14.5px;color:#CBD5E1;line-height:1.7;margin-bottom:12px}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;color:#F8FAFC;margin:18px 0 6px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
   strong{color:#F8FAFC}
   .meta{font-size:13px;color:#94A3B8;margin-bottom:22px}
   .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
   .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
   table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
   th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
-  th,td{padding:8px 10px;border:1px solid #334155;color:#CBD5E1}
-  .note{font-size:12.5px;color:#94A3B8;line-height:1.6}
+  th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
   .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
   .btn-gold{font-family:'JetBrains Mono',monospace;font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:9px 17px}
   .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+  .thesis{background:rgba(212,175,55,.06);border-left:3px solid #D4AF37;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+  .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
+  .thesis p{margin:0;font-size:14.5px;line-height:1.7;color:#E0E5F0}
   .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
   .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
 </style>
 </head>
 <body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../">TG · RESEARCH</a>
+  <a href="../#coverage">Coverage</a>
+  <a href="../#modeling">Models</a>
+  <a href="../red-team/">Red-Team</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
 <div class="wrap">
   <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← All research</a>
-  <div class="kicker" style="margin-top:26px">IC Summary · DCF Valuation · v3 · 18 July 2026</div>
-  <h1>Technogym S.p.A. (BIT: TGYM)</h1>
-  <div class="meta">Does a premium equipment maker deserve platform multiples? &nbsp;·&nbsp; <span class="pill pill-gold">HOLD · €15.72</span></div>
+  <div class="kicker" style="margin-top:26px">Investment Summary · Discounted Cash Flow (DCF) Valuation · 18 July 2026</div>
+  <h1>Technogym S.p.A. (Milan Stock Exchange: TGYM)</h1>
+  <div class="meta">Does a premium equipment maker deserve software company valuation multiples? &nbsp;·&nbsp; <span class="pill pill-gold">HOLD · €15.72</span></div>
 
-  <div class="btns">
-    <a class="btn-gold" href="../models/Technogym_DCF_Model.xlsx" download>⤓ Download DCF model (.xlsx · 47 KB · 825 live formulas)</a>
-    <a class="btn-ghost" href="ic-summary.pdf" download>IC summary (PDF)</a>
-    <a class="btn-ghost" href="../red-team/">Red-team review →</a>
+  <div class="thesis">
+    <span class="label">The 30-Second Read</span>
+    <p>Technogym makes luxury gym equipment but wants to be valued like a software company. The stock fell 30% recently when US growth stalled, so I built a Discounted Cash Flow (DCF) model to see if the drop created a buying opportunity. It mostly did not. The equipment business alone is worth roughly today's stock price. The interesting part is the software: valued on its own profit margins instead of blended away, it is genuinely worth about €3.30 a share, but only in the scenario where management finally proves it can grow it. Until they show real software numbers, this is a Hold.</p>
   </div>
 
+  <div class="btns">
+    <a class="btn-gold" href="ic-summary.pdf" download>Investment Summary (PDF)</a>
+    <a class="btn-ghost" href="../models/Technogym_DCF_Model.xlsx" download>⤓ Financial Model (.xlsx · 825 live formulas)</a>
+    <a class="btn-ghost" href="../red-team/">Red-team review →</a>
+  </div>
+  <div class="updated">Last updated: 18 July 2026</div>
+
   <h2>Recommendation</h2>
-  <p><strong>HOLD.</strong> Base fair value <strong>€15.72</strong> Gordon / ~€18.3 exit-multiple vs €15.19 spot (<strong>+3.5%</strong>) — below the &gt;20% BUY hurdle. Conviction MODERATE (6.5/10). Entry with margin of safety below €14.50. A BUY requires the H1-2026 print (30 July) confirming Americas stabilisation <strong>and</strong> a credible first digital-KPI disclosure. Bear €8.82 / Bull €24.05. Illustrative probability-weighted fair value (40% Bear / 40% Base / 20% Bull, subjective): <strong>€14.63</strong> — not a headline number.</p>
+  <p><strong>HOLD.</strong> Base fair value is €15.72 per share (calculated using the Gordon Growth terminal value method) or ~€18.3 (using an exit multiple method). This compares to the current stock price of €15.19, representing a +3.5% upside. This is below my &gt;20% hurdle for a BUY rating. Conviction is MODERATE (6.5/10). I would buy with a margin of safety if the stock drops below €14.50. A BUY rating requires the upcoming H1-2026 earnings report (due 30 July) to confirm that the Americas growth slowdown has stabilized, plus a credible first disclosure of digital revenue metrics. Bear case target is €8.82 / Bull case target is €24.05. An illustrative probability-weighted fair value (assuming a 40% chance of Bear, 40% Base, 20% Bull) is €14.63, which confirms the HOLD rating.</p>
 
   <h2>Business &amp; Moat</h2>
-  <p>Premium B2B fitness-equipment franchise (81% commercial revenue) with luxury-brand positioning (10 consecutive Olympics as exclusive supplier), direct field-sales distribution (68% of revenue — owns its customer relationships), an installed base of ~100k facilities generating service/replacement demand, and an embryonic connected-wellness software layer. Moat: brand + distribution density + operator switching costs. The unresolved question — and the stock's entire valuation debate — is whether the digital ecosystem ever monetises: the company discloses no digital KPIs; our explicit L-confidence estimate is ~€45m (4.4% of revenue).</p>
+  <p>Premium Business-to-Business (B2B) fitness equipment franchise (81% commercial revenue) with luxury-brand positioning (they have been the exclusive supplier for 10 consecutive Olympic Games). They use direct field-sales distribution (68% of revenue, meaning they own their own customer relationships). They have an installed base of roughly 100,000 facilities generating recurring service and replacement demand, plus an early-stage connected-wellness software layer. The economic moat relies on brand strength, distribution density, and the cost for gyms to switch providers. The unresolved question, which is the entire stock valuation debate, is whether the digital ecosystem ever makes real money. The company discloses no digital performance metrics (KPIs), so my explicit low-confidence estimate is that digital revenue is currently ~€45m (4.4% of total revenue).</p>
 
   <h2>Financial Quality &amp; Capital Allocation</h2>
   <table>
@@ -59,28 +87,32 @@
     <tr><td>Recurring FCF (€m)</td><td>—</td><td>—</td><td>116.4</td><td>129.9</td></tr>
     <tr><td>Cash conversion (pre-tax FCF/EBITDA)</td><td>—</td><td>—</td><td>86%</td><td>82%</td></tr>
   </table>
-  <p>Net cash €156m, no bank debt; suppliers fund working capital (DPO ~221d). Dividend €0.38 (+extraordinary in 2025), 10% buyback authorisation. Founder-controlled (key-man risk); no M&amp;A habit — organic compounder with a lazy balance sheet that provides a soft LBO floor (4.0–4.5x debt capacity ≈ €900m–1bn).</p>
+  <p>The company has €156m in net cash and no bank debt. Suppliers fund the working capital needs (Days Payable Outstanding is ~221 days, meaning they take a long time to pay suppliers). They pay a €0.38 dividend (plus an extraordinary dividend in 2025) and have a 10% share buyback authorization. The company is founder-controlled (which creates a key-man risk) and has no mergers and acquisitions (M&amp;A) habit. It is an organic compounder with a lazy balance sheet that provides a soft floor for a potential leveraged buyout (LBO) (they could support 4.0 to 4.5x debt capacity, equal to roughly €900m to €1bn).</p>
 
   <h2>Valuation</h2>
-  <p>Driver-based 10yr DCF: BtoB growth fading 9%→2.5%. <strong>Digital P&amp;L isolated (v3):</strong> hardware EBITDA margin expands on its own operating leverage to ~20.75%, digital revenue carries its own ~60% EBITDA margin (sensitised 50–75%), and the total base margin is held at the defensible ~23.5% (2032) — the restructure is margin-neutral, so the rating does not move. WACC 7.75% (Bund 3.13% + 0.95β × 4.23% ERP + 0.6% weighted CRP — no BTP/CRP double-count); terminal g 2.25%, cross-checked by exit multiple. <strong>Gordon implies a ~9.4x exit</strong> — below today's ~13x and below the comp range (JHT 10.5x, Amer Sports 20.1x, Garmin 19.8x bracket the platform debate). TV = 63% of EV.</p>
+  <p>Driver-based 10-year Discounted Cash Flow (DCF) model: Business-to-Business (B2B) growth fading from 9% down to 2.5% over the decade. Digital Profit &amp; Loss (P&amp;L) isolated: Hardware operating profit margin (EBITDA) expands on its own operating leverage to ~20.75%. Digital revenue carries its own ~60% EBITDA margin (stress-tested between 50% and 75%). The total base margin is held at the defensible ~23.5% by 2032. This restructure is margin-neutral, so the rating does not move. The Weighted Average Cost of Capital (WACC, the discount rate) is 7.75%. This is built from a German Bund risk-free rate of 3.13% + a 0.95 Beta × 4.23% Equity Risk Premium (ERP) + a 0.6% weighted Country Risk Premium (CRP). This avoids double-counting risk by not mixing Italian BTP yields with the CRP. Terminal growth is 2.25%, cross-checked by an exit multiple. The Gordon Growth math implies a ~9.4x exit multiple, which is below today's ~13x trading multiple and below the comparable company range (Johnson Health Tech at 10.5x, Amer Sports at 20.1x, and Garmin at 19.8x bracket the platform debate). Terminal Value (TV) makes up 63% of the total Enterprise Value (EV).</p>
   <div class="insight">
-    <p>Isolating digital at its true margin shows the <strong>platform option is worth ~€3.3/share</strong> (base → bull-digital), versus ~€0.6 when it was blended into group margin — material, but it sits in the <strong>bull case, not the base</strong>. The May–July 2026 de-rate (19x→13x EBITDA, −30%) was multiple compression on Americas deceleration (Q1 +2.5%) and downgrades, not an earnings miss; our base sits ~€0.5 above spot — the de-rate was directionally correct and roughly fair. Consensus €19.3–20.6 implicitly pays for a faster digital ramp and ~24.5% margins.</p>
+    <p>Isolating digital at its true margin shows the platform option is worth ~€3.3 per share (when moving from base case to bull case for digital only), versus ~€0.6 when it was blended into the group margin. This is material, but it sits in the bull case, not the base. The May to July 2026 stock price drop (from 19x down to 13x EBITDA, a 30% decline) was multiple compression due to Americas growth deceleration (Q1 was only +2.5%) and analyst downgrades, not an earnings miss. Our base case sits ~€0.5 above the current stock price, meaning the market de-rate was directionally correct and roughly fair. The Wall Street consensus target of €19.3 to €20.6 implicitly pays for a faster digital ramp and ~24.5% margins.</p>
   </div>
 
   <h2>Risks &amp; Catalysts</h2>
-  <p>Risks (ranked): BtoB capex cycle (5pp deceleration ≈ −€3.5–4.0/share); margin stall (bear €8.82); digital thesis failure/non-disclosure; Americas tariffs (17% of revenue); key-man; FX. Catalysts: H1-26 results (30-Jul); first digital KPI disclosure (thesis-defining); Olympic-year pipeline conversion; buyback activation.</p>
+  <p>Risks (ranked by impact): 1. The B2B capital expenditure cycle turns (a 5 percentage point growth deceleration equals roughly a €3.5 to €4.0 per share value loss). 2. Profit margin stalls (bear case €8.82). 3. Digital thesis fails or they continue to hide the numbers. 4. Americas tariffs (17% of revenue). 5. Key-man risk (founder control). 6. Foreign Exchange (FX) risk.</p>
+  <p>Catalysts: H1-2026 results (30 July); first digital KPI disclosure (which would define the thesis); Olympic-year pipeline conversion; buyback activation.</p>
 
   <h2>What Has To Be True / What Changes My Mind</h2>
-  <p>At €15.2 the market prices ~6–8% fading growth, ~22–23% margins, near-zero digital in the base. Mind-changers to BUY: Americas re-acceleration (not tariff deferral proving structural) <strong>and</strong> a first digital disclosure that underwrites the option. To bear: Americas confirming share loss; first margin decline in five years; a third year of digital silence. <strong>Red-team / version revisions applied:</strong> point estimate widened to a range; rating moved to <strong>HOLD</strong> after the v2 IFRS-16 lease-principal fix (−€1.6/sh) and the v3 digital isolation; exit-multiple cross-check promoted as primary TV defence; digital isolated so the bull–base spread reflects the option honestly rather than smuggling it into the margin endpoint.</p>
+  <p>At the current €15.19 price, the market is pricing in roughly 6 to 8% fading growth, 22 to 23% profit margins, and near-zero digital value in the base case.</p>
+  <p>Mind-changers to BUY: Americas growth re-accelerates (proving the slowdown was just tariff deferral, not structural) and a first digital disclosure that supports the software option.</p>
+  <p>Mind-changers to BEAR: Americas confirming they are losing market share; first profit margin decline in five years; a third year of digital silence.</p>
+  <p><strong>Red-team revisions applied:</strong> Widened the point estimate to a range. Moved the rating to HOLD after the IFRS-16 lease principal fix (which lowered value by €1.6/share) and the digital isolation. Promoted the exit-multiple cross-check as the primary terminal value defense. Isolated digital revenue so the bull-to-base spread reflects the software option honestly, rather than artificially inflating the hardware margin endpoint.</p>
 
   <div class="btns">
-    <a class="btn-gold" href="../models/Technogym_DCF_Model.xlsx" download>⤓ Download the model</a>
+    <a class="btn-gold" href="ic-summary.pdf" download>Investment Summary (PDF)</a>
+    <a class="btn-ghost" href="../models/Technogym_DCF_Model.xlsx" download>⤓ Download the model</a>
     <a class="btn-ghost" href="../red-team/">Read the red-team review →</a>
   </div>
 
   <div class="foot">
-    Independent analysis from public sources; the workbook is the source of truth (scenario switch on <span class="mono">03 Assumptions!B3</span>).
-    Not affiliated with, or endorsed by, any company covered. Nothing here is investment advice.<br>
+    Independent analysis from public sources. The Excel workbook is the source of truth (use the scenario switch on the '03 Assumptions' tab to change views). Not affiliated with, or endorsed by, any company covered. Nothing here is investment advice.<br>
     <span class="mono">tanmaygambhir37@gmail.com</span>
   </div>
 </div>
