@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sector Map: The AI Semiconductor Supply Chain | Tanmay Gambhir</title>
+<meta name="description" content="A full-value-chain sector map of AI semiconductors: EDA, equipment, foundry, memory, packaging, and systems — economics, moats, geopolitics, and a watch list.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sector Map: The AI Semiconductor Supply Chain">
+<meta property="og:description" content="How $400B+ of annual AI infrastructure spending flows through the most concentrated, most geopolitically exposed, and most profitable industrial supply chain ever built.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/industry/ai-semiconductor-supply-chain/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<style>
+:root{
+  --ink:#16202e; --ink2:#445062; --muted:#7a8699; --line:#e3e8ef; --bg:#ffffff; --bg2:#f6f8fb;
+  --navy:#0f2a4a; --accent:#1a5cff; --accent2:#0b3d91; --gold:#b8860b;
+  --green:#127a4b; --greenbg:#e8f6ef; --red:#b3261e; --redbg:#fdecea; --amber:#a05a00; --amberbg:#fdf3e3;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;font-size:15.5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* masthead */
+.masthead{background:var(--navy);color:#fff;padding:52px 0 44px;border-bottom:4px solid var(--gold)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#9fb6d4;margin-bottom:14px}
+.masthead h1{font-family:var(--serif);font-size:42px;line-height:1.12;font-weight:700;max-width:820px}
+.masthead .sub{margin-top:16px;font-size:17px;color:#c8d5e6;max-width:760px}
+.meta-strip{display:flex;flex-wrap:wrap;gap:26px;margin-top:28px;font-family:var(--mono);font-size:12px;color:#9fb6d4}
+.meta-strip b{color:#fff;font-weight:600}
+
+/* toc */
+.toc{background:var(--bg2);border-bottom:1px solid var(--line);padding:14px 0;position:sticky;top:0;z-index:50;overflow-x:auto}
+.toc-inner{display:flex;gap:8px;white-space:nowrap}
+.toc a{font-family:var(--mono);font-size:11px;color:var(--ink2);padding:5px 10px;border:1px solid var(--line);border-radius:99px;background:#fff}
+.toc a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+/* sections */
+section{padding:52px 0 8px}
+.snum{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+h2{font-family:var(--serif);font-size:30px;margin-bottom:6px}
+.dek{color:var(--muted);font-size:16px;margin-bottom:24px;max-width:820px}
+h3{font-size:17px;margin:26px 0 10px}
+p{margin-bottom:14px;max-width:860px;color:var(--ink2)}
+p b,li b{color:var(--ink)}
+.rule{border:none;border-top:1px solid var(--line);margin:44px 0 0}
+
+/* callouts */
+.punch{border-left:4px solid var(--gold);background:var(--bg2);padding:16px 20px;margin:20px 0;font-family:var(--serif);font-size:17.5px;color:var(--ink);max-width:860px}
+.note{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* stat band */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:22px 0}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.stat .v{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--navy)}
+.stat .l{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px}
+th{background:var(--navy);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12px;letter-spacing:.03em;white-space:nowrap}
+td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+tr:nth-child(even) td{background:var(--bg2)}
+td b{color:var(--ink)}
+.tbl-scroll{overflow-x:auto}
+.pos{color:var(--green);font-weight:600}.neg{color:var(--red);font-weight:600}.mid{color:var(--amber);font-weight:600}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:2px 8px;border-radius:99px;margin:1px 2px 1px 0;white-space:nowrap}
+.tg{background:var(--greenbg);color:var(--green)}.tr{background:var(--redbg);color:var(--red)}.ta{background:var(--amberbg);color:var(--amber)}.tb{background:#e8efff;color:var(--accent2)}
+
+/* value chain flowchart */
+.chain{margin:26px 0}
+.stage{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.stage-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;padding:13px 18px;background:var(--navy);color:#fff}
+.stage-head .n{font-family:var(--mono);font-size:11px;color:#9fb6d4}
+.stage-head .t{font-family:var(--serif);font-size:19px;font-weight:700}
+.stage-head .m{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:#ffd98a}
+.stage-body{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:0}
+.stage-cell{padding:14px 18px;border-left:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.stage-cell:first-child{border-left:none}
+.stage-cell .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.arrow{text-align:center;color:var(--muted);font-size:20px;line-height:1;padding:7px 0}
+@media(max-width:760px){.stage-body{grid-template-columns:1fr}.stage-cell{border-left:none;border-top:1px solid var(--line)}}
+
+/* moat dots */
+.dots{font-family:var(--mono);letter-spacing:2px;color:var(--accent2);white-space:nowrap}
+.dots .off{color:#d6dde8}
+
+/* five forces */
+.forces{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0}
+.force{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.force .fh{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.force .fh b{font-size:14.5px}
+.force p{font-size:13px;margin:0}
+.badge{font-family:var(--mono);font-size:10.5px;padding:3px 9px;border-radius:99px;font-weight:600}
+.b-low{background:var(--greenbg);color:var(--green)}.b-med{background:var(--amberbg);color:var(--amber)}.b-high{background:var(--redbg);color:var(--red)}
+@media(max-width:760px){.forces{grid-template-columns:1fr}}
+
+/* bull bear */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
+.case{border-radius:12px;padding:20px 22px;border:1px solid var(--line)}
+.case.bull{background:var(--greenbg);border-color:#bfe3d0}
+.case.bear{background:var(--redbg);border-color:#f0c4c0}
+.case h4{font-family:var(--serif);font-size:20px;margin-bottom:10px}
+.case ul{margin:0 0 0 18px}
+.case li{font-size:13.5px;margin-bottom:8px;color:var(--ink2)}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+
+/* dashboard */
+.dash{background:var(--navy);border-radius:14px;padding:30px;color:#dbe6f3;margin:24px 0}
+.dash h3{color:#fff;margin-top:0}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:18px}
+.dash-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 16px}
+.dash-card .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8fa8c8;margin-bottom:6px}
+.dash-card .v{font-family:var(--serif);font-size:21px;font-weight:700;color:#fff}
+.dash-card .s{font-size:12px;color:#b9c9dd;margin-top:4px;line-height:1.4}
+.rating{display:inline-block;background:var(--gold);color:#1c1400;font-family:var(--mono);font-weight:700;font-size:13px;padding:6px 14px;border-radius:8px;letter-spacing:.06em}
+
+ul.tight{margin:0 0 14px 20px;max-width:860px}
+ul.tight li{margin-bottom:7px;color:var(--ink2);font-size:14.5px}
+
+footer{padding:40px 0 60px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);margin-top:60px}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="wrap">
+    <div style="margin-bottom:18px"><a href="../../" style="font-family:var(--mono);font-size:12px;color:#9fb6d4;text-decoration:none">&larr; All research — Tanmay Gambhir</a></div>
+    <div class="kicker">Industry Intelligence &middot; Sector Maps &middot; No. 01</div>
+    <h1>The AI Semiconductor Supply Chain</h1>
+    <div class="sub">How a $400B+ annual torrent of AI infrastructure spending flows through the most concentrated, most geopolitically exposed, and most profitable industrial supply chain ever built.</div>
+    <div class="meta-strip">
+      <div>PUBLISHED <b>July 2026</b></div>
+      <div>SCOPE <b>Full value chain: EDA &rarr; equipment &rarr; foundry &rarr; memory &rarr; packaging &rarr; systems</b></div>
+      <div>READ TIME <b>~20 min</b></div>
+      <div>STATUS <b>Working draft — updated version coming</b></div>
+    </div>
+  </div>
+</div>
+
+<nav class="toc"><div class="wrap toc-inner">
+  <a href="#s1">Summary</a><a href="#s2">Industry Map</a><a href="#s3">Value Chain</a><a href="#s4">Economics</a><a href="#s5">Competitors</a><a href="#s6">Moats</a><a href="#s7">Five Forces</a><a href="#s8">Value Creation</a><a href="#s9">Business Models</a><a href="#s10">Key Metrics</a><a href="#s11">Trends</a><a href="#s12">Geopolitics</a><a href="#s13">Risks</a><a href="#s14">Opportunities</a><a href="#s15">Watch List</a><a href="#s16">Debate</a><a href="#s17">Outlook</a><a href="#s18">Reading</a><a href="#s19">Sources</a><a href="#s20">Dashboard</a>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ============ 1. EXECUTIVE SUMMARY ============ -->
+<section id="s1">
+  <div class="snum">01 &middot; Executive Summary</div>
+  <h2>The 30-Second Read</h2>
+  <div class="dek">What a portfolio manager needs to know walking between meetings.</div>
+
+  <p><b>Why does this industry exist?</b> Training and running AI models is the most computationally intensive activity humans have ever commercialized. A frontier training run consumes more raw compute than existed on Earth two decades ago. The AI semiconductor supply chain exists to convert electricity, sand, and roughly forty years of accumulated process knowledge into that compute &mdash; and almost every step of the conversion runs through a monopoly or near-monopoly.</p>
+
+  <p><b>How does it make money?</b> Four hyperscalers (Amazon, Google, Microsoft, Meta) plus a second tier of AI labs, neoclouds, and sovereigns will spend roughly <b>$725B on capex in 2026</b>, up ~77% year over year. The majority flows into accelerated computing. Nvidia converts that spend into ~70%+ gross margins on GPU systems; TSMC manufactures nearly every advanced AI chip at record 67.7% gross margin; SK Hynix sells HBM memory that is sold out a year forward; ASML sells the only machines (EUV lithography) that can print any of it. Value concentrates wherever there is no second source.</p>
+
+  <p><b>Why does it matter today?</b> Semiconductors are on track for roughly <b>$1 trillion+ in 2026 revenue</b> (forecasts range $975B&ndash;$1.3T), with the AI data-center segment &mdash; over $300B of accelerators alone &mdash; contributing essentially all incremental growth. Nvidia alone did $215.9B of revenue in its fiscal 2026, up 65%. This is no longer a cyclical component industry; it is the capex program of the AI era, comparable to railroads in the 1880s or telecom fiber in 1999 &mdash; with the crucial difference that today's builders fund it from operating cash flow rather than debt (though debt is now creeping in).</p>
+
+  <p><b>What is changing?</b> Three things. First, the bottleneck keeps migrating &mdash; from GPUs (2023) to advanced packaging and HBM (2024&ndash;25) to power, ABF substrates, and lithography capacity (2026). Whoever owns the current bottleneck owns pricing power. Second, custom silicon (Google TPU, Amazon Trainium 3, OpenAI/Broadcom) is growing faster than merchant GPUs, shifting economics toward TSMC and design partners like Broadcom and Marvell. Third, US export controls have effectively split the industry into two stacks: a Western stack and an emerging Chinese stack (Huawei Ascend + SMIC + CXMT) that is 3&ndash;5 years behind but state-funded and improving.</p>
+
+  <p><b>Why should investors care?</b> This supply chain contains several of the best businesses ever created &mdash; monopolies with 40&ndash;70% operating margins, decade-long moats, and secular demand &mdash; trading at 20&ndash;35x forward earnings. It also carries genuine cyclical and geopolitical tail risk: demand depends on the ROI of AI itself, and 90%+ of leading-edge manufacturing sits on one island. The investment question is not "is AI real?" but "which layer of the stack keeps its pricing power when supply catches up?" This report is built to answer that.</p>
+
+  <div class="punch">The core insight: this is not one industry. It is a chain of sequential monopolies, and returns accrue to whichever link is scarcest at any moment. Track the bottleneck, and you track the profit pool.</div>
+</section>
+<hr class="rule">
+<!-- ============ 2. VISUAL INDUSTRY MAP ============ -->
+<section id="s2">
+  <div class="snum">02 &middot; Visual Industry Map</div>
+  <h2>The Value Chain, End to End</h2>
+  <div class="dek">Nine stages between a design idea and a running AI model. Margin % shown is typical gross margin at that layer. Revenue pools are 2026 run-rate estimates.</div>
+
+  <div class="chain">
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 1</span><span class="t">Chip Design Tools &amp; IP (EDA)</span><span class="m">~$25B pool &middot; 85&ndash;90% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Software to design chips with 200B+ transistors; licensed processor architectures. <b>Synopsys, Cadence, Arm, Siemens EDA</b> (private within Siemens), Alphawave. A structural duopoly-plus-one; no chip ships without them.</div>
+        <div class="stage-cell"><div class="h">Geography</div>US-dominant (Synopsys, Cadence), UK (Arm). Export-control chokepoint: EDA access itself is a sanctions lever against China.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag tb">Switching costs</span><span class="tag tb">Ecosystem lock-in</span><span class="tag tg">Recurring revenue</span> Engineers train on one toolchain for a career. ~90% renewal rates, software economics.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 2</span><span class="t">Chip Designers (Fabless)</span><span class="m">~$350B+ pool &middot; 55&ndash;75% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Architect the accelerators. <b>Nvidia</b> (~$5.1T mkt cap, ~90% merchant AI share), <b>AMD</b>, <b>Broadcom &amp; Marvell</b> (custom ASICs for hyperscalers), hyperscaler in-house teams (Google TPU, Amazon Trainium, Microsoft Maia, Meta MTIA). Private: Cerebras, Groq, SambaNova, Tenstorrent.</div>
+        <div class="stage-cell"><div class="h">Geography</div>Overwhelmingly US (Santa Clara). China parallel stack: Huawei HiSilicon, Cambricon, Biren.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag tb">CUDA software moat</span><span class="tag tb">Systems integration</span><span class="tag tg">Fabless = high ROIC</span> Nvidia's real product is a rack-scale system plus 4M-developer ecosystem, not a chip.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 3</span><span class="t">Wafer Fab Equipment</span><span class="m">~$130B pool &middot; 45&ndash;55% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>The machines that make chips. <b>ASML</b> (EUV lithography monopoly; &euro;43&ndash;45B 2026 guidance, raised twice), <b>Applied Materials, Lam Research, Tokyo Electron, KLA</b> (metrology near-monopoly). Top 5 = ~60&ndash;65% of market.</div>
+        <div class="stage-cell"><div class="h">Geography</div>Netherlands (ASML), US (AMAT/LRCX/KLAC), Japan (TEL, Advantest, Screen). Zero Chinese presence at leading edge.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag tb">Physics monopoly</span><span class="tag tb">Installed-base service</span><span class="tag tg">Decades of R&amp;D</span> An EUV tool has 100k+ parts and a 20-year supplier web (Zeiss optics, Trumpf lasers). Unreplicable this decade.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 4</span><span class="t">Foundry (Leading Edge)</span><span class="m">~$160B AI-relevant pool &middot; 55&ndash;68% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Manufacture the wafers. <b>TSMC</b>: ~73% of advanced foundry, 100% of AI accelerator leading edge in practice; Q2'26 revenue $40.2B (+36%), gross margin 67.7% &mdash; an all-time high. <b>Samsung Foundry</b> distant #2; <b>Intel Foundry</b> the subsidized wildcard; <b>SMIC</b> China's champion, stuck at ~7nm without EUV.</div>
+        <div class="stage-cell"><div class="h">Geography</div>Taiwan is the single point of failure: &gt;90% of &le;5nm capacity. Diversification underway (TSMC Arizona &amp; Kumamoto, ~$165B US commitment) but Taiwan keeps the leading edge.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag tb">Process knowledge</span><span class="tag tb">Scale + yield learning</span><span class="tag tb">Customer trust</span> Yield curves compound: whoever runs the most wafers learns fastest. N2 fully booked; pricing power now explicit.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 5</span><span class="t">Memory (HBM)</span><span class="m">~$60B+ HBM pool &middot; 50&ndash;60% GM (HBM)</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>High-bandwidth memory stacked beside the GPU; the binding constraint on accelerator output. <b>SK Hynix</b> ~62% share (Q2'26), <b>Micron</b> ~21% (now &gt;$1T mkt cap), <b>Samsung</b> ~17% and fighting back on HBM4. China's CXMT years behind.</div>
+        <div class="stage-cell"><div class="h">Geography</div>South Korea (SK Hynix, Samsung), US/Japan/Taiwan fabs (Micron). Korea = ~75%+ of HBM supply.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag ta">Oligopoly discipline</span><span class="tag tb">Packaging know-how (MR-MUF)</span><span class="tag tr">Historically cyclical</span> HBM converts commodity DRAM into a qualified, design-in, sold-out-forward product. The question: does it stay that way?</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 6</span><span class="t">Advanced Packaging &amp; Test</span><span class="m">~$60B pool &middot; 20&ndash;50% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Stitch GPU die + HBM onto silicon interposers (CoWoS). <b>TSMC</b> again (CoWoS ~127&ndash;140k wafers/month by end-2026, sold out into 2027), <b>ASE, Amkor</b>, Intel (Foveros). Upstream materials: <b>Ibiden, Shinko, Unimicron</b> (ABF substrates &mdash; $7B market at full utilization; ultimate source: Ajinomoto's build-up film).</div>
+        <div class="stage-cell"><div class="h">Geography</div>Taiwan-centric; Japan for substrates/materials; Korea for HBM stacking. Amkor building in Arizona.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag ta">Current bottleneck</span><span class="tag tb">Co-design with foundry</span> Packaging graduated from afterthought to chokepoint: the chip now IS the package.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 7</span><span class="t">Systems, Networking &amp; ODMs</span><span class="m">~$150B pool &middot; 10&ndash;30% GM</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Turn chips into racks and clusters. Networking: <b>Nvidia (NVLink/InfiniBand/Spectrum-X), Broadcom (Tomahawk), Arista, Astera Labs, Credo, Coherent/Lumentum</b> (optics). Assembly: <b>Foxconn, Quanta, Supermicro, Celestica, Wiwynn</b>. Power/cooling: <b>Vertiv, Eaton, Schneider</b>, liquid-cooling specialists.</div>
+        <div class="stage-cell"><div class="h">Geography</div>Taiwan ODMs (assembly shifting to US/Mexico), US networking silicon, global electrical suppliers.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag tr">ODMs commoditized</span><span class="tag tg">Networking silicon sticky</span> The scale-up fabric (NVLink vs. Ethernet) is a genuine strategic battleground; box assembly is not.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 8</span><span class="t">Data Centers &amp; Compute Clouds</span><span class="m">$725B capex 2026 &middot; margins TBD</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>Deploy and rent the compute. <b>AWS ($200B '26 capex), Google ($175&ndash;185B), Meta ($115&ndash;135B), Microsoft ($110&ndash;120B)</b>; neoclouds <b>CoreWeave, Crusoe, Nebius, Lambda</b>; sovereign AI (Gulf states, Japan, EU); colo/power: Equinix, Digital Realty, utilities, gas-turbine makers.</div>
+        <div class="stage-cell"><div class="h">Geography</div>US-led; Middle East rising fast (UAE/Saudi mega-deals); power availability now dictates siting.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag ta">Scale + cheap capital</span><span class="tag tr">Neocloud economics fragile</span> Hyperscalers capture AI revenue AND build custom chips &mdash; the only customers with real bargaining power in the chain.</div>
+      </div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="stage">
+      <div class="stage-head"><span class="n">STAGE 9</span><span class="t">End Users: Models &amp; Applications</span><span class="m">The demand engine &middot; ROI still unproven at scale</span></div>
+      <div class="stage-body">
+        <div class="stage-cell"><div class="h">What happens / who</div>OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, and every enterprise buying tokens. Their willingness to pay for compute is the load-bearing assumption under the entire $725B capex stack.</div>
+        <div class="stage-cell"><div class="h">Geography</div>US frontier labs dominate; China's labs (DeepSeek et al.) drive efficiency-per-chip innovation under constraint.</div>
+        <div class="stage-cell"><div class="h">Edge</div><span class="tag ta">Everything upstream depends on this layer's ROI</span> If model revenue compounds, the chain re-rates; if it stalls, the correction starts here and moves up.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="punch">Read the map bottom-up as a risk chain and top-down as a profit chain. Profit concentrates in stages 1&ndash;5 (monopolies); risk concentrates in stages 8&ndash;9 (demand). The middle (6&ndash;7) is where bottlenecks temporarily mint fortunes.</div>
+</section>
+<hr class="rule">
+<!-- ============ 3. VALUE CHAIN DEEP DIVE ============ -->
+<section id="s3">
+  <div class="snum">03 &middot; Value Chain Economics</div>
+  <h2>Where Money Is Made, Stage by Stage</h2>
+  <div class="dek">One table, everything that matters: margins, returns, capital intensity, pricing power.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Stage</th><th>Gross Margin</th><th>Op Margin</th><th>ROIC</th><th>Capex / Sales</th><th>Pricing Power</th><th>Switching Costs</th><th>Barriers to Entry</th></tr>
+    <tr><td><b>EDA / IP</b></td><td>85&ndash;90%</td><td>30&ndash;38%</td><td class="pos">20&ndash;30%+</td><td>&lt;5%</td><td class="pos">High</td><td class="pos">Extreme (toolchain careers)</td><td class="pos">Very high &mdash; 30yr code bases</td></tr>
+    <tr><td><b>Fabless design (Nvidia)</b></td><td>70&ndash;75%</td><td>~60%</td><td class="pos">&gt;100%</td><td>&lt;5%</td><td class="pos">Extreme (today)</td><td class="pos">High (CUDA, networking)</td><td class="pos">High &mdash; software ecosystem</td></tr>
+    <tr><td><b>Custom ASIC (AVGO/MRVL)</b></td><td>~65% / ~45%</td><td>30&ndash;45%</td><td class="pos">High</td><td>&lt;7%</td><td class="mid">Medium (customer is designer)</td><td class="pos">High (multi-yr programs)</td><td class="mid">Medium-high</td></tr>
+    <tr><td><b>Equipment (ASML/KLA)</b></td><td>50&ndash;62%</td><td>30&ndash;40%</td><td class="pos">25&ndash;40%</td><td>5&ndash;8%</td><td class="pos">High (monopoly niches)</td><td class="pos">High (process recipes)</td><td class="pos">Extreme &mdash; physics + supplier web</td></tr>
+    <tr><td><b>Foundry (TSMC)</b></td><td>60&ndash;68% (peak)</td><td>~60% (peak)</td><td class="pos">25&ndash;30% (up from ~20%)</td><td class="neg">30&ndash;40%</td><td class="pos">High &amp; rising</td><td class="pos">Very high (redesign = 18mo)</td><td class="pos">Extreme &mdash; $30B+/fab, yield learning</td></tr>
+    <tr><td><b>HBM memory</b></td><td>50&ndash;60% (peak)</td><td>35&ndash;50% (peak)</td><td class="mid">Cyclical: -10% to +30%</td><td class="neg">30&ndash;45%</td><td class="mid">High now, historically nil</td><td class="mid">Medium (12-mo qual cycles)</td><td class="pos">High &mdash; 3 players, $20B+ entry</td></tr>
+    <tr><td><b>OSAT / packaging</b></td><td>15&ndash;25% (ASE/Amkor)</td><td>8&ndash;15%</td><td class="mid">10&ndash;15%</td><td class="neg">15&ndash;25%</td><td class="mid">Improving (scarcity)</td><td class="mid">Medium</td><td class="mid">Medium &mdash; TSMC keeps the best part</td></tr>
+    <tr><td><b>ODM / server assembly</b></td><td class="neg">8&ndash;12%</td><td class="neg">3&ndash;6%</td><td class="mid">Decent (low capital)</td><td>&lt;3%</td><td class="neg">None</td><td class="neg">Low</td><td class="neg">Low &mdash; the commodity layer</td></tr>
+    <tr><td><b>Networking &amp; optics</b></td><td>35&ndash;65%</td><td>15&ndash;45%</td><td class="pos">High (silicon), mid (optics)</td><td>5&ndash;10%</td><td class="mid">Medium-high</td><td class="pos">High (fabric lock-in)</td><td class="mid">Medium-high</td></tr>
+    <tr><td><b>Neoclouds</b></td><td>50&ndash;60% (GPU rental)</td><td class="neg">Thin after depreciation</td><td class="neg">Unproven; leverage-dependent</td><td class="neg">&gt;100% (growth)</td><td class="neg">Falling (rental rates decay)</td><td class="neg">Low</td><td class="neg">Low &mdash; capital is the only ticket</td></tr>
+  </table></div>
+
+  <h3>Where value is created &mdash; and destroyed</h3>
+  <p><b>Created:</b> at every layer where a decade of accumulated learning cannot be bought &mdash; EUV optics, foundry yield curves, CUDA's 4M developers, HBM stacking know-how, KLA's defect libraries. These are cumulative-knowledge businesses: each year of operation widens the gap.</p>
+  <p><b>Destroyed:</b> wherever capital is the only input. Server assembly earns 3&ndash;6% operating margins moving $100B+ of Nvidia content. GPU rental without a captive workload is a depreciation race: an H100 rented at $8/hr in 2023 rents below $2 today, while the debt that bought it still amortizes. Historically, commodity memory destroyed ~$50B of capital per down-cycle; HBM's design-in model is an attempt to escape that fate, not yet proven through a full cycle.</p>
+  <p><b>Customer relationships:</b> the defining feature of this chain is <i>mutual hostage-taking</i>. Nvidia prepays TSMC and Hynix; hyperscalers prepay Nvidia; ASML's customers fund its R&amp;D through orders placed years ahead. Everyone is locked in a multi-year embrace &mdash; which stabilizes the boom and would synchronize the bust.</p>
+</section>
+<hr class="rule">
+
+<!-- ============ 4. INDUSTRY ECONOMICS ============ -->
+<section id="s4">
+  <div class="snum">04 &middot; Industry Economics</div>
+  <h2>Size, Growth, Cycles, Cash</h2>
+  <div class="dek">The numbers that define the sector in mid-2026.</div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">~$1.0&ndash;1.3T</div><div class="l">2026 total semiconductor revenue (WSTS $975B; IDC/Gartner ~$1.3T)</div></div>
+    <div class="stat"><div class="v">&gt;$300B</div><div class="l">2026 data-center accelerator market (GPUs + custom ASICs)</div></div>
+    <div class="stat"><div class="v">$725B</div><div class="l">Big-4 hyperscaler capex 2026 (+77% YoY)</div></div>
+    <div class="stat"><div class="v">$5.3T</div><div class="l">Goldman est. cumulative Big-4 capex FY25&ndash;30</div></div>
+    <div class="stat"><div class="v">$215.9B</div><div class="l">Nvidia FY26 revenue (+65%); Q1 FY27: $81.6B (+85%)</div></div>
+    <div class="stat"><div class="v">67.7%</div><div class="l">TSMC Q2'26 gross margin &mdash; all-time high for a manufacturer at scale</div></div>
+  </div>
+
+  <h3>Growth: history and forward path</h3>
+  <p>Semis grew at a ~7&ndash;8% CAGR for three decades, punctuated by brutal 20&ndash;30% down-cycles (2001, 2008, 2019, 2023 memory). AI broke the pattern: the industry grew ~19% in 2024, ~18&ndash;26% in 2025, and is guided to 26&ndash;50%+ in 2026 depending on the forecaster. The honest way to model it: <b>a structural step-change in the data-center segment layered on an unchanged cyclical base</b> (autos, industrial, mobile remain sluggish). Consensus long-term paths put semis at $1.5&ndash;2T by 2030 if AI capex holds a 20%+ CAGR.</p>
+
+  <h3>Cyclicality &mdash; the honest view</h3>
+  <p>Every prior "this time is different" in semis ended in inventory correction. What's actually different now: (1) demand is prepaid and contracted years forward, (2) supply is physically constrained at multiple layers simultaneously, so over-building is harder, and (3) the buyers fund from cash flow, not leverage &mdash; though 2026's tell is that debt financing (hyperscaler bond issuance, neocloud GPU-backed loans) is growing. The cycle isn't dead; it's postponed and will arrive through the <i>demand</i> side (AI ROI disappointing) rather than the classic supply glut &mdash; which means less warning when it turns.</p>
+
+  <h3>Capital and cash characteristics</h3>
+  <ul class="tight">
+    <li><b>Capital requirements:</b> a leading-edge fab now exceeds $30B; TSMC's 2026 capex runs ~$50B+; a single HBM line ~$3&ndash;5B; an EDA company needs almost nothing. The chain spans the entire capital-intensity spectrum.</li>
+    <li><b>Economies of scale:</b> extreme and compounding at foundry/memory (yield learning per wafer run); network-effect-like at the design layer (CUDA); classic scale in equipment R&amp;D amortization.</li>
+    <li><b>Operating leverage:</b> ferocious. Foundries and memory carry 60&ndash;70% fixed costs; a 10% utilization swing moves operating margins ~8&ndash;10 points. This is why peak margins (now) and trough margins differ so violently.</li>
+    <li><b>Working capital:</b> deteriorating by design &mdash; inventory builds (Nvidia carries months of HBM/CoWoS WIP), prepayments cascade down the chain. Watch inventory days as the earliest cycle indicator.</li>
+    <li><b>Cash conversion:</b> fabless converts 90%+ of net income to FCF; TSMC ~50&ndash;60% during build-outs; memory near zero across a full cycle historically. Hyperscaler FCF is now visibly compressed by capex &mdash; the market has begun charging them for it.</li>
+  </ul>
+
+  <h3>Valuation multiples (July 2026)</h3>
+  <div class="tbl-scroll"><table>
+    <tr><th>Layer</th><th>Representative</th><th>Fwd P/E</th><th>Comment</th></tr>
+    <tr><td>GPU king</td><td>Nvidia</td><td>~30x</td><td>Cheaper than its growth; the multiple embeds durability doubt, not growth doubt</td></tr>
+    <tr><td>Foundry</td><td>TSMC</td><td>~24&ndash;29x</td><td>Structurally re-rated from its historic 15&ndash;20x; monopoly finally priced as one</td></tr>
+    <tr><td>Custom ASIC</td><td>Broadcom</td><td>~32&ndash;41x</td><td>Richest multiple in the chain; priced for flawless OpenAI/hyperscaler execution</td></tr>
+    <tr><td>Equipment</td><td>ASML / KLA / AMAT</td><td>~25&ndash;35x</td><td>Re-rated on 2026 order books; ASML raised guidance twice this year</td></tr>
+    <tr><td>Memory</td><td>Micron / SK Hynix</td><td>~10&ndash;15x</td><td>Classic cyclical discount persists &mdash; the market does not believe peak HBM margins are permanent</td></tr>
+    <tr><td>Systems/ODM</td><td>Supermicro, Quanta</td><td>~12&ndash;20x</td><td>Correctly cheap: revenue without economics</td></tr>
+  </table></div>
+  <p class="note">The multiple spread IS the debate: memory at 12x vs. Broadcom at 35x+ is the market pricing which margins are cyclical and which are structural. If HBM margins prove durable, memory is the cheapest asset in the chain.</p>
+</section>
+<hr class="rule">
+
+<!-- ============ 5. COMPETITIVE LANDSCAPE ============ -->
+<section id="s5">
+  <div class="snum">05 &middot; Competitive Landscape</div>
+  <h2>Who's Who, and Who's Gaining</h2>
+  <div class="dek">Leaders, challengers, disruptors &mdash; with an honest read on financial quality.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Company</th><th>Role</th><th>Business model</th><th>Advantage</th><th>Weakness</th><th>Share</th><th>Financial quality</th></tr>
+    <tr><td><b>Nvidia</b></td><td>Leader</td><td>Full-stack AI systems: chips + NVLink + networking + CUDA, sold as racks</td><td>Ecosystem + one-year product cadence + supply-chain command of TSMC/HBM allocation</td><td>Customer concentration (top-4 = ~50%+ of DC revenue); those customers are building replacements; China revenue ~written off</td><td>~90% merchant AI silicon</td><td class="pos">Exceptional: 70%+ GM, &gt;100% ROIC, net cash</td></tr>
+    <tr><td><b>TSMC</b></td><td>Leader</td><td>Pure-play foundry; takes no product risk, taxes everyone's success</td><td>Yield leadership, N2/A16 roadmap, CoWoS control, customer neutrality</td><td>Geographic concentration; capex super-cycle; US fabs dilute margins ~2&ndash;3pts</td><td>~73% advanced foundry; ~100% of AI accelerators</td><td class="pos">Exceptional: 67.7% GM, ~60% OM, fortress balance sheet</td></tr>
+    <tr><td><b>Broadcom</b></td><td>Challenger (custom)</td><td>Custom XPU design (Google TPU, Meta, OpenAI) + merchant networking + infra software</td><td>Only proven partner for hyperscaler-scale ASICs; Ethernet fabric alternative to NVLink</td><td>Q3'26 AI guide of $16B missed estimates &mdash; lumpy program timing; multiple leaves no room for slips</td><td>~70%+ of custom ASIC design work</td><td class="pos">Excellent; heavy but well-managed leverage from VMware</td></tr>
+    <tr><td><b>AMD</b></td><td>Challenger (merchant)</td><td>MI-series GPUs + EPYC CPUs; the "second source" everyone wants to exist</td><td>Only credible CUDA alternative at scale; OpenAI warrant deal aligned incentives; +186% in Q2'26</td><td>Software (ROCm) still the gap; margins structurally below Nvidia's</td><td>~5&ndash;8% AI accelerators, rising</td><td class="mid">Good and improving; the market now prices success</td></tr>
+    <tr><td><b>SK Hynix</b></td><td>Leader (HBM)</td><td>DRAM/NAND with HBM sold via annual negotiated design-ins</td><td>HBM4 lead, MR-MUF packaging, deepest Nvidia relationship; ~62% HBM share</td><td>Korea concentration; Samsung's HBM4 counterattack; cyclical DNA</td><td>~62% HBM (mid-50s% of Nvidia HBM4)</td><td class="pos">Peak-cycle superb; through-cycle volatile</td></tr>
+    <tr><td><b>Micron</b></td><td>Challenger (HBM)</td><td>Only US memory maker; HBM4 samples shipping at 11 Gbps</td><td>Overtook Samsung to #2 in HBM (~21%); CHIPS-funded US capacity; +240% in Q2'26</td><td>Smallest scale of the three; late-cycle entry risk</td><td>~21% HBM</td><td class="mid">Strong now; crossed $1T mkt cap &mdash; expectations elevated</td></tr>
+    <tr><td><b>Samsung</b></td><td>Wounded giant</td><td>Memory + foundry + everything; lost HBM crown, foundry a distant #2</td><td>Unmatched breadth; HBM3E finally qualified; HBM4 could restore mid-20s% share of Nvidia allocation</td><td>Execution failures 2023&ndash;25 (HBM qual delays, 3nm yields); conglomerate discount earned</td><td>~17% HBM; ~10% adv. foundry</td><td class="mid">Solid balance sheet, weak momentum &mdash; the turnaround option</td></tr>
+    <tr><td><b>ASML</b></td><td>Monopoly</td><td>EUV/High-NA litho systems (&euro;200&ndash;400M each) + service annuity on installed base</td><td>Literal monopoly on the physics; raising capacity 30%/yr for two years; 2026 guide raised twice to &euro;43&ndash;45B</td><td>Order lumpiness; China DUV revenue politically capped; customer concentration (3 buyers of High-NA)</td><td>100% EUV</td><td class="pos">Excellent; ~record backlog</td></tr>
+    <tr><td><b>Intel</b></td><td>Turnaround / national champion</td><td>IDM: products + Foundry open to third parties; now with US government equity stake</td><td>18A/14A process potentially competitive; only US-owned leading-edge logic; geopolitical put option; +216% in Q2'26</td><td>Foundry still burns cash; must win external customers it has never served well</td><td>&lt;5% foundry</td><td class="neg">Weak but state-backstopped &mdash; a policy instrument as much as a company</td></tr>
+    <tr><td><b>Huawei/SMIC/CXMT</b></td><td>Disruptor (China stack)</td><td>Vertically integrated national stack: Ascend 910C/950 chips, SMIC 7nm (~60k wpm 2026), CXMT HBM</td><td>Unlimited state capital; captive domestic market; Ascend output doubling to ~1.6M dies in 2026</td><td>No EUV = stuck near 7nm; CXMT HBM supply caps output (~2M stacks &asymp; 250&ndash;300k chips); yields poor</td><td>Rising share of China market only</td><td class="neg">Economics irrelevant &mdash; strategic, not commercial</td></tr>
+    <tr><td><b>Private: Cerebras, Groq, Tenstorrent, SambaNova</b></td><td>Disruptors</td><td>Alternative architectures (wafer-scale, LPU inference, RISC-V licensing)</td><td>Inference cost/latency niches; sovereign customers (Groq&ndash;Saudi)</td><td>CUDA gravity; capital intensity vs. giants; most likely outcome is acquisition or niche</td><td>&lt;2% combined</td><td class="neg">Venture-stage economics</td></tr>
+  </table></div>
+
+  <p><b>Regional champions worth knowing:</b> Tokyo Electron, Advantest, Screen, Disco (Japan &mdash; test/dicing/coating near-monopolies); Ibiden &amp; Shinko (substrates); MediaTek (Taiwan &mdash; edge-AI silicon); Astera Labs, Credo, Marvell (US &mdash; connectivity); Vertiv (power/cooling); Arm (architecture tax on nearly every chip).</p>
+</section>
+<hr class="rule">
+
+<!-- ============ 6. MOAT ANALYSIS ============ -->
+<section id="s6">
+  <div class="snum">06 &middot; Moat Analysis</div>
+  <h2>Ranking the Moats</h2>
+  <div class="dek">Five-dot scale. What sustains each moat &mdash; and what corrodes it.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Company</th><th>Moat score</th><th>Primary moat</th><th>Secondary</th><th>What corrodes it</th></tr>
+    <tr><td><b>ASML</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;</span></td><td>Technology monopoly (EUV physics + Zeiss optics chain)</td><td>Installed-base service annuity; customer co-funding</td><td>Only a paradigm shift in lithography (none visible this decade); China nanoimprint/DUV multi-patterning nibbles at trailing edge</td></tr>
+    <tr><td><b>TSMC</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;</span></td><td>Cumulative process knowledge + scale (yield learning compounds)</td><td>Customer trust (never competes with customers); CoWoS lock; ecosystem (IP libraries, design kits)</td><td>Geography &mdash; the moat sits in the Taiwan Strait; Intel 14A + subsidies could take marginal share by 2028</td></tr>
+    <tr><td><b>Nvidia</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td>CUDA software ecosystem (~4M developers, 20yr head start)</td><td>Systems integration (NVLink rack-scale); supply-chain allocation power; cadence (new architecture yearly)</td><td>Its own customers: TPU/Trainium at hyperscalers already run trillions of training FLOPs; inference commoditizes faster than training; PyTorch/Triton abstraction weakens CUDA lock</td></tr>
+    <tr><td><b>Synopsys / Cadence</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td>Switching costs (30-year toolchains, engineer habit)</td><td>IP libraries; regulation (export-control gatekeeper status)</td><td>AI-native design tools (could be disruption or reinforcement); open-source EDA remains toy-scale</td></tr>
+    <tr><td><b>KLA</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td>Defect-detection data moat (decades of yield libraries)</td><td>Process-control share &gt;50%; gross margins ~62%</td><td>Little &mdash; quietly one of the best businesses in the chain</td></tr>
+    <tr><td><b>SK Hynix</b></td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td>HBM process know-how (MR-MUF) + qualification lock</td><td>Nvidia design-in relationship; oligopoly structure</td><td>Moat is 12&ndash;24 months deep, renewed each generation: Samsung/Micron HBM4 wins reset the race; commodity DNA lurks beneath</td></tr>
+    <tr><td><b>Broadcom</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td>Customer captivity (multi-year ASIC programs; switching mid-program &asymp; impossible)</td><td>SerDes/networking IP depth; Ethernet ecosystem</td><td>Programs end; hyperscalers can dual-source design partners (Marvell, Alchip) next generation</td></tr>
+    <tr><td><b>Arm</b></td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td>Architecture network effect (software written for Arm ISA)</td><td>Royalty toll-booth model</td><td>RISC-V &mdash; slow but real, and China's preferred escape hatch</td></tr>
+    <tr><td><b>Amkor / ASE</b></td><td><span class="dots">&#9679;&#9679;<span class="off">&#9679;&#9679;&#9679;</span></span></td><td>Scale in a scarce capability (packaging spillover)</td><td>Location + customer qualification</td><td>TSMC keeps the highest-value packaging in-house; scarcity premium fades as capacity lands</td></tr>
+    <tr><td><b>ODMs (SMCI, Quanta)</b></td><td><span class="dots">&#9679;<span class="off">&#9679;&#9679;&#9679;&#9679;</span></span></td><td>Speed and intimacy with Nvidia reference designs</td><td>None durable</td><td>Everything &mdash; every server generation re-opens the contract</td></tr>
+  </table></div>
+
+  <div class="punch">Rule of thumb: moats in this chain scale with <i>accumulated irreplaceable learning</i>, not with revenue. ASML and TSMC cannot be rebuilt with any amount of money in under 15 years. Nvidia could be seriously wounded in 5. An ODM can be displaced in one product cycle.</div>
+</section>
+<hr class="rule">
+<!-- ============ 7. FIVE FORCES ============ -->
+<section id="s7">
+  <div class="snum">07 &middot; Industry Structure</div>
+  <h2>Porter's Five Forces</h2>
+  <div class="dek">Assessed for the core of the chain (design&ndash;foundry&ndash;memory&ndash;equipment). Peripheral layers differ &mdash; noted where relevant.</div>
+
+  <div class="forces">
+    <div class="force"><div class="fh"><b>Threat of New Entrants</b><span class="badge b-low">LOW</span></div>
+      <p>Entry tickets: $30B+ per fab, 15+ years to EUV competence, decades of EDA code. Even nation-states struggle &mdash; China has spent $150B+ and remains ~5 years behind at logic. Exception: chip <i>design</i> entry is merely hard, not impossible &mdash; hence hyperscaler silicon and AI-chip startups. The manufacturing core is a fortress; the design edge is contested.</p></div>
+    <div class="force"><div class="fh"><b>Supplier Power</b><span class="badge b-high">HIGH</span></div>
+      <p>The chain's defining feature. ASML is the sole EUV supplier to TSMC; TSMC the sole viable manufacturer for Nvidia; SK Hynix the lead HBM source; Ajinomoto the sole ABF film maker; Zeiss the sole EUV optics maker. Single-source relationships stack five deep. Each layer extracts a toll from the one below &mdash; visible in TSMC's price hikes and HBM's negotiated annual contracts.</p></div>
+    <div class="force"><div class="fh"><b>Buyer Power</b><span class="badge b-med">MEDIUM &rarr; RISING</span></div>
+      <p>Four buyers fund most of the chain ($725B capex), which should mean power &mdash; but they are compute-starved and bid against each other, plus sovereigns and neoclouds. Their real leverage is the credible threat of custom silicon: every TPU/Trainium generation shifts pricing power a notch. Watch the merchant-vs-custom mix as the balance-of-power gauge.</p></div>
+    <div class="force"><div class="fh"><b>Threat of Substitutes</b><span class="badge b-low">LOW (for now)</span></div>
+      <p>No substitute for advanced silicon compute exists at scale. Real substitution happens <i>within</i> the chain: algorithmic efficiency (DeepSeek-style training economies) substitutes software for hardware; smaller specialized models substitute for frontier scale. Photonics, neuromorphic, quantum: all &gt;5 years from displacing merchant volume.</p></div>
+    <div class="force"><div class="fh"><b>Rivalry</b><span class="badge b-med">MEDIUM</span></div>
+      <p>Strange structure: monopolists don't fight each other (ASML vs. TSMC vs. Nvidia are vertical partners), so rivalry concentrates in pockets &mdash; HBM's three-way war, AMD vs. Nvidia, Ethernet vs. NVLink, foundry's TSMC-vs-Intel skirmish. Where rivalry is hot, margins are contested; where it is absent, margins are historic.</p></div>
+    <div class="force" style="background:var(--bg2)"><div class="fh"><b>Verdict</b><span class="badge b-low">ATTRACTIVE CORE</span></div>
+      <p>The design&ndash;manufacture&ndash;equip core is among the most structurally attractive industries in existence &mdash; sequential monopolies with rising demand. Attractiveness decays with distance from the core: assembly, integration, and undifferentiated GPU rental are structurally poor. Invest in the core; trade the periphery.</p></div>
+  </div>
+</section>
+<hr class="rule">
+
+<!-- ============ 8. VALUE CREATION ============ -->
+<section id="s8">
+  <div class="snum">08 &middot; Value Creation</div>
+  <h2>Who Actually Captures the Economics</h2>
+  <div class="dek">Follow one dollar of hyperscaler capex through the chain.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Claim on $1.00 of AI data-center capex (approx.)</th><th>Share</th><th>Who</th><th>Economics captured</th></tr>
+    <tr><td>Accelerator systems (GPU/ASIC racks)</td><td>~$0.40&ndash;0.50</td><td>Nvidia, AMD, Broadcom/Marvell designs</td><td class="pos">The lion's share &mdash; ~75% GM on the Nvidia slice</td></tr>
+    <tr><td>&mdash; of which flows through to foundry &amp; packaging</td><td>~$0.10&ndash;0.12</td><td>TSMC (wafers + CoWoS)</td><td class="pos">Extraordinary: ~68% GM on its slice, and it taxes every vendor equally</td></tr>
+    <tr><td>&mdash; of which flows to HBM</td><td>~$0.08&ndash;0.10</td><td>SK Hynix, Micron, Samsung</td><td class="pos">Peak-cycle excellent; the swing factor</td></tr>
+    <tr><td>Networking, optics, interconnect</td><td>~$0.08&ndash;0.12</td><td>Nvidia, Broadcom, Arista, Astera, Coherent</td><td class="pos">Strong and growing with cluster scale</td></tr>
+    <tr><td>Power, cooling, electrical, shell</td><td>~$0.20&ndash;0.25</td><td>Vertiv, Eaton, Schneider, contractors, utilities</td><td class="mid">Good and durable, but competitive</td></tr>
+    <tr><td>Assembly, integration, logistics</td><td>~$0.05</td><td>ODMs</td><td class="neg">Revenue without profit</td></tr>
+    <tr><td>Storage, CPUs, other silicon</td><td>~$0.08&ndash;0.10</td><td>Various</td><td class="mid">Mixed</td></tr>
+  </table></div>
+
+  <p><b>Who earns excess returns:</b> Nvidia (~60% operating margin on ~$240B run-rate), TSMC (~60% OM at peak), ASML/KLA (structurally), SK Hynix (cyclically), Broadcom (contractually). Between them they capture the overwhelming majority of the chain's economic profit &mdash; five companies out of hundreds.</p>
+  <p><b>Who destroys capital:</b> historically, memory in down-cycles and trailing-edge foundries; today the candidates are levered neoclouds renting undifferentiated GPUs (depreciation outruns rental yield), late-arriving AI-chip startups, and any government-sponsored fab built for politics rather than customers. The next write-downs are being financed right now, at the periphery.</p>
+  <p><b>The disappearance test:</b> if this industry vanished tomorrow, the loudest screams would come from OpenAI, Anthropic, Google, and Meta within <i>days</i> &mdash; model progress would halt. Within weeks: every cloud, every enterprise AI deployment, global phone/PC/auto production. The world's marginal productivity growth now routes through this one supply chain &mdash; which is precisely why governments treat it as strategic infrastructure and why the industry's biggest risk is being <i>too</i> important to be left alone.</p>
+</section>
+<hr class="rule">
+
+<!-- ============ 9. BUSINESS MODELS ============ -->
+<section id="s9">
+  <div class="snum">09 &middot; Business Models</div>
+  <h2>Six Ways to Make Money in This Chain</h2>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Model</th><th>Revenue model</th><th>Cost structure</th><th>GM</th><th>EBITDA M</th><th>Cash conversion</th><th>Capital intensity</th><th>Signature KPIs</th></tr>
+    <tr><td><b>Toll-booth software (EDA/IP)</b><br>Synopsys, Cadence, Arm</td><td>Subscriptions + royalties per chip shipped</td><td>~90% engineers</td><td>85&ndash;90%</td><td>35&ndash;45%</td><td class="pos">Excellent</td><td>Minimal</td><td>Renewal rate, royalty/unit, backlog</td></tr>
+    <tr><td><b>Fabless systems (Nvidia, AMD)</b></td><td>Hardware sales at software-like margins; growing services/software attach</td><td>R&amp;D-heavy; COGS outsourced to TSMC/HBM</td><td>55&ndash;75%</td><td>50&ndash;65% (NVDA)</td><td class="pos">Excellent</td><td>Low (prepays aside)</td><td>Data-center rev growth, backlog/visibility, attach rate of networking</td></tr>
+    <tr><td><b>Custom silicon partner (Broadcom, Marvell)</b></td><td>NRE + per-unit on multi-year programs</td><td>Design teams + IP amortization</td><td>45&ndash;65%</td><td>40&ndash;60%</td><td class="pos">Strong</td><td>Low</td><td>Program wins, XPU units, SerDes share</td></tr>
+    <tr><td><b>Foundry (TSMC)</b></td><td>Price per wafer, rising ~3&ndash;10%/yr at leading edge + packaging attach</td><td>~60% fixed: depreciation, utilities, labor</td><td>55&ndash;68%</td><td>~70%</td><td class="mid">Good (capex drag)</td><td class="neg">Extreme (30&ndash;40% of rev)</td><td>Utilization, node mix %, wafer ASP, capex/depn ratio</td></tr>
+    <tr><td><b>Memory (SK Hynix, Micron)</b></td><td>HBM: annual contracted design-ins. Commodity DRAM/NAND: spot + quarterly</td><td>Fab depreciation dominates</td><td>30&ndash;60% (cycle)</td><td>40&ndash;65% peak / negative trough</td><td class="neg">Poor through-cycle</td><td class="neg">Extreme</td><td>HBM mix %, bit growth vs. capex, contract coverage, inventory days</td></tr>
+    <tr><td><b>Equipment (ASML, AMAT, LRCX, KLA)</b></td><td>System sales (lumpy) + service/upgrades annuity (~25&ndash;30% of rev, growing)</td><td>R&amp;D + skilled assembly; supplier network</td><td>45&ndash;62%</td><td>30&ndash;42%</td><td class="pos">Strong</td><td>Moderate</td><td>Bookings/backlog, service mix, installed base, China %</td></tr>
+  </table></div>
+  <p class="note">Pattern worth internalizing: the closer the revenue model is to a <b>recurring toll on someone else's volume</b> (EDA royalties, ASML service, TSMC wafer pricing), the better the through-cycle economics. One-shot hardware sales &mdash; even glorious ones &mdash; must be re-won every cycle.</p>
+</section>
+<hr class="rule">
+
+<!-- ============ 10. KEY METRICS ============ -->
+<section id="s10">
+  <div class="snum">10 &middot; Key Metrics Cheat Sheet</div>
+  <h2>What to Actually Watch</h2>
+  <div class="dek">The dozen numbers that move this sector, and why.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Metric</th><th>Where</th><th>Why it matters</th></tr>
+    <tr><td><b>Hyperscaler capex guidance</b></td><td>MSFT/GOOG/AMZN/META earnings calls</td><td>The sector's top-line, one quarter early. 2026: $725B, +77%. The single most important number in semis. A deceleration in the <i>growth rate</i> hits high-multiple stocks before absolute cuts appear.</td></tr>
+    <tr><td><b>Nvidia data-center revenue &amp; visibility</b></td><td>NVDA quarterly</td><td>Q1 FY27: $75.2B (+92%). Watch the mix commentary: hyperscale ~50% vs. AI clouds/enterprise/sovereign ~50% &mdash; diversification of demand is the bull case's load-bearing wall.</td></tr>
+    <tr><td><b>TSMC HPC revenue % and gross margin</b></td><td>TSM quarterly</td><td>HPC = 66% of revenue; GM 67.7%. Rising GM = pricing power confirmed. Falling utilization would be the cycle's first hard signal.</td></tr>
+    <tr><td><b>CoWoS capacity &amp; allocation</b></td><td>TSMC commentary, supply-chain checks</td><td>~127&ndash;140k wpm exiting 2026, sold out into 2027. The physical ceiling on global AI chip output. When CoWoS stops being scarce, GPU pricing power weakens.</td></tr>
+    <tr><td><b>HBM contract pricing &amp; share shifts</b></td><td>SK Hynix/Micron/Samsung calls, TrendForce</td><td>HBM4 allocation (Hynix mid-50s%, Samsung mid-20s%, Micron ~20%) resets annually. First HBM price <i>decline</i> = memory cycle turning.</td></tr>
+    <tr><td><b>ASML bookings &amp; backlog</b></td><td>ASML quarterly</td><td>Record ~$15.7B quarterly orders (Jan '26); capacity +30%/yr planned. Equipment orders lead fab output by ~18 months &mdash; the industry's longest leading indicator, in both directions.</td></tr>
+    <tr><td><b>Wafer ASP / node mix</b></td><td>TSMC disclosures</td><td>N3 30% + N5 33% of wafer revenue. Advanced node mix (77%) is the margin engine; N2 ramp pricing (~$30k+/wafer est.) sets 2027 economics.</td></tr>
+    <tr><td><b>Custom ASIC unit forecasts</b></td><td>Broadcom/Marvell calls</td><td>The merchant-vs-custom ratio is the Nvidia-moat gauge. Broadcom's $16B Q3 AI guide missing estimates was the year's most important "crack" datapoint.</td></tr>
+    <tr><td><b>GPU rental rates (spot)</b></td><td>Neocloud pricing pages, brokers</td><td>The real-time price of compute. H100 spot fell &gt;75% from 2023 peaks &mdash; healthy for demand, lethal for levered GPU landlords. Blackwell rates are the one to watch now.</td></tr>
+    <tr><td><b>Inventory days across the chain</b></td><td>10-Qs</td><td>The classic cycle thermometer. Rising finished-goods inventory at ODMs/distributors historically precedes corrections by 2&ndash;3 quarters.</td></tr>
+    <tr><td><b>Power: MW contracted / interconnect queues</b></td><td>Utility filings, hyperscaler PPAs</td><td>Electricity is the 2027+ binding constraint. Data-center power deals (nuclear restarts, gas turbines sold out to 2029) tell you whether the 2027&ndash;28 capex can physically deploy.</td></tr>
+    <tr><td><b>Model economics (tokens, API pricing, AI revenue)</b></td><td>OpenAI/Anthropic disclosures, hyperscaler AI revenue lines</td><td>The end-demand truth serum. Token prices falling while token <i>volume</i> grows faster = healthy (Jevons). AI revenue stalling while capex grows = the bear case beginning.</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+<!-- ============ 11. SECULAR TRENDS ============ -->
+<section id="s11">
+  <div class="snum">11 &middot; Secular Trends</div>
+  <h2>Signal vs. Noise</h2>
+
+  <h3>Trends that matter</h3>
+  <div class="tbl-scroll"><table>
+    <tr><th>Trend</th><th>So what?</th></tr>
+    <tr><td><b>Inference overtakes training</b></td><td>Training is lumpy, concentrated, frontier-lab-driven; inference is recurring, distributed, and scales with actual usage. Inference favors cost-per-token over peak FLOPs &mdash; better for custom ASICs, AMD, and memory bandwidth; a relative headwind for Nvidia's training premium. The mix shift is the decade's most investable rotation.</td></tr>
+    <tr><td><b>Custom silicon compounding</b></td><td>Trainium 3 at 3nm powering a 500k-chip cluster (Project Rainier); TPU v7 at scale; OpenAI&ndash;Broadcom racks arriving. Every custom chip deployed transfers margin from Nvidia to TSMC + design partner. TSMC is the arms dealer that wins either way.</td></tr>
+    <tr><td><b>Power as the binding constraint</b></td><td>Chips are outrunning grid build-out. This shifts value to electrical equipment, turbines, nuclear PPAs, and cooling &mdash; and caps the deployment rate of everything upstream. The bottleneck's next migration is out of silicon entirely.</td></tr>
+    <tr><td><b>Algorithmic efficiency</b></td><td>DeepSeek-class training economies showed 10x cost reductions are achievable. Bears read this as demand destruction; three years of evidence says Jevons paradox wins &mdash; cheaper compute &rarr; more consumption. But it caps <i>pricing</i>, which matters for the margin structure even as volumes grow.</td></tr>
+    <tr><td><b>Supply-chain bifurcation (US/China)</b></td><td>Two full stacks being built in parallel. Doubles global equipment/fab demand in the medium term (bullish for suppliers who can sell to both sides' legal segments), but ends the single-market assumption underlying 30 years of semiconductor economics.</td></tr>
+    <tr><td><b>Advanced packaging as the new scaling axis</b></td><td>Transistor shrink is slowing; performance now comes from stitching more silicon together (CoWoS &rarr; CoPoS, glass substrates, co-packaged optics). Value migrates from front-end litho toward packaging, substrates, and interconnect &mdash; a durable mix shift in who captures the wafer dollar.</td></tr>
+  </table></div>
+
+  <h3>Mostly noise</h3>
+  <ul class="tight">
+    <li><b>Quantum computing</b> &mdash; real science, no relevance to AI compute economics this decade.</li>
+    <li><b>"GPU glut" headlines off spot-rental prices</b> &mdash; spot rates measure the neocloud periphery, not contracted hyperscaler demand. Watch capex guides, not rental listings.</li>
+    <li><b>Neuromorphic / photonic replacement claims</b> &mdash; photonics matters for <i>interconnect</i> (real, near-term), not for replacing the GPU itself.</li>
+    <li><b>Month-to-month China chip "breakthrough" stories</b> &mdash; direction is real and covered in &sect;12; individual announcements are mostly state media amplification. Track SMIC wafer capacity and CXMT HBM output instead.</li>
+  </ul>
+</section>
+<hr class="rule">
+
+<!-- ============ 12. GEOPOLITICS ============ -->
+<section id="s12">
+  <div class="snum">12 &middot; Geopolitical Considerations</div>
+  <h2>The Most Politicized Supply Chain on Earth</h2>
+
+  <h3>The export-control regime (as of mid-2026)</h3>
+  <p>Policy has whipsawed: H20 sales to China halted (Apr 2025), reversed (Jul 2025) but never shipped; H200 sales approved by the White House (Dec 2025) and codified (Jan 2026) with case-by-case licenses, a cap of China-bound volume at 50% of US shipments, and a 25% tariff-style levy. Then BIS clarified (May 31, 2026) that licenses are required for shipments to <b>any entity with a Chinese ultimate parent, anywhere in the world</b> &mdash; closing the offshore loophole. Net effect: Nvidia's China AI business has generated essentially zero revenue since early 2025, and Chinese buyers, wary of policy reversal and under domestic pressure to buy Huawei, have largely moved on. Brookings' verdict is close to consensus: the US is effectively <i>out</i> of China's AI chip market.</p>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Dimension</th><th>State of play</th><th>Investment implication</th></tr>
+    <tr><td><b>Taiwan concentration</b></td><td>&gt;90% of &le;5nm logic; CoWoS overwhelmingly Taiwanese. TSMC's $165B US build-out shifts perhaps 15&ndash;20% of leading-edge output to Arizona by ~2030.</td><td>The un-hedgeable tail risk. Every multiple in the chain embeds an implicit Taiwan discount &mdash; and it is arguably too small. Diversification progress is the key re-rating catalyst for TSM.</td></tr>
+    <tr><td><b>China's counter-stack</b></td><td>Huawei Ascend output doubling to ~1.6M dies (2026); SMIC 7nm ~60k wpm; CXMT HBM ~2M stacks (enough for only ~250&ndash;300k top-end chips). Ascend 950 series launching through 2026.</td><td>China solves "good enough" domestic AI compute by ~2028 but stays 3&ndash;5 yrs behind frontier without EUV. Chinese share loss is permanent for US chipmakers &mdash; model China revenue at zero and treat any recovery as upside.</td></tr>
+    <tr><td><b>Industrial policy</b></td><td>US CHIPS Act evolved into direct equity (Intel stake); Japan (Rapidus, TSMC Kumamoto subsidies), EU, India, Gulf states all paying for fabs. Sovereign AI purchases (UAE/Saudi) now a top-5 demand source.</td><td>Subsidized capacity is future margin pressure at trailing edge, but sovereign <i>demand</i> is a genuine new revenue pool. Follow the subsidies for equipment names &mdash; every fab, economic or not, buys tools.</td></tr>
+    <tr><td><b>Chokepoint weaponization</b></td><td>US controls: EDA, EUV/DUV (via Netherlands), equipment. China controls: gallium, germanium, rare-earth processing; used sparingly but demonstrably.</td><td>Both sides have escalation ladders. Materials names and equipment China-exposure (~20&ndash;40% of AMAT/LRCX revenue historically) are the pressure points.</td></tr>
+    <tr><td><b>Currency &amp; tariffs</b></td><td>Semiconductor-specific tariff regimes in flux; TWD/KRW/JPY moves swing reported margins for TSMC/Hynix/equipment.</td><td>Second-order but real: TSMC flags FX in every guide. Tariff pass-through so far absorbed by scarcity pricing.</td></tr>
+  </table></div>
+
+  <div class="punch">The geopolitical paradox: export controls were designed to slow China's AI progress. They have also guaranteed Huawei a protected domestic monopsony, cost US firms a ~$50B market, and accelerated the very self-sufficiency drive they aimed to prevent. Investors should assume bifurcation is permanent &mdash; and price both stacks accordingly.</div>
+</section>
+<hr class="rule">
+
+<!-- ============ 13. RISKS ============ -->
+<section id="s13">
+  <div class="snum">13 &middot; Risks</div>
+  <h2>What Kills the Thesis</h2>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Risk</th><th>Type</th><th>Probability</th><th>Severity</th><th>Mechanism &amp; early warning</th></tr>
+    <tr><td><b>AI ROI disappointment</b></td><td>Structural</td><td class="mid">Medium</td><td class="neg">Severe</td><td>Enterprise AI revenue fails to justify $725B/yr capex; boards cut. Watch: hyperscaler AI revenue disclosure vs. capex growth; CFO language shifting from "demand-constrained" to "optimizing."</td></tr>
+    <tr><td><b>Classic inventory/digestion cycle</b></td><td>Cyclical</td><td class="mid">Medium-high by 2027</td><td class="mid">Moderate</td><td>Even secular booms pause (cloud capex 2019, 2022). Multi-layer double-ordering unwinds fast. Watch: ODM inventory days, CoWoS spot availability, HBM contract renegotiations.</td></tr>
+    <tr><td><b>Taiwan conflict / blockade</b></td><td>Black swan</td><td class="pos">Low (annually)</td><td class="neg">Catastrophic</td><td>Uninsurable, unhedgeable within the sector; would halt global AI progress and vaporize multiples chain-wide. Only mitigations: position sizing and the slow Arizona/Kumamoto build-out.</td></tr>
+    <tr><td><b>Nvidia moat erosion</b></td><td>Competitive</td><td class="mid">Medium (gradual)</td><td class="mid">Moderate&ndash;severe for NVDA; neutral for chain</td><td>Custom ASIC mix + Ethernet fabrics + PyTorch abstraction chip away. This redistributes profit within the chain rather than destroying it. Watch: custom ASIC unit growth vs. GPU units.</td></tr>
+    <tr><td><b>Debt entering the ecosystem</b></td><td>Financial</td><td class="mid">Rising</td><td class="mid">Moderate</td><td>Neocloud GPU-backed lending, vendor financing, hyperscaler bond issuance, circular deals (chipmaker invests in customer who buys chips). Echoes of 1999 vendor financing. Watch: credit spreads on AI-infra debt; any GPU-collateral markdowns.</td></tr>
+    <tr><td><b>Power wall</b></td><td>Execution</td><td class="mid">High (as friction)</td><td class="pos">Mild&ndash;moderate</td><td>Chips ship but can't be energized; revenue slips right. Watch: interconnect queue times, turbine lead times, datacenter vacancy near zero.</td></tr>
+    <tr><td><b>Regulatory / antitrust</b></td><td>Regulatory</td><td class="pos">Low&ndash;medium</td><td class="pos">Mild</td><td>Dominance this visible invites scrutiny (Nvidia allocation practices, ASML/TSMC pricing). Slow-burn risk, mostly headline volatility.</td></tr>
+    <tr><td><b>Capital allocation hubris</b></td><td>Company</td><td class="mid">Medium</td><td class="pos">Company-specific</td><td>Peak-cycle cash tempts empire-building M&amp;A and buybacks at top multiples (memory's historic vice; Intel's past). Judge managements by counter-cyclical discipline.</td></tr>
+    <tr><td><b>Model-architecture discontinuity</b></td><td>Technology</td><td class="pos">Low</td><td class="mid">Moderate</td><td>A post-transformer architecture with radically different hardware needs would strand some silicon. GPUs' generality is the hedge; fixed-function ASICs carry the exposure.</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+
+<!-- ============ 14. INVESTMENT OPPORTUNITIES ============ -->
+<section id="s14">
+  <div class="snum">14 &middot; Investment Opportunities</div>
+  <h2>Where the Asymmetries Are</h2>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Category</th><th>Names</th><th>The argument</th></tr>
+    <tr><td><b>Core compounders</b></td><td>TSMC, ASML, KLA</td><td>Irreplaceable monopolies with pricing power finally being exercised. TSMC at ~24&ndash;29x for 40% growth and 60% operating margins is arguably still the chain's best risk-adjusted asset &mdash; the Taiwan discount is the price of admission. ASML's twice-raised 2026 guide plus 30%/yr capacity expansion extends visibility into 2028.</td></tr>
+    <tr><td><b>Quality at a debate</b></td><td>Nvidia</td><td>~30x forward for the most profitable company in history is not expensive <i>if</i> data-center revenue holds. The debate is durability, not growth. Sized correctly, still core; the error is treating it as riskless.</td></tr>
+    <tr><td><b>The cyclical-to-structural bet</b></td><td>SK Hynix, Micron</td><td>If HBM's design-in, annually-contracted model has genuinely broken the memory cycle, 10&ndash;15x P/E is the cheapest quality in the chain. If not, you're buying the top of a memory cycle at $1T valuations (Micron). The single most consequential judgment call in the sector.</td></tr>
+    <tr><td><b>Hidden monopolies (picks &amp; shovels squared)</b></td><td>Ibiden, Shinko, Disco, Advantest, Ajinomoto (yes, the MSG company), Zeiss (via Carl Zeiss Meditec proxy is imperfect), BESI</td><td>Sole or dominant suppliers of substrates, dicing, test, build-up film, optics, hybrid bonding &mdash; tiny slices of BOM, total veto power over output, rarely covered, often at mid-teens multiples in Japan.</td></tr>
+    <tr><td><b>Turnarounds / options</b></td><td>Intel, Samsung</td><td>Intel: a state-backstopped option on 14A working and on Taiwan-risk hedging demand &mdash; the downside is now politically managed. Samsung: HBM4 redemption plus foundry stabilization from a wounded-giant valuation. Both are options, not compounders &mdash; size accordingly.</td></tr>
+    <tr><td><b>The power trade</b></td><td>Vertiv, Eaton, GE Vernova, nuclear/PPA plays</td><td>Every scenario in which chips keep shipping requires electrons and cooling. Less monopolistic than silicon, but the demand visibility (turbines sold out years out) is comparable and the multiples are lower.</td></tr>
+    <tr><td><b>Underpriced connectivity</b></td><td>Marvell, Astera Labs, Coherent, Arista</td><td>Cluster scale grows super-linearly in interconnect content: the bigger the cluster, the higher the networking share of BOM. Co-packaged optics is the next design-in cycle to handicap.</td></tr>
+    <tr><td><b>Avoid / short candidates</b></td><td>Undifferentiated ODMs at peak multiples; levered pure-rental neoclouds; late-stage AI-chip startups at unicorn marks</td><td>Each is a structurally margin-poor or depreciation-exposed model currently priced on revenue momentum. This is where the cycle's capital destruction is being pre-positioned.</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+<!-- ============ 15. COMPANIES TO WATCH ============ -->
+<section id="s15">
+  <div class="snum">15 &middot; Companies to Watch</div>
+  <h2>The Watch List</h2>
+  <div class="dek">Market caps and multiples approximate as of July 2026. Moat on the 5-dot scale from &sect;06.</div>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Company</th><th>Ticker</th><th>Country</th><th>Business</th><th>Mkt Cap</th><th>Moat</th><th>Growth</th><th>ROIC</th><th>Valuation</th><th>Why interesting</th></tr>
+    <tr><td><b>Nvidia</b></td><td>NVDA</td><td>US</td><td>AI systems &amp; CUDA</td><td>~$5.1T</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">+65% FY26</td><td class="pos">&gt;100%</td><td>~30x fwd</td><td>The profit pool itself; the debate is 2028 margins, not 2026 growth</td></tr>
+    <tr><td><b>TSMC</b></td><td>TSM</td><td>Taiwan</td><td>Leading-edge foundry</td><td>~$2.2T</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;</span></td><td class="pos">+40% '26</td><td class="pos">~25&ndash;30%</td><td>~24&ndash;29x</td><td>Wins whoever wins the chip war; pricing power now explicit</td></tr>
+    <tr><td><b>Broadcom</b></td><td>AVGO</td><td>US</td><td>Custom ASICs + networking + software</td><td>~$1.9T</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">High-teens+</td><td class="pos">High</td><td class="mid">~32&ndash;41x</td><td>The anti-Nvidia trade with Nvidia-like economics; richest multiple = least forgiveness</td></tr>
+    <tr><td><b>Micron</b></td><td>MU</td><td>US</td><td>DRAM/NAND/HBM</td><td>~$1.0T</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">Explosive (HBM)</td><td class="mid">Cyclical</td><td class="pos">Low-teens</td><td>+240% in Q2'26; the "memory cycle is dead" thesis in its purest, riskiest form</td></tr>
+    <tr><td><b>SK Hynix</b></td><td>000660.KS</td><td>Korea</td><td>HBM leader</td><td>~$600&ndash;900B</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">Very high</td><td class="mid">Cyclical</td><td class="pos">~10&ndash;14x</td><td>~62% HBM share, mid-50s% of Nvidia HBM4; cheapest large-cap AI pure-play</td></tr>
+    <tr><td><b>AMD</b></td><td>AMD</td><td>US</td><td>Merchant GPU #2</td><td>~$860B</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">Very high</td><td class="mid">Improving</td><td class="mid">Rich</td><td>+186% Q2'26 on OpenAI alignment; success now priced &mdash; execution must follow</td></tr>
+    <tr><td><b>ASML</b></td><td>ASML</td><td>NL</td><td>EUV monopoly</td><td>~$700B</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;&#9679;</span></td><td class="pos">&euro;43&ndash;45B '26 (raised 2x)</td><td class="pos">~30%+</td><td>~30x</td><td>The only company literally everyone in the chain must pay eventually</td></tr>
+    <tr><td><b>Samsung Electronics</b></td><td>005930.KS</td><td>Korea</td><td>Memory + foundry giant</td><td>~$1.0T</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="mid">Recovering</td><td class="mid">Mid</td><td class="pos">Discounted</td><td>HBM4 redemption arc; the cheapest way to own a memory recovery if execution returns</td></tr>
+    <tr><td><b>Marvell</b></td><td>MRVL</td><td>US</td><td>Custom silicon + optics DSP</td><td>~$100&ndash;130B</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">High</td><td class="mid">Mid</td><td class="mid">Elevated</td><td>Broadcom's understudy in custom ASICs; wins share as hyperscalers dual-source design</td></tr>
+    <tr><td><b>KLA</b></td><td>KLAC</td><td>US</td><td>Process control / metrology</td><td>~$235B</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">Strong</td><td class="pos">~40%</td><td>~28x</td><td>The quietest great business in semis; yield complexity only ever increases</td></tr>
+    <tr><td><b>Lam Research</b></td><td>LRCX</td><td>US</td><td>Etch/deposition</td><td>~$335B</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">Strong</td><td class="pos">High</td><td>~28x</td><td>HBM stacking and 3D structures are etch-intensive &mdash; direct memory-capex leverage</td></tr>
+    <tr><td><b>Tokyo Electron</b></td><td>8035.T</td><td>Japan</td><td>Coater/developer, etch</td><td>~$130&ndash;180B</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">Strong</td><td class="pos">High</td><td class="pos">Discount to US peers</td><td>~100% share in EUV coat/develop; Japan-listed valuation gap</td></tr>
+    <tr><td><b>Vertiv</b></td><td>VRT</td><td>US</td><td>Power &amp; cooling</td><td>~$60&ndash;80B</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">Very high</td><td class="pos">High</td><td class="mid">Elevated</td><td>Liquid cooling attach rate rising with every GPU generation; the power wall monetized</td></tr>
+    <tr><td><b>Astera Labs</b></td><td>ALAB</td><td>US</td><td>Connectivity silicon</td><td>~$20&ndash;30B</td><td><span class="dots">&#9679;&#9679;&#9679;<span class="off">&#9679;&#9679;</span></span></td><td class="pos">Hyper-growth</td><td class="mid">Early</td><td class="neg">Very rich</td><td>Pure-play on cluster interconnect content growth; volatile, thesis-dense</td></tr>
+    <tr><td><b>Ibiden</b></td><td>4062.T</td><td>Japan</td><td>ABF substrates</td><td>~$15&ndash;25B</td><td><span class="dots">&#9679;&#9679;&#9679;&#9679;<span class="off">&#9679;</span></span></td><td class="pos">High</td><td class="mid">Mid</td><td class="pos">Modest</td><td>Nvidia's substrate lifeline; capacity sold out; the hidden-monopoly archetype</td></tr>
+    <tr><td><b>Intel</b></td><td>INTC</td><td>US</td><td>IDM turnaround</td><td>~$340B</td><td><span class="dots">&#9679;&#9679;<span class="off">&#9679;&#9679;&#9679;</span></span></td><td class="mid">Recovering</td><td class="neg">Low</td><td class="mid">Story-priced after +216% Q2</td><td>A geopolitical option with a government floor; 14A external wins are the catalyst</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+
+<!-- ============ 16. INVESTMENT DEBATE ============ -->
+<section id="s16">
+  <div class="snum">16 &middot; The Investment Debate</div>
+  <h2>Bull vs. Bear</h2>
+
+  <div class="duo">
+    <div class="case bull">
+      <h4>&#9650; The Bull Case</h4>
+      <ul>
+        <li><b>Demand is real, contracted, and diversifying.</b> $725B of 2026 capex is funded from ~$400B+ of Big-4 operating cash flow; sovereigns and enterprises now ~50% of Nvidia's DC mix. This is not 1999 debt-fueled speculation at the core.</li>
+        <li><b>Supply cannot overshoot quickly.</b> CoWoS, HBM, EUV, substrates, and power are all simultaneously constrained. Classic gluts need easy capacity addition; this chain physically cannot add it in under 2&ndash;3 years.</li>
+        <li><b>Token demand is compounding faster than efficiency gains</b> &mdash; every cost decline has produced a larger volume response (Jevons). Inference is becoming a metered utility on all cognitive work.</li>
+        <li><b>The monopolies are still under-earning their power.</b> TSMC only began real price increases in 2025&ndash;26. HBM contracts are repricing upward. Pricing power has years of runway even if unit growth slows.</li>
+        <li><b>Valuations are not bubble-grade at the core:</b> Nvidia ~30x, TSMC ~25x for 40&ndash;65% growth compares favorably to Cisco's 130x in 2000.</li>
+      </ul>
+    </div>
+    <div class="case bear">
+      <h4>&#9660; The Bear Case</h4>
+      <ul>
+        <li><b>The ROI math doesn't close yet.</b> $725B/yr of capex needs hundreds of billions of annual AI <i>revenue</i> to justify; disclosed AI revenue remains a fraction of that. Depreciation is a 4&ndash;6 year clock already ticking on 2023&ndash;24 GPUs.</li>
+        <li><b>Circularity is spreading:</b> chipmakers investing in customers who buy their chips; GPU-collateralized debt; vendor-financed neoclouds. Late-cycle financial architecture, recognizable from every prior mania.</li>
+        <li><b>The marginal buyer is weakening:</b> Broadcom's guidance miss, hyperscaler FCF compression penalized by the market, semis sell-off in July '26 &mdash; the tape is already sniffing deceleration in the <i>second derivative</i>.</li>
+        <li><b>Customer concentration cuts both ways:</b> four buyers with in-house alternatives fund the whole chain. When they pause &mdash; and cloud capex has paused before &mdash; the operating leverage that made peak margins works in reverse, violently.</li>
+        <li><b>Geopolitics is priced as a footnote:</b> Taiwan risk earns perhaps a 10&ndash;15% multiple discount against a scenario that would be a 70%+ drawdown.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>What would move each side</h3>
+  <ul class="tight">
+    <li><b>A bear converts on:</b> disclosed AI revenue crossing ~$300&ndash;400B/yr industry-wide with margins; capex funded indefinitely from FCF without leverage creep; a second consecutive year of 50%+ inference volume growth at stable pricing.</li>
+    <li><b>A bull converts on:</b> a hyperscaler cutting absolute capex guidance; HBM or CoWoS prices <i>falling</i> while capacity still ramps; GPU-collateral loan losses; Nvidia's ex-hyperscaler mix shrinking (revealing the diversification was resale, not new demand).</li>
+    <li><b>What would change my mind fastest:</b> the inventory line. Every semiconductor cycle in history announced itself in working capital two quarters before the P&amp;L. If chain-wide inventory days expand while revenue growth decelerates, exit the periphery first &mdash; the monopolies can be held through the cycle; the ODMs and neoclouds cannot.</li>
+  </ul>
+</section>
+<hr class="rule">
+
+<!-- ============ 17. FUTURE OUTLOOK ============ -->
+<section id="s17">
+  <div class="snum">17 &middot; Future Outlook</div>
+  <h2>5 / 10 / 20 Years</h2>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Horizon</th><th>What changes</th><th>What stays constant</th></tr>
+    <tr><td><b>5 years (2031)</b></td><td>Inference dominates compute; custom ASICs reach 30&ndash;40% of accelerator units; at least one memory-cycle correction tests the "HBM is different" thesis; power/energy becomes the openly acknowledged constraint; TSMC Arizona at scale trims (not removes) Taiwan premium; China achieves self-sufficient "good enough" AI compute at ~2024 Western levels; co-packaged optics standard in new clusters; the first serious AI-capex digestion year has occurred and been survived (or not &mdash; this is the decade's biggest known unknown).</td><td>TSMC still makes the chips. ASML still makes the machines. CUDA still matters (less). Compute demand still grows.</td></tr>
+    <tr><td><b>10 years (2036)</b></td><td>The stack fully bifurcates into two spheres with separate standards; packaging/3D integration rivals lithography as the performance axis (glass substrates, wafer-scale, optical interconnect mainstream); AI compute is priced and traded like a utility commodity with financial derivatives; sovereign compute reserves are normal state policy; possibly one post-transformer architecture shift has re-shuffled the accelerator leaderboard; equipment oligopoly intact (hardest layer to disrupt).</td><td>Sequential-monopoly structure persists &mdash; the physics only gets harder, favoring incumbents. Cyclicality, having been declared dead, will have reasserted itself at least once.</td></tr>
+    <tr><td><b>20 years (2046)</b></td><td>Genuinely unknowable, but structure is more predictable than technology: whatever replaces CMOS scaling (photonic, 3D-everything, new materials) will most plausibly be commercialized <i>by the same firms</i> &mdash; ASML, TSMC, and their successors own the industrialization muscle even if the science originates elsewhere. Compute-per-watt, not compute-per-dollar, is the defining metric. Energy production and compute production have merged into a single planning problem.</td><td>The meta-lesson of 80 years of semiconductors: the technology S-curves change, the knowledge-compounding leaders mostly don't. Bet on the institutions that have survived multiple S-curves.</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+
+<!-- ============ 18. READING LIST ============ -->
+<section id="s18">
+  <div class="snum">18 &middot; Reading List</div>
+  <h2>How to Go Deeper</h2>
+
+  <h3>Books</h3>
+  <ul class="tight">
+    <li><b>Chip War</b> &mdash; Chris Miller. The geopolitical history; the single best on-ramp.</li>
+    <li><b>The Chip</b> &mdash; T.R. Reid. The invention story (Kilby/Noyce).</li>
+    <li><b>Only the Paranoid Survive</b> &mdash; Andy Grove. Strategic inflection points, from the man who navigated memory's collapse.</li>
+    <li><b>Fabless: The Transformation of the Semiconductor Industry</b> &mdash; Nenni &amp; McLellan. How the foundry model rewired the industry's economics.</li>
+    <li><b>The Nvidia Way</b> &mdash; Tae Kim. Jensen Huang's operating system.</li>
+  </ul>
+
+  <h3>Ongoing coverage (highest signal-to-noise)</h3>
+  <ul class="tight">
+    <li><b>SemiAnalysis</b> (Dylan Patel) &mdash; the reference for supply-chain forensics; their Huawei/CoWoS/datacenter model work is unmatched outside the industry itself.</li>
+    <li><b>Stratechery</b> (Ben Thompson) &mdash; strategy and aggregation lens on Nvidia/TSMC/hyperscalers.</li>
+    <li><b>Asianometry</b> (YouTube/newsletter) &mdash; deep histories of litho, foundry, Japan's equipment champions.</li>
+    <li><b>Fabricated Knowledge</b> (Doug O'Laughlin) &mdash; investor-grade semis analysis.</li>
+    <li><b>TrendForce &amp; SEMI</b> &mdash; HBM pricing, capacity data, WFE forecasts (the industry's own numbers).</li>
+    <li><b>Podcasts:</b> Acquired (Nvidia trilogy, TSMC, Arm episodes are canonical), BG2 (hyperscaler capex debates), Transistor Radio.</li>
+  </ul>
+
+  <h3>Investor letters &amp; academic</h3>
+  <ul class="tight">
+    <li>NZS Capital's semiconductor pieces; Sequoia's "AI's $600B Question" (Cahn) and its sequels &mdash; the canonical bear-math framework.</li>
+    <li>Academic: "The Decline of Computers as a General Purpose Technology" (Thompson &amp; Spanuth); CSET reports on export controls (the actual policy analysis behind the headlines).</li>
+  </ul>
+</section>
+<hr class="rule">
+
+<!-- ============ 19. PRIMARY SOURCES ============ -->
+<section id="s19">
+  <div class="snum">19 &middot; Primary Sources</div>
+  <h2>Go to the Filings, Not the Headlines</h2>
+
+  <div class="tbl-scroll"><table>
+    <tr><th>Source</th><th>What to read</th><th>What it uniquely tells you</th></tr>
+    <tr><td><b>Nvidia 10-K / 10-Q + CFO commentary</b></td><td>Segment mix, customer concentration footnote, purchase commitments</td><td>The purchase-commitment line (~$40B+) is the chain's forward order book in one number; concentration disclosure quantifies the top-customer risk precisely</td></tr>
+    <tr><td><b>TSMC quarterly management report &amp; annual 20-F</b></td><td>Node mix, platform mix, capex guide, ASP trends</td><td>The most transparent disclosure in the industry &mdash; effectively a census of global leading-edge demand</td></tr>
+    <tr><td><b>ASML annual report &amp; Investor Day</b></td><td>Bookings, backlog, litho roadmap, 2030 scenarios</td><td>18-month forward visibility on global fab construction; their long-term model is the industry's best public forecast</td></tr>
+    <tr><td><b>SK Hynix filings (incl. 2026 US listing docs / F-1)</b></td><td>HBM capacity, contract structure, capex</td><td>The newly filed US prospectus is the single richest public document on HBM economics ever published</td></tr>
+    <tr><td><b>Hyperscaler 10-Ks/10-Qs</b> (MSFT, GOOGL, AMZN, META)</td><td>Capex, useful-life assumptions, AI revenue commentary, finance leases</td><td>Depreciation-schedule changes are the quiet tell on how long they really think GPUs earn; capex guides are the sector's demand curve</td></tr>
+    <tr><td><b>BIS / Federal Register</b></td><td>Export rules as published (Jan 2026 H200 rule; May 2026 entity clarification)</td><td>Read the actual rule text &mdash; press coverage of export controls is reliably imprecise about scope and licensing mechanics</td></tr>
+    <tr><td><b>SEMI, WSTS, TrendForce</b></td><td>WFE forecasts, billings, HBM/DRAM pricing</td><td>Industry-association data is the ground truth beneath sell-side estimates</td></tr>
+    <tr><td><b>Earnings calls to never skip</b></td><td>Nvidia, TSMC, ASML, Broadcom, SK Hynix, Micron, Vertiv + hyperscaler capex Q&amp;A</td><td>Seven calls a quarter &asymp; complete real-time map of the chain's health</td></tr>
+    <tr><td><b>Capital Markets Days</b></td><td>ASML (litho roadmap), TSMC tech symposium, Samsung foundry forum, Intel foundry day</td><td>Where multi-year capacity and node roadmaps are committed in public &mdash; the industry's forward calendar</td></tr>
+  </table></div>
+</section>
+<hr class="rule">
+
+<!-- ============ 20. DASHBOARD ============ -->
+<section id="s20">
+  <div class="snum">20 &middot; Sector Dashboard</div>
+  <h2>One-Page Summary</h2>
+
+  <div class="dash">
+    <h3>AI Semiconductor Supply Chain &mdash; July 2026</h3>
+    <div class="dash-grid">
+      <div class="dash-card"><div class="h">Industry size</div><div class="v">~$1.0&ndash;1.3T</div><div class="s">Total semis 2026E; &gt;$300B data-center accelerators; $725B hyperscaler capex feeding it</div></div>
+      <div class="dash-card"><div class="h">Growth</div><div class="v">+26&ndash;50% '26</div><div class="s">AI segment growing 40&ndash;90% by layer; non-AI semis roughly flat &mdash; this is a one-engine industry right now</div></div>
+      <div class="dash-card"><div class="h">Margins</div><div class="v">Historic highs</div><div class="s">TSMC GM 67.7%, Nvidia ~70%+, HBM ~50%+ &mdash; peak-cycle everywhere; that is both the attraction and the warning</div></div>
+      <div class="dash-card"><div class="h">ROIC</div><div class="v">10% &rarr; 100%+</div><div class="s">Fabless/EDA highest; foundry ~25&ndash;30%; memory cyclical; periphery poor</div></div>
+      <div class="dash-card"><div class="h">Capital intensity</div><div class="v">Extreme at core</div><div class="s">$30B+/fab; TSMC capex ~$50B+; ASML adding 30%/yr capacity; the moat and the burden are the same thing</div></div>
+      <div class="dash-card"><div class="h">Best businesses</div><div class="v">TSMC &middot; ASML &middot; NVDA &middot; KLA</div><div class="s">Sequential monopolies with compounding knowledge moats; hidden gems in Japanese materials/test</div></div>
+      <div class="dash-card"><div class="h">Worst businesses</div><div class="v">ODMs &middot; levered neoclouds</div><div class="s">Revenue without economics; depreciation races financed with debt</div></div>
+      <div class="dash-card"><div class="h">Top risks</div><div class="v">AI ROI &middot; Taiwan &middot; cycle</div><div class="s">Demand-side correction most likely; Taiwan most severe; debt creep the newest</div></div>
+      <div class="dash-card"><div class="h">Top opportunities</div><div class="v">Core monopolies &middot; HBM debate &middot; power &middot; hidden monopolies</div><div class="s">TSMC/ASML at reasonable multiples; memory's structural re-rate if HBM holds; Japanese chokepoints</div></div>
+      <div class="dash-card"><div class="h">Investment rating</div><div class="v"><span class="rating">OVERWEIGHT CORE / UNDERWEIGHT PERIPHERY</span></div><div class="s">Own the irreplaceable (foundry, litho, process control, design ecosystems) through the cycle; rent the cyclicals with discipline; avoid the capital-only layers. Respect the cycle everyone has stopped pricing.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding:0">
+    <p style="max-width:100%"><b>Sources &amp; basis:</b> Company filings and press releases (Nvidia FY26/Q1 FY27 results; TSMC Q2 2026 report; ASML 2026 guidance; SK Hynix US listing documents), BIS/Federal Register export-control rules (Jan &amp; May 2026), industry forecasters (WSTS, IDC, Gartner, TrendForce, SEMI), and reporting by SemiAnalysis, CNBC, Reuters, Brookings, and Tom's Hardware, compiled July 2026. Market caps and multiples are approximate point-in-time figures and move daily. Margin, ROIC, and revenue-pool figures by stage are analytical estimates. This is independent research for informational purposes &mdash; not investment advice.</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

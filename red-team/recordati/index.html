@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red-Team Review: Recordati LBO | Tanmay Gambhir</title>
+<meta name="description" content="Adversarial review of my Recordati LBO: the headline story got rewritten — BD adds ~0 to the return rate; the sponsor case is a bet on the exit multiple.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The adversarial review that changed both answers">
+<meta property="og:description" content="Investment committees don't take a model on faith. They pay someone to attack it. I did exactly that to my own work.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/red-team/recordati/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;margin:48px 0 14px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.04em;margin:24px 0 10px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  ul,ol{padding-left:22px;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  em{color:#94A3B8}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:22px;line-height:1.65}
+  .banner{background:rgba(96,165,250,.06);border-left:3px solid #7FB0F5;border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0 28px}
+  .banner p{margin:0 0 12px 0;font-size:14px;line-height:1.7;color:#E0E5F0}
+  .banner p:last-child{margin-bottom:0}
+  .banner .blabel{color:#7FB0F5;font-weight:700}
+  .banner ol{margin:6px 0 12px 22px;font-size:13.5px;line-height:1.65;color:#E0E5F0}
+  .banner ol li{margin-bottom:8px}
+  .vnote{background:#1E293B;border:1px solid #334155;border-left:3px solid #D4AF37;border-radius:10px;padding:16px 18px;margin:16px 0}
+  .vnote p{margin:0;font-size:13.5px}
+  .verdict{color:#D4AF37;font-style:italic}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<div class="wrap">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">&larr; Red-team overview</a>
+  <div class="kicker" style="margin-top:26px">Adversarial Review · Recordati LBO</div>
+  <h1>Red-Team: Recordati LBO</h1>
+  <div class="meta">I attacked my own LBO the way a skeptical Investment Committee member would. The headline story got rewritten: the famous pharma bolt-on machine adds roughly zero to the return rate, and the whole sponsor case is a bet on the exit multiple. Where a challenge landed, I changed the numbers; where it didn’t, the defense is on the record.</div>
+
+  <div class="vnote"><p>Reconciliation (18 July 2026): two mechanical fixes. (i) The 2031 exit-year BD spend (€400m that bought EBITDA only in 2032, post-exit) is removed, cutting cumulative BD to €1.6bn at a true 9.0x effective. (ii) Net debt refinanced is bridged from the 2025 reported gross €2,037m to a close-date estimate ~€1,750m (2026 free cash flow less dividends). Net: base <strong>~15% IRR / ~2.0x MOIC</strong>, entry 12.6x on close-date net debt (12.9x announced basis). <strong>BD value-creation decomposition:</strong> no-BD floor ~15%; funding BD €400m/yr adds ~0 to −0.1pt (the 9x-in/11.5x-out arbitrage is offset by interest drag on un-swept cash plus forfeited deleveraging); exit at entry-flat 12.9x adds <strong>+2.9pt</strong>. The exit multiple is ~100% of the sponsor-consistent case: BD grows MOIC dollars, not the rate.</p></div>
+
+  <h3>Challenges that land</h3>
+  <p><strong>B1. "Your base case both haircuts the exit multiple AND removes the BD machine: that's double conservatism, and it makes the model unable to explain why sophisticated buyers did the deal."</strong> <span class="verdict">Verdict: lands, but this review corrects the diagnosis. The two levers are NOT worth the same: the decomposition above shows BD ≈ 0pt and the exit multiple ≈ +2.9pt, so they are not substitutes ("entry-flat exit OR funded BD" was wrong; the "OR" is deleted). The investment summary now presents: Conservative no-BD floor (~15%), Sponsor-consistent (entry-flat 12.9x exit: ~18%), Full-thesis (12.9x + 6.0x leverage + bull ops: ~24%). The recommendation stands; the framing is corrected: the sponsor case is a bet on exit-multiple maintenance, not on the bolt-on machine.</span></p>
+  <p><strong>B2. "Your change-in-working-capital assumption at 15% of revenue growth is a guess sitting on the fastest-moving part of the model (US rare-disease inventory absorbed €135m in 2025 alone)."</strong> <span class="verdict">Verdict: lands as a sensitivity gap. At 25% of revenue change, cumulative free cash flow drops ~€200m and exit leverage rises ~0.15x, an IRR impact of ~−0.6pt. Material but not thesis-breaking; flagged as a build-time refinement (the input is editable in the workbook).</span></p>
+  <p><strong>B3. "Single-flow IRR flatters nothing but hides refinancing/dividend-recap optionality, and conversely ignores the 2026 stub period."</strong> We close 31 December 2026 using 2026 guidance as the entry year; if closing slips into 2027 or 2026 misses guidance, entry economics shift. <span class="verdict">Verdict: partially lands; documented as a structural simplification. Recap optionality would only improve IRR (~+1pt), a conservative direction.</span></p>
+  <p><strong>B4. "Isturisa is ~35–40% of Rare Diseases by our own estimate, and relacorilant is a live Phase 3 threat. Where's the product-level bear?"</strong> <span class="verdict">Verdict: lands directionally. The bear scenario (Rare Diseases growth +8%→5%) is the proxy; a true product-level model needs disclosure Recordati doesn't provide. Recorded as a known limitation with the register's low-confidence label discipline.</span></p>
+
+  <h3>Challenges that don't land</h3>
+  <ul>
+    <li><em>"12.9x is simply too expensive: Ipsen is 8.4x."</em> The market cleared this exact multiple twice (2018, 2026), with the most sophisticated possible seller-buyer pair. Ipsen is the challenge case, not the proof; the sensitivity grid prices it (at 9–10x exit, IRR 2–7%: that IS the risk statement).</li>
+    <li><em>"100% cash sweep is unrealistic."</em> It's the conservative modeling default; covenant-lite reality would allow retention, which only reallocates value, and the sweep input is editable.</li>
+    <li><em>"You can't validate against the actual debt structure."</em> Correct until the CONSOB offer document publishes; the model's €5.45bn at the bottom of the reported €5.5–6bn range is the right independent posture.</li>
+  </ul>
+
+  <h3>Revised judgment: Recordati</h3>
+  <p>Rating: <strong>PARTICIPATE as co-invest (6/10), unchanged in direction but reframed:</strong> our ~15% is a conservative floor, not a midpoint; the sponsor-consistent read is ~18% and comes entirely from holding the exit multiple at entry (12.9x), not from BD. Decline as a standalone sponsor underwrite at a 20%+ hurdle without conviction that the exit multiple holds at entry: the decomposition shows that is the bet, not the bolt-on machine. What would change my mind positively: relacorilant failure, offer document showing cheaper debt, first post-close bolt-on at &lt;9x. Negatively: 2026 margin miss below 36%, Isturisa US script deceleration.</p>
+
+  
+  <div class="btns">
+    <a class="btn-ghost" href="../../recordati/">Recordati investment summary →</a>
+    <a class="btn-ghost" href="../technogym/">Technogym red-team →</a>
+    <a class="btn-ghost" href="../">Structural weaknesses common to both &rarr;</a>
+  </div>
+
+  <div class="foot">
+    Published deliberately: where a challenge landed, the number moved against the original thesis.
+    Independent analysis from public sources. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red-Team Review: Technogym DCF | Tanmay Gambhir</title>
+<meta name="description" content="Adversarial review of my Technogym DCF: the rating fell from BUY to HOLD, and isolating the digital P&amp;L showed the software option is worth five times my first claim.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The adversarial review that changed both answers">
+<meta property="og:description" content="Investment committees don't take a model on faith. They pay someone to attack it. I did exactly that to my own work.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/red-team/technogym/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;margin:48px 0 14px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.04em;margin:24px 0 10px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  ul,ol{padding-left:22px;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  em{color:#94A3B8}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:22px;line-height:1.65}
+  .banner{background:rgba(96,165,250,.06);border-left:3px solid #7FB0F5;border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0 28px}
+  .banner p{margin:0 0 12px 0;font-size:14px;line-height:1.7;color:#E0E5F0}
+  .banner p:last-child{margin-bottom:0}
+  .banner .blabel{color:#7FB0F5;font-weight:700}
+  .banner ol{margin:6px 0 12px 22px;font-size:13.5px;line-height:1.65;color:#E0E5F0}
+  .banner ol li{margin-bottom:8px}
+  .vnote{background:#1E293B;border:1px solid #334155;border-left:3px solid #D4AF37;border-radius:10px;padding:16px 18px;margin:16px 0}
+  .vnote p{margin:0;font-size:13.5px}
+  .verdict{color:#D4AF37;font-style:italic}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<div class="wrap">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">&larr; Red-team overview</a>
+  <div class="kicker" style="margin-top:26px">Adversarial Review · Technogym DCF</div>
+  <h1>Red-Team: Technogym DCF</h1>
+  <div class="meta">I attacked my own DCF the way a skeptical Investment Committee member would. The rating fell from BUY to HOLD, and the digital business turned out to be worth five times what I first claimed. Where a challenge landed, I changed the numbers; where it didn’t, the defense is on the record.</div>
+
+  <div class="vnote"><p>A previous accounting fix (charging lease principal repayments in the free cash flow build) had already moved the base fair value to €15.75. This review additionally isolates the digital Profit &amp; Loss (P&amp;L). Hardware profit margin expands on its own operating leverage to ~20.75%, while digital revenue carries its own ~60% margin. Net effect: base fair value is <strong>€15.72 / HOLD (+3.5%)</strong>, with a bear case of €8.82 and a bull case of €24.05. Isolating digital reveals the option is worth <strong>~€3.3/share</strong> (not the ~€0.6 it showed when blended). This is a redistribution of existing value, so the total base margin is held at the defensible ~23.5% and the rating does not change.</p></div>
+
+  <h3>Challenges that land (and what they change)</h3>
+  <p><strong>A1. "Your margin endpoint is doing the work of a thesis."</strong> 23.5% by 2032 assumes seven more years of net expansion after four exceptional ones. Procurement renegotiation and re-engineering are one-time gains that annualise out; what's left is mix, and the mix shift depends on the digital/services growth you yourself call an option. If margins plateau at 22.5%, fair value drops ~€1.3. <span class="verdict">Verdict: lands, and this revision acts on it. Digital is now isolated at its own margin, so the total-margin endpoint no longer smuggles the mix shift into hardware. Base total margin holds at ~23.5% (hardware ~20.75% standalone + digital ~60%); the honest central read is €15.5–16.0, not a €17.34 point. Present it as HOLD.</span></p>
+  <p><strong>A2. "You answered the drawdown with a hypothesis, not evidence."</strong> The tariff-deferral explanation for Americas +2.5% is unverified. If it's share loss (Matrix/Life Fitness price aggression), the BtoB fade path is too generous. <span class="verdict">Verdict: lands as a timing issue. H1 results print 30 July. Recommendation is conditioned: a BUY is only actionable after the H1 print confirms Americas stabilisation. This is now in the investment summary.</span></p>
+  <p><strong>A3. "A 63% terminal-value share means your explicit period barely matters, and your 2.25% terminal growth embeds an immortality assumption for a consumer-capex brand."</strong> <span class="verdict">Verdict: does not change the number but changes the presentation: the exit-multiple cross-check (Gordon-implied ~9.4x, below today's ~13x) is the stronger defence and is now cited first.</span></p>
+  <p><strong>A4. "Beta 0.95 triangulated is soft."</strong> True: providers range 0.80–1.16, and the WACC sensitivity band (7.0–8.75%) swings value €14.3–22.6. <span class="verdict">Verdict: acceptable because the grid makes the dependence transparent; noted as a known limitation.</span></p>
+
+  <h3>Challenges that don't land</h3>
+  <ul>
+    <li><em>"Digital estimate is invented."</em> It is an explicitly labelled low-confidence estimation block with editable drivers, built precisely because the company won't disclose. The alternative, pretending the platform question can't be analysed, is worse.</li>
+    <li><em>"Comps are junk."</em> Correct that no clean comp exists; the model uses them only for triangulation and says so. Johnson Health Tech at 10.5x and Garmin/Amer at ~20x bracket the debate accurately.</li>
+    <li><em>"Net cash should fund a buyback assumption."</em> Speculative capital allocation is not underwritten in a DCF; the authorisation is noted as optionality.</li>
+  </ul>
+
+  <h3>Revised judgment: Technogym</h3>
+  <p>Rating: <strong>HOLD. Fair value €15.72 (+3.5% vs €15.19): below the &gt;20% BUY hurdle.</strong> A BUY would require an H1-26 print (30 July 2026) confirming Americas stabilisation <em>and</em> a credible first digital-KPI disclosure; entry attractive below €14.50 with margin of safety; conviction MODERATE (6.5/10). The digital option (~€3.3/share) is real but sits in the bull case, not the base. What would change my mind to BUY: Americas re-acceleration plus first digital disclosure. To bear: Americas share loss; first margin decline in 5 years.</p>
+
+  
+  <div class="btns">
+    <a class="btn-ghost" href="../../technogym/">Technogym investment summary →</a>
+    <a class="btn-ghost" href="../recordati/">Recordati red-team →</a>
+    <a class="btn-ghost" href="../">Structural weaknesses common to both &rarr;</a>
+  </div>
+
+  <div class="foot">
+    Published deliberately: where a challenge landed, the number moved against the original thesis.
+    Independent analysis from public sources. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
