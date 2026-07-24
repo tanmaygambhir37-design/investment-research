@@ -7,9 +7,13 @@ deals. Everything is researched and cited from public sources.
 
 **Live site:** https://tanmaygambhir37-design.github.io/investment-research/
 
-**New session? Start with [`MEMO_PLAYBOOK.md`](MEMO_PLAYBOOK.md)** — the accumulated rules on
-structure, sourcing, data integrity, and voice, extracted from real corrections made while
-building the Dust memo. Read it before writing anything new.
+**New session? Start with the playbooks — read the relevant one before writing anything new:**
+- [`MEMO_PLAYBOOK.md`](MEMO_PLAYBOOK.md) — for writing-led pieces (like the Dust memo): structure,
+  sourcing, data integrity, and voice, extracted from real corrections.
+- [`MODEL_PLAYBOOK.md`](MODEL_PLAYBOOK.md) — for pieces that need a valuation (a DCF or LBO built as a
+  live Excel workbook, like Technogym and Recordati). The method, the modeling rules, how to adapt the
+  kit to a **new company**, and how to ship the finished analysis to the site. Reference architectures,
+  reconstruction scripts and verification live in [`model-kit/`](model-kit/).
 
 ## Coverage
 
