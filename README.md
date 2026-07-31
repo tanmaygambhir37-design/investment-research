@@ -45,7 +45,9 @@ each stage.
 ## Site docs
 
 - `MEMO_PLAYBOOK.md` — how to write the next memo without repeating past mistakes.
-- `SITE_AUDIT.md` — last full audit of the site's structure and copy.
+- `AUDIT_2026-07-31.md` — latest full audit: UI, accessibility, link and number integrity, and a
+  check for AI-generated writing. Read this before the older one.
+- `SITE_AUDIT.md` — the previous audit pass (July 2026), partly superseded.
 - `IMPLEMENTATION_PLAN.md` — open backlog, in priority order.
 
 ## Disclaimer

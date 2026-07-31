@@ -10,12 +10,17 @@
 <meta property="og:description" content="The equipment business alone is worth roughly today's stock price. The software is genuinely worth ~€3.30 a share, but only in the scenario where management proves it can grow it.">
 <meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
 <meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/technogym/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tanmay Gambhir — Investment Research">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth;scroll-padding-top:62px}
   body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
   a{text-decoration:none}
   .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
@@ -34,6 +39,11 @@
   .meta{font-size:13px;color:#94A3B8;margin-bottom:22px}
   .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
   .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
+  .chart-note{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8595AB;line-height:1.5;margin-top:10px}
+  .chart-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .chart-scroll svg{min-width:520px}
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0}
+  .tbl-scroll table{margin:0}
   table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
   th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
   th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
@@ -44,8 +54,8 @@
   .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
   .thesis p{margin:0;font-size:14.5px;line-height:1.7;color:#E0E5F0}
   .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
-  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
-  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8595AB;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#8595AB;line-height:1.7}
 </style>
 </head>
 <body>
@@ -56,7 +66,7 @@
   <a href="../#industry">Industry</a>
   <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
 </div></nav>
-<div class="wrap">
+<main class="wrap">
   <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← All research</a>
   <div class="kicker" style="margin-top:26px">Investment Summary · Discounted Cash Flow (DCF) Valuation · 18 July 2026</div>
   <h1>Technogym S.p.A. (Milan Stock Exchange: TGYM)</h1>
@@ -79,7 +89,7 @@
 
   <div style="background:#1E293B;border:1px solid #334155;border-radius:14px;padding:20px 22px;margin:18px 0">
     <div class="mono" style="font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:6px">Valuation Football Field — value per share (€)</div>
-    <svg viewBox="0 0 660 190" style="width:100%;height:auto;display:block" role="img" aria-label="Valuation ranges versus the current share price of 15.19 euros">
+    <div class="chart-scroll"><svg viewBox="0 0 660 168" style="width:100%;height:auto;display:block" role="img" aria-label="Valuation ranges versus the current share price of 15.19 euros">
       <g font-family="'JetBrains Mono',monospace" font-size="11" fill="#94A3B8">
         <text x="10" y="46">Bear–Bull scenarios</text>
         <text x="10" y="96">WACC sensitivity 7.0–8.75%</text>
@@ -99,21 +109,21 @@
       </g>
       <line x1="415" y1="18" x2="415" y2="160" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="4 3"/>
       <text x="415" y="12" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#D4AF37" font-weight="700">spot €15.19</text>
-      <text x="415" y="178" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#64748B">base fair value €15.72 → +3.5% vs spot · below the &gt;20% BUY hurdle</text>
-    </svg>
+    </svg></div>
+    <div class="chart-note">Base fair value €15.72 → +3.5% vs spot, below the &gt;20% BUY hurdle.</div>
   </div>
 
   <h2>Business &amp; Moat</h2>
   <p>Premium Business-to-Business (B2B) fitness equipment franchise (81% commercial revenue) with luxury-brand positioning (they have been the exclusive supplier for 10 consecutive Olympic Games). They use direct field-sales distribution (68% of revenue, meaning they own their own customer relationships). They have an installed base of roughly 100,000 facilities generating recurring service and replacement demand, plus an early-stage connected-wellness software layer. The economic moat relies on brand strength, distribution density, and the cost for gyms to switch providers. The unresolved question, which is the entire stock valuation debate, is whether the digital ecosystem ever makes real money. The company discloses no digital performance metrics (KPIs), so my explicit low-confidence estimate is that digital revenue is currently ~€45m (4.4% of total revenue).</p>
 
   <h2>Financial Quality &amp; Capital Allocation</h2>
-  <table>
-    <tr><th>Metric</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr>
+  <div class="tbl-scroll"><table>
+    <tr><th scope="col">Metric</th><th scope="col">2022</th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th></tr>
     <tr><td>Revenue (€m)</td><td>721.5</td><td>808.1</td><td>901.3</td><td>1,019.3</td></tr>
     <tr><td>Adj. EBITDA margin</td><td>18.3%</td><td>18.8%</td><td>19.8%</td><td>21.6%</td></tr>
     <tr><td>Recurring FCF (€m)</td><td>—</td><td>—</td><td>116.4</td><td>129.9</td></tr>
     <tr><td>Cash conversion (pre-tax FCF/EBITDA)</td><td>—</td><td>—</td><td>86%</td><td>82%</td></tr>
-  </table>
+  </table></div>
   <p>The company has €156m in net cash and no bank debt. Suppliers fund the working capital needs (Days Payable Outstanding is ~221 days, meaning they take a long time to pay suppliers). They pay a €0.38 dividend (plus an extraordinary dividend in 2025) and have a 10% share buyback authorization. The company is founder-controlled (which creates a key-man risk) and has no mergers and acquisitions (M&amp;A) habit. It is an organic compounder with a lazy balance sheet that provides a soft floor for a potential leveraged buyout (LBO) (they could support 4.0 to 4.5x debt capacity, equal to roughly €900m to €1bn).</p>
 
   <h2>Valuation</h2>
@@ -148,6 +158,6 @@
     Independent analysis from public sources. The Excel workbook is the source of truth (use the scenario switch on the '03 Assumptions' tab to change views). Not affiliated with, or endorsed by, any company covered. Nothing here is investment advice.<br>
     <span class="mono">tanmaygambhir37@gmail.com</span>
   </div>
-</div>
+</main>
 </body>
 </html>

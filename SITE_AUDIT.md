@@ -1,5 +1,13 @@
 # Site Audit — investment-research (July 2026)
 
+> **Superseded in part.** A second, deeper pass ran on 31 July 2026 across all eight pages, covering
+> responsive behaviour, accessibility, asset and link integrity, cross-page arithmetic, and a check
+> for AI-generated writing. Findings and fixes: [`AUDIT_2026-07-31.md`](AUDIT_2026-07-31.md).
+> Twelve defects were fixed there, including one P0 the first pass missed: the Dust memo rendered
+> 816px wide inside a phone viewport. The open items from that pass are in
+> [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
+
+
 Scope: all five pages (home, Dust memo, Technogym, Recordati, Red-Team), audited against the external AI review. Verdict up front: **the review's structural criticisms were mostly already addressed** — the homepage already has hero positioning, OG/meta tags, metric grids, tooltips, and conversational hooks; the summary pages already have 30-second reads, tables, red-team revision notes, and download CTAs. The real gaps were narrower than the review claimed.
 
 ## Confirmed issues (fixed in this pass)
