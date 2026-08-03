@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Signals — UK Rates: Fading the Priced Hikes | Tanmay Gambhir</title>
+<meta name="description" content="Independent UK rates research: why the SONIA OIS curve, not gilt yields, is the correct read on Bank of England policy, and why the market's 62bp of priced hikes looks overdone. Receive 1y1y SONIA OIS.">
+<meta name="keywords" content="UK Rates Research, Bank of England, SONIA OIS, Yield Curve, Fixed Income, Macro Research, Sales & Trading, Global Markets, Gilt Market, Monetary Policy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Market Signals — UK Rates: Fading the Priced Hikes">
+<meta property="og:description" content="The market prices 62bp of BoE tightening over 12 months. The MPC voted 6–3 to hold, and the majority's own reasoning says financial conditions are already doing the work. Receive 1y1y SONIA OIS at 4.397%.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/markets/uk-rates-aug-2026/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .subnav{position:sticky;top:53px;z-index:40;background:rgba(15,23,42,.95);backdrop-filter:blur(6px);border-bottom:1px solid #1E293B;overflow-x:auto}
+  .subnav-inner{max-width:780px;margin:0 auto;padding:10px 28px;display:flex;gap:4px;white-space:nowrap}
+  .subnav a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.03em;color:#94A3B8;padding:6px 11px;border-radius:999px;flex-shrink:0}
+  .subnav a:hover{color:#F8FAFC;background:#1E293B}
+  @media(max-width:760px){.subnav{position:static}}
+  .top-spacer{padding-top:88px}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:30px;letter-spacing:-0.02em;margin-bottom:8px;line-height:1.2}
+  .subtitle{font-size:15.5px;color:#94A3B8;line-height:1.6;max-width:620px;margin-bottom:16px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin:48px 0 12px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;color:#F8FAFC;margin:20px 0 8px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:14px}
+  .pubmeta{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#94A3B8;margin:0 0 22px}
+  .pubmeta b{color:#F8FAFC;font-weight:600}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
+  th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
+  th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
+  .note{font-size:12px;color:#64748B;line-height:1.6}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-gold{font-family:'JetBrains Mono',monospace;font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:9px 17px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+  .thesis{background:rgba(212,175,55,.06);border-left:3px solid #D4AF37;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+  .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
+  .thesis p{margin:0 0 10px;font-size:14.5px;line-height:1.7;color:#E0E5F0}
+  .thesis p:last-child{margin-bottom:0}
+  .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
+  .card{background:#1E293B;border:1px solid #334155;border-radius:14px;padding:20px 22px;margin:18px 0}
+  .card-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .exhibit-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin:26px 0 8px}
+  .chart-img{width:100%;height:auto;display:block;border:1px solid #334155;border-radius:12px;background:#fff}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .qa strong{display:block;margin-bottom:4px;color:#F8FAFC}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="../../#markets">Market Signals</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<nav class="subnav"><div class="subnav-inner">
+  <a href="#summary">Summary</a>
+  <a href="#findings">Key Findings</a>
+  <a href="#framework">Framework</a>
+  <a href="#history">History</a>
+  <a href="#curve">Curve Today</a>
+  <a href="#pricing">What's Priced</a>
+  <a href="#view">View &amp; Trades</a>
+  <a href="#crossasset">Cross-Asset</a>
+  <a href="#wrong">Counterarguments</a>
+  <a href="#faq">Client Q&amp;A</a>
+  <a href="#scorecard">Scorecard</a>
+  <a href="#sources">Sources</a>
+</div></nav>
+<div class="wrap top-spacer">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← Market Signals</a>
+
+  <div class="kicker" style="margin-top:26px">Market Signals · Vol. 1, No. 1 · UK Rates</div>
+  <h1>Reading the UK Gilt Curve</h1>
+  <div class="subtitle">What the bond market is pricing for the Bank of England, and why it matters.</div>
+  <div class="meta">Two curves answer two different questions. Gilts tell you what the market charges the sovereign. Only the SONIA OIS curve tells you what the market thinks the MPC will do. &nbsp;·&nbsp; <span class="pill pill-gold">RECEIVE 1Y1Y SONIA OIS · 4.397%</span></div>
+
+  <div class="pubmeta">
+    <span>PUBLISHED <b>3 Aug 2026</b></span>
+    <span>DATA CUTOFF <b>31 Jul 2026</b></span>
+    <span>EDITION <b>Vol. 1, No. 1</b></span>
+    <span>READ TIME <b>~22 min</b></span>
+    <span>NEXT EDITION <b>Sep 2026</b></span>
+  </div>
+
+  <div class="thesis" id="summary">
+    <span class="label">The 30-Second Read</span>
+    <p>The Bank of England voted 6–3 to hold at 3.75% on 30 July. The market prices a full hike by December and two and a half by July 2027. I think that is too much.</p>
+    <p>Most UK rates commentary reads policy expectations off gilt yields. You cannot: a gilt is the expected policy path plus term premium plus a supply concession plus whatever the post-LDI pension complex is doing. At 20 years those non-policy components are worth 72bp. The instrument that isolates policy is the SONIA overnight index swap, and the Bank publishes its own fitted OIS curve daily, free. This project uses OIS for the policy path and gilts for what gilts actually price.</p>
+    <p><strong>The priced hikes are self-defeating.</strong> The six who held said financial conditions had already tightened enough — the Governor named "the upward sloping yield curve" itself. The more the market prices hikes, the less the Bank needs to deliver. Three of those six are closer to cutting than hiking.</p>
+    <p><strong>The 30-year is not a fiscal crisis.</strong> At 5.89% it is reported as a credibility event. But over twelve months the 20-year gilt–OIS spread <em>narrowed</em>, from 84bp to 72bp. The 2-year rose 60bp against the 30-year's 37bp. This was a front-end event that travelled down the curve.</p>
+    <p><strong>The trade: receive 1y1y SONIA OIS at 4.397%.</strong> It profits in any world with fewer than three hikes. It fails if services CPI re-accelerates or 2027 pay settlements exceed 4% — and the next edition will say so if it does.</p>
+  </div>
+
+  <div class="btns">
+    <a class="btn-gold" href="report.pdf" download>Full Report (PDF)</a>
+    <a class="btn-ghost" href="client-note.pdf" download>Client Note (PDF)</a>
+    <a class="btn-ghost" href="https://github.com/tanmaygambhir37-design/market-signals-uk-gilts" target="_blank" rel="noopener">GitHub Repository →</a>
+    <a class="btn-ghost" href="key_figures.csv" download>⤓ Data (.csv)</a>
+  </div>
+  <div class="updated">Published 3 August 2026 · Data cutoff 31 July 2026 · ~6,700 words in the full report</div>
+
+  <div class="mono" id="findings" style="font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin:40px 0 4px">Key Findings</div>
+  <div class="insight">
+    <p><strong>Market prices roughly 62bp of additional tightening over the next twelve months.</strong> A full 25bp hike by the December MPC and two and a half by July 2027. I think the realistic range is 0 to 25bp.</p>
+  </div>
+  <div class="insight">
+    <p><strong>The SONIA OIS curve, not gilt yields, is the correct instrument for extracting Bank of England policy expectations.</strong> A gilt bundles the policy path with term premium, a DMO supply concession, and post-LDI market-structure effects — at 20 years, those non-policy components are worth 72bp. An OIS has no principal exchange and references an overnight rate that tracks Bank Rate almost mechanically.</p>
+  </div>
+  <div class="insight">
+    <p><strong>Long-end gilt yields are near multi-decade highs, but the decomposition shows this is primarily a front-end repricing, not a widening fiscal premium.</strong> The 20-year gilt–OIS spread narrowed from 84bp to 72bp over the same twelve months the 30-year yield rose 37bp. If this were a fiscal credibility event, that spread would be widening. It is not.</p>
+  </div>
+  <div class="insight">
+    <p><strong>Trade idea: receive 1y1y SONIA OIS at 4.397%.</strong> Makes +65bp if the MPC never hikes, +40bp on one hike, +15bp on two. Only loses on three or more — the outcome furthest from a committee that just voted 6–3 to hold.</p>
+  </div>
+
+  <div class="exhibit-label">Exhibit 1 — Market-implied Bank Rate at each scheduled MPC announcement</div>
+  <img class="chart-img" src="charts/01_implied_policy_path.png" loading="lazy" alt="Stair-step chart of the SONIA OIS implied Bank Rate path from September 2026 to July 2027, rising from 3.76% to 4.36%, against three historical reference dates">
+  <p class="note" style="margin-top:8px">Source: Bank of England yield curve data and Interactive Database. Data to 31 July 2026.</p>
+
+  <h2 id="framework">Section 1 — How to read this market</h2>
+  <h3>Two curves, two questions</h3>
+  <p>The single most common mistake in UK rates commentary is to read Bank Rate expectations off gilt yields. You cannot. A gilt yield contains at least four things: the average expected path of Bank Rate over the bond's life; a <strong>term premium</strong> for locking money up and bearing the risk that rates move; a <strong>supply and fiscal concession</strong> — the discount the market extracts to absorb DMO issuance and Bank of England quantitative tightening; and <strong>market-structure effects</strong> — collateral value, benchmark status, and what the liability-driven investment (LDI) complex is doing that week.</p>
+  <p>Only the first is policy expectations. The other three are noise if the policy path is your question, and they are large: at the 20-year point they are currently worth 72 basis points.</p>
+  <p>The instrument that isolates policy expectations is the <strong>overnight index swap</strong>. A sterling OIS exchanges a fixed rate for compounded SONIA over the swap's life. SONIA tracks Bank Rate almost mechanically — it fixed at 3.7320% on 30 July against a Bank Rate of 3.75%. Because an OIS involves no principal exchange and its cashflows reference an overnight rate, it carries negligible credit risk and, at short maturities, negligible term premium. The forward path of SONIA implied by the OIS curve is, to a very good approximation, the market's expected path of Bank Rate. The Bank of England fits and publishes its own OIS curve daily, free, in the same dataset as its gilt curves — it is the correct tool and it is under-used. Gilts then get put to the job they are good at: telling you what the market charges the <strong>sovereign</strong>, over and above the risk-free policy path.</p>
+
+  <div class="exhibit-label">Exhibit 2 — The same policy path is embedded in both curves</div>
+  <img class="chart-img" src="charts/04_gilt_vs_ois.png" loading="lazy" alt="Line chart overlaying the gilt and SONIA OIS zero-coupon curves; the gap between them is everything that is not policy expectations">
+  <p class="note" style="margin-top:8px">Source: Bank of England yield curve data. Data to 31 July 2026.</p>
+
+  <h3>The four terms you need</h3>
+  <p><strong>Yield curve.</strong> Yield plotted against maturity, using the Bank of England's fitted zero-coupon curves — cleaner than quoted bond yields, which are contaminated by coupon effects.</p>
+  <p><strong>Duration.</strong> Approximate percentage price change for a 1% move in yield. A 30-year zero has roughly 30 years of duration; a 2-year has 2 — the same 10bp move costs fifteen times more at 30 years than at 2. Curve trades must be <strong>DV01-neutral</strong> — sized so both legs have equal sensitivity — or they are a directional bet wearing a disguise.</p>
+  <p><strong>Term premium.</strong> The extra yield over expected policy for taking duration risk. Rather than estimate it with an affine term structure model — a black box that cannot be defended line by line — this report uses the <strong>gilt–OIS spread</strong> as its observable proxy. Both legs price the same expected policy path, so the path cancels; what remains is compensation for holding a gilt rather than receiving fixed in a swap.</p>
+  <p><strong>Forward rate.</strong> The rate implied today for a future period. If the 1-year rate is 4.07% and the 2-year is 4.23%, the market implies a 1-year rate starting one year from now of about 4.40% — the <strong>1y1y</strong>, the cleanest single expression of where the market thinks Bank Rate is heading, and the security this report recommends receiving.</p>
+
+  <h2 id="history">Section 2 — How we got here</h2>
+  <p>Four moves explain today's level.</p>
+  <p><strong>March 2020 — COVID.</strong> Gilt yields collapsed as the Bank cut to 0.10% and restarted asset purchases, then violently reversed during the global dash for cash: the 10-year fell 46bp in the fortnight to 9 March 2020, then rose 65bp in the nine days that followed, with the 20-year up 85bp. The lesson that survives: in a liquidity event the long end moves most, and correlation between "safe" assets goes to one.</p>
+  <p><strong>September–October 2022 — LDI.</strong> The most important episode in the modern gilt market. Between the 22 September mini-Budget and 12 October, the 20-year gilt yield rose 116bp and the 30-year 109bp. UK defined-benefit pension schemes had used leveraged interest rate swaps and repo to hedge liabilities, posting gilts as collateral; when yields rose, they faced collateral calls, meeting them meant selling gilts, and selling gilts pushed yields higher. The Bank intervened with time-limited long-dated purchases and the 30-year fell 133bp over the following three weeks. Two things changed permanently: LDI funds now hold materially more liquidity buffer and less leverage (structurally weaker natural demand for long-dated gilts), and the DMO skewed issuance away from the long end — long conventional gilts are just £22.4bn of £246.2bn in the revised 2026-27 remit, 9.1%.</p>
+  <p><strong>2023–2025 — disinflation and quantitative tightening.</strong> Bank Rate peaked and began falling; the Bank ran down its gilt portfolio. Through 2025 the market consistently priced <em>cuts</em>: in mid-2025 the 12-month-ahead OIS forward sat 30–75bp below spot. As of 17 July 2026 the Bank still held £491bn of gilts for monetary policy purposes.</p>
+  <p><strong>March 2026 — the energy shock.</strong> The conflict in the Middle East disrupted energy markets. At the end of February 2026 the market priced 30bp of <em>cuts</em> over twelve months; by the end of March it priced 53bp of <em>hikes</em> — an 83bp swing in a single month, and the regime the market has been in since. Everything in this report is a consequence of that flip.</p>
+
+  <div class="exhibit-label">Exhibit 3 — Dating the regime change</div>
+  <img class="chart-img" src="charts/02_regime_flip.png" loading="lazy" alt="Line chart of 12-month-ahead priced policy change swinging from -30bp of cuts to +53bp of hikes between end-February and end-March 2026">
+  <p class="note" style="margin-top:8px">An 83bp swing in a single month. Source: Bank of England yield curve data.</p>
+
+  <h2 id="curve">Section 3 — The curve today</h2>
+  <p><em>Data as at close, 31 July 2026.</em></p>
+  <table>
+    <tr><th>Tenor</th><th>Gilt spot</th><th>SONIA OIS spot</th><th>Gilt–OIS</th><th>Real (RPI)</th><th>RPI breakeven</th></tr>
+    <tr><td>2y</td><td>4.299%</td><td>4.232%</td><td>+6.8bp</td><td>—</td><td>—</td></tr>
+    <tr><td>5y</td><td>4.559%</td><td>4.340%</td><td>+21.9bp</td><td>1.116%</td><td>3.442%</td></tr>
+    <tr><td>10y</td><td>5.104%</td><td>4.630%</td><td>+47.4bp</td><td>1.881%</td><td>3.223%</td></tr>
+    <tr><td>20y</td><td>5.800%</td><td>5.083%</td><td>+71.7bp</td><td>2.501%</td><td>3.298%</td></tr>
+    <tr><td>30y</td><td>5.892%</td><td>—</td><td>—</td><td>2.520%</td><td>3.372%</td></tr>
+  </table>
+  <p><strong>Levels are extreme; slopes are not.</strong> The 10-year sits at the 99.7th percentile of its post-2015 range and the 88th percentile since 1997. The 30-year is at the 99.8th percentile since 1997 — of 7,457 sessions since 1998, only four have closed higher, and the post-1998 peak of 5.95% was set on 15 May 2026. But the <em>shape</em> is unremarkable: 2s10s at 80.5bp is only the 64th percentile since 2015, 10s30s at 78.8bp the 88th percentile — steep, but not a record — and every slope is <strong>flatter</strong> than a year ago (2s10s in from 90bp, 10s30s from 92bp, 2s30s from 182bp to 159bp). That combination — record levels, unremarkable slopes, flattening — is the signature of a front-end-led repricing, not a long-end funding crisis.</p>
+  <p><strong>The evidence.</strong> Over the twelve months to 31 July, the 2-year rose 60bp and the 30-year 37bp. Year to date the pattern is similar: 2-year +67bp, 30-year +58bp. The move was concentrated where policy expectations live.</p>
+
+  <div class="exhibit-label">Exhibit 4 — Where the selloff actually happened</div>
+  <img class="chart-img" src="charts/08_yield_changes_by_tenor.png" loading="lazy" alt="Bar chart of yield changes by tenor showing the 2-year rose more than the 30-year, both over 12 months and year to date">
+  <p class="note" style="margin-top:8px">Source: Bank of England yield curve data. Data to 31 July 2026.</p>
+
+  <p><strong>And the gilt-specific premium narrowed while this happened.</strong> The 20-year gilt–OIS spread went from 84bp a year ago to 72bp today; the 10-year from 54bp to 47bp. If the long end were being punished for fiscal credibility, this spread would be widening. It is not.</p>
+
+  <div class="exhibit-label">Exhibit 5 — The gilt-specific premium by tenor</div>
+  <img class="chart-img" src="charts/05_gilt_ois_spread_term_structure.png" loading="lazy" alt="Bar chart of the gilt-OIS spread by tenor across four historical reference dates, showing the spread has narrowed year over year at every tenor beyond 5 years">
+  <p class="note" style="margin-top:8px">This is the report's most important analytical finding, and it contradicts the prevailing narrative. Source: Bank of England yield curve data.</p>
+
+  <p>This is the report's most important analytical finding and it contradicts the prevailing narrative. <strong>The UK long end is expensive to the taxpayer because sterling rates repriced, not because the market has newly lost faith in the UK's fiscal position.</strong> The gilt-specific premium is elevated versus history — the 20-year spread is at the 74th percentile since 2015, a structural consequence of LDI retreat and QT — but it is not deteriorating right now.</p>
+  <p><strong>Butterflies.</strong> The 5s10s30s fly is at −24bp, the 31st percentile since 2015: the 10-year is <em>rich</em> relative to its wings. 2s5s10s at −29bp tells a similar story — a mild argument against using the 10-year as the long leg of a steepener.</p>
+  <p><strong>Regime.</strong> Classified on the standard bull/bear × steepen/flatten grid using rolling one-month changes, 2026 has been a bear market — yields rose in 55% of sessions — with no dominant curve regime; steepeners and flatteners split roughly evenly. In 2025, by contrast, bear steepeners accounted for 45% of sessions.</p>
+
+  <h2 id="pricing">Section 4 — What the market is pricing</h2>
+  <p>Interpolating the Bank of England's OIS instantaneous forward curve onto the scheduled MPC announcement dates gives the market's meeting-by-meeting view.</p>
+  <table>
+    <tr><th>MPC date</th><th>Implied rate</th><th>Cumulative vs 3.75%</th><th>Priced at that meeting</th></tr>
+    <tr><td>17 Sep 2026</td><td>3.76%</td><td>+1bp</td><td>~6%</td></tr>
+    <tr><td>5 Nov 2026</td><td>3.88%</td><td>+13bp</td><td>~46%</td></tr>
+    <tr><td>17 Dec 2026</td><td>3.99%</td><td>+24bp</td><td>~44%</td></tr>
+    <tr><td>4 Feb 2027</td><td>4.11%</td><td>+36bp</td><td>~48%</td></tr>
+    <tr><td>18 Mar 2027</td><td>4.19%</td><td>+44bp</td><td>~34%</td></tr>
+    <tr><td>29 Apr 2027</td><td>4.26%</td><td>+51bp</td><td>~28%</td></tr>
+    <tr><td>17 Jun 2027</td><td>4.33%</td><td>+58bp</td><td>~25%</td></tr>
+    <tr><td>29 Jul 2027</td><td>4.36%</td><td>+62bp</td><td>~16%</td></tr>
+  </table>
+  <p>Read it as: September is a non-event, one full hike is priced by December 2026, and two and a half by July 2027. Within the two-year policy-relevant window the implied path tops out at 4.41% in December 2027 before drifting lower. Beyond two years the OIS forward starts picking up swap term premium and stops being a clean policy read, so it is not used here. The "priced at that meeting" column is the incremental basis points divided by 25 — the risk-neutral chance of a 25bp move, conditional on nothing happening between meetings. It is how the desk talks and it is the right order of magnitude, not a real-world forecast.</p>
+
+  <h3>Inflation compensation, done properly</h3>
+  <p>UK index-linked gilts reference RPI, not CPI. RPI has historically run about 0.9pp above CPI, but from February 2030 RPI is aligned to CPIH, which collapses that wedge to roughly zero. A breakeven spanning 2030 therefore blends two different indices. Applying the wedge only to the pre-reform portion of each horizon:</p>
+  <table>
+    <tr><th>Tenor</th><th>RPI breakeven</th><th>Share of horizon pre-2030</th><th>CPI-equivalent</th></tr>
+    <tr><td>5y</td><td>3.44%</td><td>70%</td><td>2.81%</td></tr>
+    <tr><td>10y</td><td>3.22%</td><td>35%</td><td>2.91%</td></tr>
+    <tr><td>20y</td><td>3.30%</td><td>18%</td><td>3.14%</td></tr>
+    <tr><td>30y</td><td>3.37%</td><td>12%</td><td>3.27%</td></tr>
+  </table>
+  <p>The headline "3.4% at 30 years" becomes 3.27% CPI-equivalent — still 127bp above target, but compensation is <em>lowest</em> at 10 years and rises with maturity, the profile of an inflation risk premium that grows with horizon uncertainty rather than a forecast of a permanent overshoot. The clinching evidence: <strong>5y5y forward inflation compensation is 3.00%, down from 3.13% a year ago.</strong> Long-run expectations are falling during an energy shock. Whatever else is wrong with the UK, the inflation anchor is holding.</p>
+
+  <div class="exhibit-label">Exhibit 6 — Breakevens adjusted for the February 2030 RPI–CPIH alignment</div>
+  <img class="chart-img" src="charts/10_breakevens.png" loading="lazy" alt="Chart of RPI breakevens and CPI-equivalent breakevens by tenor, plus the 5y5y forward inflation anchoring gauge falling from 3.13% to 3.00%">
+  <p class="note" style="margin-top:8px">Source: Bank of England yield curve data (GLC Inflation).</p>
+
+  <p><strong>Real yields.</strong> The 10-year real yield is 1.88% and the 30-year 2.52%, the latter at the 99.5th percentile since 1997 — levels last seen before the financial crisis. For a pension fund or insurer with real liabilities this is the best entry point in two decades, and the strongest argument that long gilts will eventually find a bid. It is not an argument that they will find it this quarter.</p>
+
+  <h2 id="view">Section 5 — My market view</h2>
+  <h3>What is priced correctly</h3>
+  <p><strong>The September meeting</strong> — six basis points, roughly a 6% chance of a move. The MPC has just said it wants to "allow time to observe further evidence," and the decisive data will not exist by 16 September. <strong>The 10-year in isolation</strong> — at 5.10% with a 47bp gilt–OIS spread, priced for a policy path I disagree with, but its gilt-specific premium is defensible. <strong>Long-run inflation</strong> — a 10-year CPI-equivalent breakeven of 2.91% is roughly fair for a central bank five years above target dealing with an energy shock. No edge, no trade.</p>
+
+  <h3>What is overpriced — hikes. This is the core view.</h3>
+  <p>The market prices +24bp by December and +62bp over twelve months. I think the realistic range is 0 to 25bp, central case one hike or none. Four reasons.</p>
+  <p><strong>1. The reaction function is self-limiting.</strong> The majority's stated rationale for holding was that "the significant tightening of financial conditions that had occurred since the conflict started was providing sufficient insurance against the upside risks to inflation." Bailey named the yield curve itself as part of the tightening. When the market prices hikes, financial conditions tighten, and the MPC's need to hike falls — priced tightening substitutes for delivered tightening.</p>
+  <p><strong>2. The vote is further from a hike than 6–3 suggests.</strong> Dhingra called a hike "disproportionate." Taylor sees the economy "drifting further toward deficient demand" and wants to resume cuts once uncertainty clears. Ramsden would "consider resuming the cutting cycle" if risks subside. That is three of the six who are closer to cutting than hiking.</p>
+  <p><strong>3. The hawks are arguing from asymmetric loss functions, not from data.</strong> Greene: "there has been scant evidence of second-round effects, but I expect some to emerge." Mann's decisive input was the geopolitical development, not the inflation prints, which she concedes "have continued to moderate." Pill acknowledges staff found neither a money overhang nor expectation de-anchoring.</p>
+  <p><strong>4. The evidence that would settle it does not arrive in time.</strong> The Committee said the key uncertainty is second-round effects in wage-setting, and that "indications of 2027 pay settlements were yet to come." The market prices a full hike by 17 December; the Committee expects to be starting to learn by then.</p>
+
+  <h3>What is underpriced</h3>
+  <p><strong>The probability the next move is a cut.</strong> The OIS curve prices essentially zero chance of a cut over the next two years. Three MPC members have effectively said they would vote for one if the energy shock fades. The Bank's own milder published scenario assumes de-escalation and weaker household consumption — in that world Bank Rate is below 3.75% within a year, and that optionality is free at current levels. <strong>The long end, on valuation.</strong> A 30-year real yield of 2.52% is a two-decade high, and long conventional supply is just 9.1% of the FY26-27 remit. But the Autumn Budget is a scheduled, binary, unhedgeable event, and I am not paid to be early into one.</p>
+
+  <div class="card">
+    <div class="card-label">The View</div>
+    <table style="margin:0">
+      <tr><th></th><th>Position</th><th>Conviction</th></tr>
+      <tr><td><strong>Front end</strong></td><td><strong>Receive 1y1y SONIA OIS at 4.40%.</strong> Overpriced for hikes.</td><td>High</td></tr>
+      <tr><td><strong>Long end</strong></td><td><strong>Neutral.</strong> Cheap, but do not buy before the Autumn Budget.</td><td>Medium</td></tr>
+      <tr><td><strong>Curve</strong></td><td><strong>2s10s steepener, DV01-neutral, 5:1.</strong> The hedged version of the front-end view.</td><td>Medium</td></tr>
+      <tr><td><strong>Breakevens</strong></td><td><strong>No position.</strong> 10y CPI-equivalent at 2.91% is close to fair.</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <h3>The trades</h3>
+  <div class="card">
+    <div class="card-label">Primary — Receive 1y1y SONIA OIS at 4.397%</div>
+    <table style="margin:0 0 14px">
+      <tr><td>Instrument</td><td>1-year sterling OIS starting one year forward, receive fixed</td></tr>
+      <tr><td>Entry</td><td>4.397% (1y 4.066%, 2y 4.232%, from BoE OIS spot curve)</td></tr>
+      <tr><td>Target</td><td>3.95% — one hike priced, the level I think is fair</td></tr>
+      <tr><td>Stop</td><td>4.70% — consistent with the market pricing four hikes</td></tr>
+      <tr><td>3-month roll</td><td>+1.8bp (mildly positive)</td></tr>
+      <tr><td>Horizon</td><td>3–6 months, through the November and December meetings</td></tr>
+    </table>
+    <div class="card-label" style="margin-top:6px">Scenario P&amp;L (bp of rate)</div>
+    <table style="margin:0">
+      <tr><th>Outcome</th><th>Fair 1y1y</th><th>P&amp;L</th></tr>
+      <tr><td>Cuts resume, Bank Rate 3.25%</td><td>3.25%</td><td><strong>+115bp</strong></td></tr>
+      <tr><td>No hikes, 3.75%</td><td>3.75%</td><td><strong>+65bp</strong></td></tr>
+      <tr><td>One hike, 4.00%</td><td>4.00%</td><td><strong>+40bp</strong></td></tr>
+      <tr><td>Two hikes, 4.25%</td><td>4.25%</td><td><strong>+15bp</strong></td></tr>
+      <tr><td>Three hikes, 4.50%</td><td>4.50%</td><td><strong>−10bp</strong></td></tr>
+    </table>
+  </div>
+  <p><strong>The asymmetry is the point.</strong> The trade makes money in every outcome up to and including two full hikes. It only loses if the MPC delivers three or more — the outcome furthest from a committee that has just voted 6–3 to hold, with three of the majority openly discussing cuts. A carry-positive alternative for a lower-risk expression: receive 1-year spot OIS at 4.066% against SONIA at 3.732%, earning +33bp per annum simply if Bank Rate is unchanged.</p>
+  <p><strong>Secondary — 2s10s gilt steepener, DV01-neutral.</strong> Long 2-year, short 10-year, five units of 2-year per one unit of 10-year. Entry 80.5bp (64th percentile since 2015), target 105bp, stop 60bp. If I am right, the front end rallies and the long end stays anchored by fiscal risk: bull steepening. The honest caveat: the 5s10s30s fly says the 10-year is rich to its wings, which argues for a 2s20s expression if the flat leg can be sourced. Lower conviction than the outright.</p>
+  <p><strong>Long end — neutral with a defined trigger.</strong> Not long yet. I would buy the 30-year on any of: the Autumn Budget passing without an upward revision to the Net Financing Requirement; the 30-year real yield exceeding 2.75%; or the 20-year gilt–OIS spread widening beyond 90bp. Three-month carry and roll on a long 30-year position is +46bp — 54bp of carry against SONIA, less 8bp of negative roll at the very long end. Carry pays you to be long; event risk says wait.</p>
+
+  <h3>What I am watching</h3>
+  <table>
+    <tr><th>#</th><th>What</th><th>Why it matters</th></tr>
+    <tr><td>1</td><td>Services CPI (ONS, monthly)</td><td>The Committee's cleanest read on domestic persistence. Re-acceleration is the single most dangerous print for this trade.</td></tr>
+    <tr><td>2</td><td>Private-sector regular pay growth (ONS, monthly)</td><td>Taylor said it has reached "target-consistent rates." If that reverses, the hawks win the argument.</td></tr>
+    <tr><td>3</td><td>2027 pay settlement indications (late 2026)</td><td>The Committee's named decisive evidence. Arrives after the December meeting the market has already priced a hike into.</td></tr>
+    <tr><td>4</td><td>Brent &amp; UK gas ($84/bbl, 136p/therm at 28 Jul)</td><td>Duration of the energy shock matters more than level.</td></tr>
+    <tr><td>5</td><td>5 Nov MPC and Monetary Policy Report</td><td>First meeting with meaningful risk priced (46%); first chance for a holder to defect.</td></tr>
+    <tr><td>6</td><td>Autumn Budget and any DMO remit revision</td><td>The long-end trigger.</td></tr>
+    <tr><td>7</td><td>DMP survey and household inflation expectations</td><td>The Committee's named early-warning indicators for second-round effects.</td></tr>
+  </table>
+
+  <h2 id="crossasset">Section 6 — Cross-asset implications</h2>
+  <p><strong>Sterling.</strong> GBP/EUR is 1.1697, up 2.7% from 1.1386 pre-conflict — almost entirely a rate-differential story. If hikes get priced out, sterling gives that back; short GBP/EUR is a correlated way to hold the same risk. GBP/USD at 1.3457 is essentially unchanged.</p>
+  <p><strong>UK banks.</strong> Higher-for-longer front-end rates support net interest margins directly, and the rolling hedge banks run to smooth deposit income reprices upward as older tranches mature into today's higher rates — a tailwind roughly locked in regardless of what the MPC does next. If hikes get priced out, the near-term NIM benefit fades at the margin but the hedge tailwind does not. The larger risk to UK banks is impairments if a "deficient demand" scenario plays out, not rates.</p>
+  <p><strong>REITs and long-duration equity.</strong> The 30-year real yield at 2.52% is the discount rate that matters for real assets, at a two-decade high. This is a valuation headwind that does not resolve until long real yields fall, and the front end likely rallies first while the long end lags — REITs are not the way to express this view.</p>
+  <p><strong>Sterling credit.</strong> All-in yields are attractive on a multi-decade view, but spread is the wrong risk to add here: if the adverse scenario hits (second-round effects force a hike into a weak economy), spreads widen and rates sell off together. Prefer the rate expression.</p>
+  <p><strong>Equity valuations.</strong> A 10-year gilt at 5.10% is a hard number for the equity risk premium to compete with. If the front end rallies on hikes being priced out, that is mildly supportive for domestic equity through the growth channel, not the discount-rate channel.</p>
+
+  <h2 id="wrong">Section 7 — What could prove me wrong</h2>
+  <p>My thesis fails if second-round effects show up in the data. Concretely, I am wrong if:</p>
+  <ul>
+    <li><strong>Services CPI re-accelerates</strong> for two consecutive months — the Committee's primary gauge of domestic persistence and the most likely single trigger.</li>
+    <li><strong>Private-sector regular pay growth turns back up.</strong> Taylor's "target-consistent rates" is load-bearing for the doves; if it reverses, the vote flips.</li>
+    <li><strong>2027 pay settlements print above 4%</strong> — the Committee's named decisive evidence, arriving late this year.</li>
+  </ul>
+  <p><strong>Inflation surprises.</strong> The Committee expects headline CPI to rise from 2.6% as energy passes through — anticipated. The danger is a print that overshoots even that, since attentiveness above a threshold is self-fulfilling. A 3.5%+ headline print would damage this view even with benign underlying detail.</p>
+  <p><strong>Energy re-escalation.</strong> A sustained move in Brent above $100 or UK gas above 175p/therm would make the hawks' risk-management case decisively, and I would exit rather than argue.</p>
+  <p><strong>Fiscal policy.</strong> My biggest exposure on the long-end call is the Autumn Budget forcing an upward NFR revision. Note this would not invalidate the front-end trade — fiscal tightening is disinflationary — but it would make "wait for the Budget" look like the right call for the wrong reason, and I should say so if it happens.</p>
+  <div class="insight">
+    <p><strong>The strongest argument against my own thesis, on the record.</strong> My central claim is that priced hikes are self-defeating: the more the market prices, the less the Bank must deliver. But that cuts both ways — if hikes get priced <em>out</em>, financial conditions ease, and an MPC currently comfortable only because conditions are tight would face a genuine reason to move. Some hike premium may be permanently embedded in the front end precisely because the pricing is what stops it hiking. That is why my target on the 1y1y is 3.95% rather than 3.75%: the last 20bp of this trade is unlikely to be there, and anyone sizing it should assume they capture 40bp, not 65bp.</p>
+  </div>
+  <p><strong>The structural risk I cannot hedge.</strong> The Bank still holds £491bn of gilts for monetary policy, and the natural long-end buyer base is permanently smaller post-LDI. If QT runoff meets a Budget that increases issuance while pension demand stays absent, the long end can cheapen a long way beyond what any valuation screen says is fair. In 2022 the 20-year moved 116bp in three weeks. Valuation is not a catalyst, and a cheap asset can get much cheaper.</p>
+
+  <h2 id="faq">Section 8 — Three questions a client would ask today</h2>
+  <div class="qa">
+    <p><strong>"The market prices two and a half hikes and you say fade it. If you're right, why hasn't the market figured this out?"</strong> Because the market is not forecasting, it is buying insurance. Energy risk is skewed to the upside and the distribution is fat-tailed, so the risk-neutral path sits above the modal path. The trade does not need the market to be stupid; it needs the modal outcome to happen — and the payoff structure tells you the insurance is priced high: it still makes money if two full hikes are delivered. The honest risk: if the insurance is correctly priced and the tail materialises, I lose. That is why the position is sized as a directional receiver with a stop, not a leveraged carry trade.</p>
+    <p><strong>"The 30-year is at a 28-year high. Is the UK in a fiscal crisis, and should I be worried about my long-dated holdings?"</strong> No, and the data is unambiguous. Over the past year the 30-year gilt yield rose 37bp while the 20-year gilt–OIS spread narrowed from 84bp to 72bp. If this were a fiscal credibility event, that spread would be widening — it is not. What you should worry about is more structural: the natural buyer of long-dated gilts is permanently smaller post-2022, and the Bank is still running off £491bn. A 2.52% 30-year real yield is the best entry in two decades; my only reason for not buying today is the Autumn Budget.</p>
+    <p><strong>"I have to put money to work this quarter. Where's the best risk-adjusted place on the sterling curve?"</strong> The front end, receiving. A 1-year OIS at 4.07% against SONIA at 3.73% pays 33bp a year to hold a position that also expresses my highest-conviction view. For more upside, receive 1y1y at 4.40%, which makes money in every scenario up to two delivered hikes. Not this quarter: the 30-year, until the Budget clears; sterling credit; and breakevens, where I see no edge at all.</p>
+  </div>
+
+  <h2 id="scorecard">Monthly updates &amp; running scorecard</h2>
+  <p>Market Signals publishes monthly. Each edition states what changed since the last one, whether the prior call was right, and what I got wrong, before restating the current view. This is Volume 1, Number 1 — the first edition, so the scorecard has one open row. The next edition is due the first week of September 2026, after the 17 September MPC decision.</p>
+  <table>
+    <tr><th>Edition</th><th>Headline call</th><th>Verdict</th><th>P&amp;L (bp)</th><th>Note</th></tr>
+    <tr><td>Aug 2026</td><td>Fade 62bp of priced hikes; receive 1y1y at 4.397%</td><td><em>Open</em></td><td>—</td><td>Long end neutral pending Autumn Budget</td></tr>
+  </table>
+
+  <h2 id="sources">Assumptions register</h2>
+  <p>Every assumption made in this report, stated so it can be attacked.</p>
+  <table>
+    <tr><th>#</th><th>Assumption</th><th>If wrong</th></tr>
+    <tr><td>A1</td><td>SONIA OIS forwards approximate expected Bank Rate with negligible term premium under 2 years</td><td>Implied hikes overstated; my view strengthens</td></tr>
+    <tr><td>A2</td><td>The gilt–OIS spread is a usable proxy for term premium plus fiscal and supply concession</td><td>Decomposition weakens; direction of the 12-month change is robust regardless</td></tr>
+    <tr><td>A3</td><td>RPI–CPI wedge of 0.90pp pre-February 2030, zero thereafter</td><td>CPI-equivalent breakevens shift ~0.1pp at 30y; conclusion unchanged</td></tr>
+    <tr><td>A4</td><td>The market has already priced the 2030 RPI reform into index-linked gilts</td><td>Long breakevens are overstated, not understated</td></tr>
+    <tr><td>A5</td><td>Incremental bp ÷ 25 approximates the probability of a 25bp move at a meeting</td><td>Probabilities indicative only; cumulative bp figures unaffected</td></tr>
+    <tr><td>A6</td><td>Modified duration ≈ maturity for zero-coupon rates, used for DV01 ratios and roll</td><td>Hedge ratios shift a few percent; not decision-relevant</td></tr>
+    <tr><td>A7</td><td>Scenario "fair value" for 1y1y equals the assumed terminal Bank Rate</td><td>P&amp;L figures approximate to ±5bp</td></tr>
+    <tr><td>A8</td><td>Percentile ranks use daily closes with no adjustment for regime change</td><td>Post-2015 percentiles overstate how extreme levels are versus a normal-rates sample; 1997-onward percentiles reported alongside</td></tr>
+  </table>
+
+  <h3>Source register</h3>
+  <table>
+    <tr><th>Source</th><th>Used for</th></tr>
+    <tr><td><a href="https://www.bankofengland.co.uk/statistics/yield-curves" target="_blank" rel="noopener" style="color:#D4AF37">BoE Yield Curve dataset</a> — OIS, GLC Nominal, GLC Real, GLC Inflation</td><td>All curve levels, spreads, slopes, breakevens, real yields, event studies</td></tr>
+    <tr><td><a href="https://www.bankofengland.co.uk/boeapps/database/" target="_blank" rel="noopener" style="color:#D4AF37">BoE Interactive Database</a> — IUDBEDR, IUDSOIA, XUDLUSS, XUDLERS</td><td>Policy rate anchor, SONIA fixings, GBP/USD and GBP/EUR</td></tr>
+    <tr><td><a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/monetary-policy-summary-and-minutes" target="_blank" rel="noopener" style="color:#D4AF37">BoE Monetary Policy Summary and minutes</a>, meeting ending 29 July 2026</td><td>Vote split, member rationales, all quotations</td></tr>
+    <tr><td><a href="https://www.dmo.gov.uk/" target="_blank" rel="noopener" style="color:#D4AF37">UK Debt Management Office</a> — Revision to the Financing Remit 2026-27, 23 April 2026</td><td>NFR, gross sales, issuance split by type and maturity</td></tr>
+  </table>
+  <p class="note">Reproducibility: every figure in this report is generated by <span class="mono">src/build_charts.py</span> and written to <span class="mono">data/processed/key_figures.csv</span>. No number appears in the text that does not appear in that file.</p>
+
+  <h3>Methodology</h3>
+  <p class="note">Extract the policy path from BoE OIS instantaneous forwards, interpolated onto scheduled MPC dates. Decompose the gilt curve as gilt zero-coupon yield less OIS zero-coupon yield by tenor — the shared policy path cancels, leaving term premium, fiscal and supply concession, and market-structure effects. Measure slope and curvature (2s5s, 2s10s, 5s10s, 10s30s, 5s30s and butterflies) in levels and rolling percentiles, classified on the bull/bear × steepen/flatten grid. Convert RPI breakevens to CPI-equivalent by applying the ~0.9pp wedge only to the pre-February-2030 portion of each horizon. Measure event studies (COVID, LDI, the 2026 energy shock) in bp by tenor over defined windows. This project deliberately does not implement an affine term structure model: the gilt–OIS spread is coarser, but every basis point of it can be explained under questioning, which matters more than theoretical elegance for how this work is used.</p>
+
+  <div class="btns">
+    <a class="btn-gold" href="report.pdf" download>Full Report (PDF)</a>
+    <a class="btn-ghost" href="client-note.pdf" download>Client Note (PDF)</a>
+    <a class="btn-ghost" href="https://github.com/tanmaygambhir37-design/market-signals-uk-gilts" target="_blank" rel="noopener">GitHub Repository →</a>
+    <a class="btn-ghost" href="../">All Market Signals editions →</a>
+  </div>
+
+  <div class="foot">
+    Independent research based solely on public sources: Bank of England and UK Debt Management Office data and publications. Not affiliated with, or endorsed by, either institution. Nothing here is investment advice, an offer, or a solicitation.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>

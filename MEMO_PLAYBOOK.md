@@ -141,3 +141,38 @@ Tell it to:
 3. Check `SITE_AUDIT.md` and `IMPLEMENTATION_PLAN.md` for current site state and backlog.
 4. Match the existing five-page visual and structural system for any new piece, and run every
    claim through the sourcing and data-integrity rules above before it ships.
+
+## 8. Market Signals — a second content type, same visual system
+
+`markets/` is a different kind of piece from the memos: a recurring, monthly, single-author
+macro/rates publication (first edition: `markets/uk-rates-aug-2026/`), not a one-off company
+analysis. It still uses the exact same dark navy `#0F172A` / gold `#D4AF37` / JetBrains Mono
+system as everything else — the only genuinely new component is a **sticky sub-nav** (`.subnav`,
+directly below `.topnav`) for in-page jump links, because this piece is long enough (~22 min read,
+~6,700 words in the source report) to need one and nothing else on the site is. Two things worth
+knowing before extending it:
+
+- **The sub-nav goes `position:static` below 760px** (`@media(max-width:760px){.subnav{position:static}}`).
+  The shared `.topnav` already wraps to two lines at mobile widths — that's pre-existing site
+  behavior, not a bug — and a second sticky bar stacked under a two-line nav will get clipped.
+  Don't re-enable sticky on mobile without also solving that.
+- **IA decision:** `markets/` has its own landing page (`markets/index.html`), unlike Coverage or
+  Industry Intelligence, which are just homepage anchors. The reason is real, not a stylistic
+  choice: this section is designed from day one to accumulate ~12 editions a year, so it needs a
+  real index of editions the way a single Dust memo or single sector map does not. If Industry
+  Intelligence grows past a handful of pieces, give it the same treatment rather than overloading
+  the homepage anchor.
+- **Every research note still needs its own homepage card** (mirrors the Coverage/Industry
+  pattern) **and its own nav link** (`Market Signals`, after `Industry`, before `Contact`, on every
+  page that carries the shared `.topnav`). `dust/` and `industry/ai-semiconductor-supply-chain/`
+  don't carry the shared topnav at all (they're self-contained documents with just a back-link) —
+  don't add the nav item there.
+- **Chart curation, not chart dumping.** The source project shipped 12 charts; the web page uses 7.
+  Pick the ones that carry the argument (the hero chart, the two or three that prove the report's
+  contrarian findings, one that shows quantitative range beyond the obvious). Point to the full PDF
+  for the rest. This is the same "cut filler ruthlessly" rule as Section 1, applied to figures.
+- **A monthly series needs an honest "edition 1" posture.** Don't fabricate a scorecard history —
+  ship the running-scorecard table with exactly one open row and say plainly that this is the first
+  edition. The credibility is in the mechanism (state what changed, what was wrong, before restating
+  the view) being visibly ready to hold future editions accountable, not in pretending there's a
+  track record yet.
