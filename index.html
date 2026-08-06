@@ -28,6 +28,14 @@
   .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
   [data-tip]{position:relative;cursor:help}
   [data-tip]:hover::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 6px);background:#1E293B;border:1px solid #334155;color:#E0E5F0;font-family:'Inter',sans-serif;font-size:11.5px;line-height:1.5;padding:8px 10px;border-radius:8px;width:220px;z-index:60;text-transform:none;letter-spacing:0}
+  .hero-grid{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .hero-text{max-width:680px}
+  .snapshot{background:#1E293B;border:1px solid #334155;border-radius:14px;padding:22px 24px}
+  .snapshot-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+  .snapshot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px}
+  .snapshot-grid .v{font-size:20px;font-weight:700;font-family:'Manrope',sans-serif;color:#F8FAFC;font-variant-numeric:tabular-nums;line-height:1.15}
+  .snapshot-grid .l{font-size:10px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.03em;margin-top:4px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -41,23 +49,36 @@
   <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
 </div></nav>
 <div class="wrap">
-  <div class="mono" style="font-size:13px;letter-spacing:0.08em;color:#94A3B8;text-transform:uppercase;margin-bottom:14px">Independent Research by a Curious Builder</div>
-  <h1 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:44px;letter-spacing:-0.02em;margin-bottom:14px">Tanmay Gambhir</h1>
-  <p style="font-size:17px;color:#E0E5F0;line-height:1.65;max-width:640px;margin-bottom:12px">
-    I'm a Chartered Accountant with four years of experience at PwC, now starting the Bocconi × ESSEC
-    Master in Management (rotating through Milan, Singapore, and France). I built this portfolio to do the
-    actual work of research, not just read about deals and businesses. Here you'll find venture memos where
-    I try to understand a business deeply, full DCF valuations, and LBO models of recent deals rebuilt from
-    scratch to see if the math actually holds up. Everything is researched and written from public sources.
-  </p>
-  <p style="font-size:14px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:12px">
-    Every number is cited to a public source; when a figure isn't public, I explicitly label it as an estimate rather than guessing.
-  </p>
-  <p style="font-size:14px;color:#E0E5F0;line-height:1.6;max-width:640px;margin-bottom:24px">
-    New here? If you're interested in Enterprise AI, start with the <a href="dust/" style="color:#D4AF37">Dust memo</a> (5 minutes).
-    To see how institutional DCF and LBO models work on real-world deals, dive into the
-    <a href="technogym/" style="color:#D4AF37">Technogym</a> and <a href="recordati/" style="color:#D4AF37">Recordati</a> analyses.
-  </p>
+  <div class="hero-grid" style="margin-bottom:40px">
+    <div class="hero-text">
+      <div class="mono" style="font-size:13px;letter-spacing:0.08em;color:#94A3B8;text-transform:uppercase;margin-bottom:14px">Independent Research by a Curious Builder</div>
+      <h1 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:44px;letter-spacing:-0.02em;margin-bottom:14px">Tanmay Gambhir</h1>
+      <p style="font-size:17px;color:#E0E5F0;line-height:1.65;margin-bottom:12px">
+        I'm a Chartered Accountant with four years of experience at PwC, now starting the Bocconi × ESSEC
+        Master in Management (rotating through Milan, Singapore, and France). I built this portfolio to do the
+        actual work of research, not just read about deals and businesses. Here you'll find venture memos where
+        I try to understand a business deeply, full DCF valuations, and LBO models of recent deals rebuilt from
+        scratch to see if the math actually holds up. Everything is researched and written from public sources.
+      </p>
+      <p style="font-size:14px;color:#94A3B8;line-height:1.6;margin-bottom:12px">
+        Every number is cited to a public source; when a figure isn't public, I explicitly label it as an estimate rather than guessing.
+      </p>
+      <p style="font-size:14px;color:#E0E5F0;line-height:1.6;margin-bottom:0">
+        New here? If you're interested in Enterprise AI, start with the <a href="dust/" style="color:#D4AF37">Dust memo</a> (5 minutes).
+        To see how institutional DCF and LBO models work on real-world deals, dive into the
+        <a href="technogym/" style="color:#D4AF37">Technogym</a> and <a href="recordati/" style="color:#D4AF37">Recordati</a> analyses.
+      </p>
+    </div>
+    <div class="snapshot">
+      <div class="snapshot-label">By the Numbers</div>
+      <div class="snapshot-grid">
+        <div><div class="v">5</div><div class="l">Pieces published</div></div>
+        <div><div class="v">1,430+</div><div class="l">Live model formulas</div></div>
+        <div><div class="v">€10.7bn</div><div class="l">Largest deal rebuilt from scratch</div></div>
+        <div><div class="v">2</div><div class="l">Adversarial red-team reviews</div></div>
+      </div>
+    </div>
+  </div>
 
   <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:56px">
     <a href="https://www.linkedin.com/in/tanmay-g-5432ba203/" class="mono" style="font-size:12px;color:#CBD5E1;border:1px solid #334155;border-radius:999px;padding:6px 14px">LinkedIn</a>
