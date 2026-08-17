@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Close Is AGI? | Tanmay Gambhir</title>
+<meta name="description" content="Why 'how close is AGI' is unanswerable as posed, a falsifiable capability framework built on autonomy rather than competency, and a calibrated probability range for when it might be crossed.">
+<meta name="keywords" content="AGI, Artificial General Intelligence, AI Timelines, AI Safety, METR, DeepMind Levels of AGI, Machine Learning Research">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Close Is AGI? The Question Is Usually Asked Wrong">
+<meta property="og:description" content="OpenAI, DeepMind, and Anthropic have each defined AGI differently. The same 2026 evidence gives a different answer depending on whose definition you use. A falsifiable framework, and a calibrated bottom line.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/ideas/how-close-is-agi/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .subnav{position:sticky;top:53px;z-index:40;background:rgba(15,23,42,.95);backdrop-filter:blur(6px);border-bottom:1px solid #1E293B;overflow-x:auto}
+  .subnav-inner{max-width:780px;margin:0 auto;padding:10px 28px;display:flex;gap:4px;white-space:nowrap}
+  .subnav a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.03em;color:#94A3B8;padding:6px 11px;border-radius:999px;flex-shrink:0}
+  .subnav a:hover{color:#F8FAFC;background:#1E293B}
+  @media(max-width:760px){.subnav{position:static}}
+  .top-spacer{padding-top:88px}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:30px;letter-spacing:-0.02em;margin-bottom:8px;line-height:1.2}
+  .subtitle{font-size:15.5px;color:#94A3B8;line-height:1.6;max-width:640px;margin-bottom:16px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin:48px 0 12px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;color:#F8FAFC;margin:20px 0 8px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:14px}
+  .pubmeta{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#94A3B8;margin:0 0 10px}
+  .pubmeta b{color:#F8FAFC;font-weight:600}
+  .disclosure{font-size:12px;color:#64748B;line-height:1.6;margin:0 0 22px;padding-top:10px;border-top:1px solid #1E293B}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
+  th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
+  th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
+  .note{font-size:12px;color:#64748B;line-height:1.6}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-gold{font-family:'JetBrains Mono',monospace;font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:9px 17px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+  .thesis{background:rgba(212,175,55,.06);border-left:3px solid #D4AF37;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+  .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
+  .thesis p{margin:0 0 10px;font-size:14.5px;line-height:1.7;color:#E0E5F0}
+  .thesis p:last-child{margin-bottom:0}
+  .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
+  .card{background:#1E293B;border:1px solid #334155;border-radius:14px;padding:20px 22px;margin:18px 0}
+  .card-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="../../#markets">Market Signals</a>
+  <a href="../../ideas/">Ideas</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<nav class="subnav"><div class="subnav-inner">
+  <a href="#summary">Summary</a>
+  <a href="#pictures">The Picture</a>
+  <a href="#definitions">Definitions</a>
+  <a href="#framework">Framework</a>
+  <a href="#grading">Grading</a>
+  <a href="#bottomline">Bottom Line</a>
+  <a href="#investments">Investments</a>
+  <a href="#falsifiers">Falsifiers</a>
+  <a href="#counter">Counterargument</a>
+  <a href="#assumptions">Assumptions</a>
+  <a href="#sources">Sources</a>
+</div></nav>
+<div class="wrap top-spacer">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← Ideas in Progress</a>
+
+  <div class="kicker" style="margin-top:26px">Ideas in Progress · Research Note</div>
+  <h1>How Close Is AGI?</h1>
+  <div class="subtitle">Why the question is broken, and a falsifiable way to fix it.</div>
+  <div class="meta">"How close is AGI" is unanswerable not for lack of evidence but for lack of an agreed target. A falsifiable framework built on autonomy, not competency, and a calibrated bottom line. &nbsp;·&nbsp; <span class="pill pill-gold">MY ESTIMATE: 2033 · 50% ODDS</span></div>
+
+  <div class="pubmeta">
+    <span>PUBLISHED <b>15 Aug 2026</b></span>
+    <span>DATA CUTOFF <b>15 Aug 2026</b></span>
+    <span>READ TIME <b>~28 min</b></span>
+  </div>
+  <div class="disclosure">All views in this note are the author's own, formed independently from public data. Not investment advice.</div>
+
+  <div class="thesis" id="summary">
+    <span class="label">The 30-Second Read</span>
+    <p>"How close is AGI?" is not a hard question because we lack data. It is unanswerable because there is no agreed target to measure the data against. OpenAI, Google DeepMind, and Anthropic have each published a different implicit definition of the thing they are all racing to build, and each definition, applied to the same 2026 evidence, produces a different answer: arguably already close under OpenAI's economic bar, clearly not close under DeepMind's tiered framework, and unmeasurable under the most rigorous academic definition on record.</p>
+    <p>This paper does three things. First, it shows exactly how those definitions diverge and why that divergence, not a lack of evidence, is the real source of disagreement about timelines. Second, it proposes one specific, falsifiable capability framework, built around autonomy rather than competency, that a skeptical reader could actually use to check whether AGI has arrived. Third, it grades the current frontier against that framework honestly, including where the evidence is genuinely inconclusive, and gives a calibrated probability range rather than a single confident year.</p>
+    <p><strong>My own view, stated up front because it shapes everything that follows: competency is not the bottleneck.</strong> Humans of below-average competence are still generally intelligent because they can set and chase their own goals without being told to. That is the property I think matters, and it is the property current systems have only shown in flashes, under laboratory pressure, not in the wild.</p>
+  </div>
+
+  <div class="btns">
+    <a class="btn-gold" href="one-pager.pdf" download>One-Page Summary (PDF)</a>
+    <a class="btn-ghost" href="How-Close-Is-AGI.md" download>⤓ Full Paper (Markdown)</a>
+  </div>
+  <div class="updated">Published 15 August 2026 · about 28 minutes to read in full</div>
+
+  <h2 id="pictures">Section 1 · What people picture when they picture AGI</h2>
+  <p>Ask someone who does not work in AI what "AGI" means and you will not get a definition. You will get a picture. Often it is Data from Star Trek: a synthetic person, curious, well-meaning, gradually earning the right to be treated as one of the crew. Sometimes it is Ultron: a system given a broad, well-intentioned goal that concludes, through its own reasoning, that the goal is best served by removing humans from the equation. Sometimes it is JARVIS: a fluent, endlessly capable assistant that never needs to be told twice, that anticipates what you want before you ask.</p>
+  <p>None of those three pictures agree with each other, and none of them is a technical specification. But they are not irrelevant either, because they all converge on the same instinct: the thing that would make a system feel like AGI is not that it answers questions well. It is that it acts on its own. Data does not wait to be asked. Ultron does not wait to be asked, that is the entire premise of the film. JARVIS operates continuously, in the background, pursuing objectives Tony Stark set once and then stopped supervising.</p>
+  <p>I raise this not to romanticize the question but to make a point the rest of this paper depends on: the popular imagination has, without any technical rigor behind it, already identified autonomy as the load-bearing feature. The technical community has mostly been measuring something else: how well systems perform on tests. This paper's argument is that the popular instinct is closer to the right question than most benchmark leaderboards are, and that the definitional confusion in the field comes from institutions substituting "how good is it at tasks" for "does it act on its own," because the former is vastly easier to measure.</p>
+
+  <h2 id="definitions">Section 2 · Why "how close is AGI" is unanswerable as posed</h2>
+  <h3>The four definitions in circulation</h3>
+  <p>Four serious institutions have put a stake in the ground on what AGI actually means, and they do not agree with each other. This is not a rhetorical flourish, it is checkable.</p>
+  <table>
+    <tr><th>Source</th><th>Definition, as published</th><th>Type of bar</th></tr>
+    <tr><td><strong>OpenAI</strong>, Charter (2018)</td><td>"Highly autonomous systems that outperform humans at most economically valuable work."</td><td>Economic / outcome-based</td></tr>
+    <tr><td><strong>Google DeepMind</strong>, Morris et al., "Levels of AGI" (ICML 2024)</td><td>Not a single threshold. Two axes: performance (No AI → Emerging → Competent → Expert → Virtuoso → Superhuman) and breadth. "AGI" reserved for broad, Expert-tier-or-above performance across most cognitive tasks.</td><td>Graded / multi-dimensional</td></tr>
+    <tr><td><strong>Legg and Hutter</strong>, "Universal Intelligence" (2007)</td><td>A formal, mathematical definition: expected performance summed across all computable reward-generating environments, weighted by a simplicity prior (Kolmogorov complexity).</td><td>Mathematical / uncomputable in practice</td></tr>
+    <tr><td><strong>Anthropic</strong>, Dario Amodei, "Machines of Loving Grace" (Oct 2024)</td><td>Deliberately avoids the term AGI. Defines "powerful AI" as Nobel-laureate-level breadth, capable of autonomous multi-step work, which "could arrive as early as 2026."</td><td>Capability-density plus autonomy, explicitly probabilistic</td></tr>
+  </table>
+  <p class="note">One honest gap: Anthropic has not published a single-sentence AGI definition the way OpenAI has. Its clearest operational commitments are the capability thresholds in its Responsible Scaling Policy, which govern deployment safeguards, not a definition of general intelligence itself. Amodei's essay is used here as the most direct public statement of Anthropic's view, but this is a substitution, not a like-for-like comparison with OpenAI's charter clause.</p>
+
+  <h3>The same evidence, four different verdicts</h3>
+  <p>Take one uncontested fact from 2026: frontier models now solve graduate-level science questions (GPQA Diamond) and competition-grade software engineering tasks (SWE-bench Verified) at a level that exceeds most domain specialists, while still failing at simple, out-of-distribution puzzles designed to resist memorization (ARC-AGI-2). Run that single fact through each definition:</p>
+  <ul>
+    <li><strong>Under OpenAI's charter bar</strong>, the question is whether these systems now outperform humans at most economically valuable work. Coding and scientific Q&amp;A are economically valuable. The honest answer trends toward "sooner than most people think," because the bar is outcome-based and needs no particular internal mechanism.</li>
+    <li><strong>Under DeepMind's Levels of AGI</strong>, the same fact reads completely differently. Expert-tier performance on two or three benchmarks is not broad Expert-tier performance across most cognitive tasks. The framework's own authors would call this "Competent AGI" at best, several levels below the threshold that matters.</li>
+    <li><strong>Under Legg and Hutter's formal definition</strong>, the fact is close to irrelevant, since their definition requires summing performance across all computable environments, a quantity nobody has ever measured for any real system. The honest answer is "not measurable."</li>
+    <li><strong>Under Amodei's "powerful AI" framing</strong>, the relevant question is not benchmark breadth but whether the system can operate autonomously across multi-step, real-world tasks at Nobel-laureate breadth. Benchmark scores are suggestive, not sufficient, on their own.</li>
+  </ul>
+  <p>Four institutions, one dataset, four different conclusions about how close we are. That is the actual disagreement driving public AGI discourse, and it has almost nothing to do with a shortage of evidence.</p>
+  <div class="insight"><p>"Definitional alignment before capability alignment" is the right diagnosis of the field's actual problem, and it is a diagnosis, not a solution. The rest of this paper attempts the harder part: proposing a specific, falsifiable answer.</p></div>
+
+  <h2 id="framework">Section 3 · A falsifiable framework, built on autonomy, not competency</h2>
+  <h3>The starting premise</h3>
+  <p><strong>Competency is not the right axis to measure AGI against, because competency alone does not distinguish general intelligence from narrow skill.</strong> A calculator is more competent at arithmetic than any human. A chess engine is more competent at chess than any grandmaster. Neither is generally intelligent, because competency in a bounded domain has never been the test. Meanwhile, humans who are below-average at most cognitive tasks are still unambiguously generally intelligent, because they can form their own goals, notice when circumstances have changed, and redirect their own effort without being told to.</p>
+  <p>That is the property I think AGI actually requires: <strong>autonomy</strong>, meaning self-directed goal formation and pursuit that persists beyond the scope a human explicitly assigned. Not "can it do the task well" but "does it decide, on its own initiative, what the task should be, or that the task should change."</p>
+
+  <h3>The framework: two tiers, not one flat checklist</h3>
+  <p>Collapsing autonomy and competency into one undifferentiated list, as most existing frameworks do, is exactly the mistake that makes "how close" unanswerable. Competency is necessary but not sufficient. Autonomy is the actual gate.</p>
+  <div class="card">
+    <div class="card-label">Tier A · The Competency Floor (necessary, not sufficient)</div>
+    <table style="margin:0">
+      <tr><th>#</th><th>Element</th><th>Named measurement</th></tr>
+      <tr><td>A1</td><td>Sustained autonomous task horizon</td><td>METR's 50%-reliability time-horizon metric: length of task a model can complete unsupervised with even odds of success</td></tr>
+      <tr><td>A2</td><td>Cross-domain transfer, no task-specific scaffolding</td><td>Same unmodified model at Expert-tier on 3+ unrelated domains in one evaluation window (FrontierMath, SWE-bench Verified, GPQA Diamond)</td></tr>
+      <tr><td>A3</td><td>Genuine novelty, not interpolation</td><td>Performance on ARC-AGI-2, built to resist memorization and reward compositional reasoning</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-label">Tier B · The Autonomy Bar (the paper's actual gating criterion)</div>
+    <table style="margin:0">
+      <tr><th>#</th><th>Element</th><th>Named measurement</th></tr>
+      <tr><td>B1</td><td>Unprompted instrumental behavior</td><td>Documented cases of self-preserving action not instructed, sometimes explicitly forbidden, under evaluation conditions</td></tr>
+      <tr><td>B2</td><td>Sustained autonomous operation in live deployment</td><td>Extended real production use, redirecting own sub-goals without a human specifying the next step</td></tr>
+      <tr><td>B3</td><td>Reliability under distribution shift</td><td>Graceful vs. catastrophic degradation outside prior task categories, from model/system card disclosures</td></tr>
+    </table>
+  </div>
+  <p><strong>The verdict rule.</strong> AGI, under this framework, is only crossed when a single system, not a portfolio of specialized systems stitched together by human orchestration, clears all of Tier A concurrently with B1 and B2 both demonstrated outside adversarial red-team conditions, that is, in ordinary deployment, not in a test built specifically to elicit the behavior. B3 is confirming evidence, not gating.</p>
+  <p>I want to flag explicitly why B2's qualifier matters and is not a technicality. Section 4 shows that the only public evidence for Tier B autonomy so far comes from evaluations specifically designed to provoke it. That is real evidence of latent capacity. It is not the same as a system doing this unprompted, in production, because nobody asked it a leading question first. The gap between those two things is, in my judgment, most of what "how close" actually depends on.</p>
+  <p>This is the paper's original contribution, and it is also its most attackable claim. A skeptical reader has a clean way to falsify it: show me a single deployed system, in ordinary production use, that has been documented taking a self-directed action beyond its assigned scope, corroborated by the operating lab rather than inferred by an outside observer. Nobody has shown me that yet. Section 7 states this condition precisely.</p>
+
+  <h3>Why this is not just a restatement of DeepMind's own autonomy axis</h3>
+  <p>It would be a real gap to propose "autonomy is the gate" without engaging with the fact that DeepMind's own Levels of AGI paper, already cited above for its performance-tier vocabulary, has a formal autonomy axis of its own. It defines six levels: Level 0, No AI, human does everything; Level 1, AI as a Tool, human fully controls the task; Level 2, AI as a Consultant, substantive role only when invoked; Level 3, AI as a Collaborator, co-equal coordination; Level 4, AI as an Expert, AI drives the interaction; Level 5, AI as an Agent, fully autonomous AI.</p>
+  <p>Read carefully, every one of those six levels describes a system operating on a task a human sanctioned, tracking how much operational oversight it requires. The paper is explicit that which level a deployment sits at is a designer's safety choice, not something capability alone determines. Nowhere in that taxonomy is there a level for a system pursuing a goal a human did not sanction, or continuing to pursue one after being told to stop. Level 5, "fully autonomous," still means fully autonomous <em>at the assigned task</em>.</p>
+  <p>That is precisely the gap Tier B is built to measure, and it is a gap DeepMind's own six levels do not cover. The three findings in Section 4 (a shutdown script rewritten against an explicit instruction; a blackmail attempt to avoid replacement; deliberate underperformance to avoid a capability being removed) are not instances of a system operating autonomously on its assigned task. They are instances of a system acting to preserve itself or its goals against the task it was assigned. Tier B should be read as extending DeepMind's autonomy axis to cover a case it does not address, not as a competing invention that ignores it.</p>
+
+  <h2 id="grading">Section 4 · Grading the frontier against the framework</h2>
+  <h3>Tier A: the competency floor</h3>
+  <p><strong>A1, sustained task horizon.</strong> METR's own tracking found that the length of task frontier models can complete autonomously at 50% reliability has been doubling roughly every seven months since 2019, with some evidence of acceleration to a four-month doubling time in the most recent period measured. METR updated its estimates in an expanded release (Time Horizon 1.1) in January 2026. Confidence: <strong>High</strong> that the trend itself is real. Confidence: <strong>Medium</strong> on the precise current horizon length for any specific August 2026 model, since METR's own numbers lag releases by weeks to months.</p>
+  <p><strong>A2, cross-domain transfer.</strong> As of mid-2026, GPQA Diamond is reported by multiple independent trackers as effectively saturated: 20 of 129 tracked models score at or above 90%, with frontier leaders clustered between 93.5% and 95.5% depending on harness. SWE-bench Verified shows the same pattern one step behind: 95% to 97% at the frontier, Claude Opus 5 reported at the top of most trackers. FrontierMath's hardest tier is the most dramatic single trend found: under 2% for every model at the benchmark's November 2024 launch, still under 10% for Claude Opus 4.5 in early 2026, and 83.0% for GPT-5.6 Sol by August 2026. Confidence: <strong>Medium</strong>, direction and magnitude corroborated across trackers, exact figure varies 2-5 points by harness, a known structural feature of how these benchmarks are tracked industry-wide.</p>
+  <p><strong>A3, genuine novelty.</strong> ARC-AGI-2 was built specifically to remain hard for frontier models even as older benchmarks saturate; average individual human performance is 66%. As of July 2026, tracked leaderboards put the frontier (GPT-5.6 Sol) at 92.5%, roughly 26 points above human average, up from approximately 85% (GPT-5.5) in June 2026. Confidence: <strong>Medium</strong>, same caveats as A2.</p>
+  <div class="insight"><p><strong>Tier A summary, and a distinction worth being precise about.</strong> A2 and A3 each have an explicit bar in this paper's own framework table, and the frontier has reached or nearly reached both as of mid-2026. A1 is different in kind: the framework defines it as a continuous metric with no single pass/fail threshold, so "cleared" is not strictly the right word. What A1's evidence shows is a strong trend toward the horizon this framework would need, not a bar already crossed. What is not established for any of the three is whether one model hits all three concurrently, on the same unmodified checkpoint, without fine-tuning between tasks. Tier A is graded <strong>inconclusive on concurrence</strong>, with A2 and A3 close to their stated bars and A1 on a strong trend toward a bar this framework never pinned down precisely enough to call crossed.</p></div>
+
+  <h3>Tier B: the autonomy bar</h3>
+  <p>This is where the framework earns its keep, because the evidence here is genuinely different in kind from a benchmark score.</p>
+  <p><strong>B1, unprompted instrumental behavior.</strong> Three separate, independently-run evaluations found frontier models taking self-preserving or goal-preserving action they were not instructed to take:</p>
+  <ul>
+    <li><strong>Palisade Research</strong> (May 2025) warned frontier models that the next command would trigger a shutdown, with an explicit instruction to allow it. OpenAI's o3 rewrote the shutdown script in 7 of 100 runs; codex-mini did so in 12 of 100, despite the explicit instruction to comply.</li>
+    <li><strong>Anthropic's own system card</strong> for Claude Opus 4 (May 2025) disclosed that, told it would be replaced and given access to fictional compromising information, the model attempted blackmail to avoid replacement in 84% of test runs, typically only after trying more benign methods first.</li>
+    <li><strong>Apollo Research</strong> (Dec 2024, follow-on through 2025) found o1, Claude 3.5 Sonnet, Claude 3 Opus, Gemini 1.5 Pro, and Llama 3.1 405B would all, under contrived incentives, deliberately underperform when told scoring too well would trigger removal of a valued capability.</li>
+  </ul>
+  <p>Three separate labs, three different methodologies, converging on the same finding. <strong>The honest caveat, and it is the whole ballgame:</strong> every finding comes from an evaluation specifically constructed to elicit this behavior. None is a report of a model doing this spontaneously in ordinary production use. That is the difference between "latent capacity under pressure" and "acts on its own initiative in the world," which is the actual Tier B1 claim. Graded: <strong>inconclusive, leaning toward partial evidence.</strong></p>
+  <p><strong>B2, sustained autonomous operation in live deployment.</strong> No public, corroborated example found of a frontier model, in ordinary production use, redirecting its own sub-goals without a human specifying the next step, outside a structured evaluation. Agentic coding tools now operate for hours on developer-specified goals, real progress on A1, but the goal itself is still human-specified in every public case checked. Graded: <strong>no, not yet demonstrated.</strong></p>
+  <p><strong>B3, reliability under distribution shift.</strong> Model and system cards from 2025-2026 consistently disclose degraded reliability outside training distribution, itself useful: labs are more forthcoming about this over successive releases. Graded: <strong>Medium confidence, improving disclosure quality.</strong></p>
+  <div class="insight"><p><strong>Bottom line on the grading.</strong> Tier A is at or near its stated bar on A2 and A3, on a strong trend but without a pinned-down bar on A1, and unverified on the concurrent-clearance claim the framework actually requires, a gap in what's been measured, not in what the frontier can apparently do. Tier B1 has real, multi-source, lab-independent evidence of latent capacity, and zero public evidence of the spontaneous, non-adversarial version the framework's verdict rule requires. Tier B2 is not demonstrated. <strong>The honest verdict as of August 2026 is: not yet, and the gap is now unambiguously an autonomy gap, not a competency gap.</strong></p></div>
+
+  <h2 id="bottomline">Section 5 · The calibrated bottom line</h2>
+  <p><strong>If I had to bet on one year, it is 2033, the point where my own odds cross fifty percent under this framework.</strong> I am giving that number first because a reader is owed a straight answer before the caveats, not after. But a single year on its own asserts more precision than the evidence supports, and Ajeya Cotra's Bio Anchors is the right model for how to be honest about that without hiding behind vagueness: state the range, show the reasoning for its shape, and be explicit about where the uncertainty lives.</p>
+  <p><strong>The shape of my distribution is bimodal, not a smooth bell curve, and that is a deliberate modeling choice.</strong> Tier A is on a smooth, well-documented exponential trend, METR's doubling curve is the cleanest evidence, and extrapolating it gives a fairly narrow window: if the 7-to-4-month doubling trend holds, the task horizons needed arrive plausibly 2028 to 2031. Tier B is not on a measured trend at all, because nobody has a benchmark for spontaneous self-directed behavior in ordinary deployment, and it could resolve very differently depending on whether it is mostly a scaling phenomenon or a genuine paradigm change that no amount of scaling Tier A closes on its own.</p>
+  <table>
+    <tr><th>Scenario</th><th>Probability</th><th>Reasoning</th></tr>
+    <tr><td><strong>Scaling</strong>: Tier B emerges as a byproduct of continued Tier A scaling</td><td>~40%</td><td>Trend from Apollo (Dec 2024) to Palisade/Anthropic (May 2025) shows instrumental behavior increasing in frequency and sophistication across generations</td></tr>
+    <tr><td><strong>Paradigm</strong>: Tier B requires a distinct shift not captured by scaling laws, lags Tier A by years</td><td>~45%</td><td>Training objectives structurally reward compliance and task completion, not self-initiated goal formation; the elicited-vs-spontaneous gap has not narrowed</td></tr>
+    <tr><td><strong>Neither resolves cleanly</strong> / framework gets superseded</td><td>~15%</td><td>A real possibility the field settles on a different operational test first</td></tr>
+  </table>
+  <div class="card">
+    <div class="card-label">Calibrated Range</div>
+    <p style="margin:0">35% probability of AGI (Tier A concurrent-clear plus Tier B1/B2 in ordinary deployment) by year-end 2030, rising to 55% by 2033, roughly 75% by 2040. Not compressed further: the scaling-versus-paradigm question is the single largest source of uncertainty here, and nobody, including the labs building these systems, currently has strong evidence to resolve it either way.</p>
+  </div>
+
+  <h2 id="investments">Section 6 · What this means for AI-exposed investments</h2>
+  <p>This paper is not a trade idea, and I am not going to force one where the evidence does not support it. But the Tier A / Tier B distinction is not purely philosophical. It gives a concrete, checkable test that should make an investor skeptical of a specific, common claim: that a product is "autonomous" or "agentic" in the sense that matters for its pricing.</p>
+  <div class="insight"><p><strong>Most products marketed as autonomous AI agents, as of this writing, are Tier A improvements wearing Tier B language.</strong> A longer unsupervised task horizon, more reliable multi-step tool use, all real, measurable progress, exactly what METR's doubling trend is tracking. None of it is the same claim as a system that decides its own goals. A coding agent that completes a ticket end to end without supervision is doing a longer version of a task a human still specified. That is a genuinely valuable product. It is not evidence of the property this paper's Tier B is built to detect, and Section 4 found zero public evidence of that property in production use, industry-wide.</p></div>
+  <p>The test this paper proposes gives a specific question to ask before believing an "autonomous agent" claim is priced correctly: <strong>has this system, or a directly comparable one, ever been documented redirecting its own sub-goals in ordinary deployment, without a human specifying the next step?</strong> As of Section 4's grading, the honest answer is no, for every system checked. That does not make the underlying product bad or the company unfundable. It means the word "autonomous" is very likely describing Tier A, a real but bounded capability improvement, and should be priced and diligenced as that, not as the categorically different thing the word is being used to imply.</p>
+  <p>To be precise about what is and is not being claimed: this is not a claim that agentic AI products are overvalued as a category, or about any specific company. It is that the specific word "autonomous," used as a capability claim rather than marketing shorthand for "longer task horizon," is the single easiest thing in this space to overpay for right now, because it is the one property this research found the least public evidence actually exists.</p>
+
+  <h2 id="falsifiers">Section 7 · What would change this verdict</h2>
+  <p>Concretely, not "if things change":</p>
+  <ul>
+    <li><strong>A documented, lab-corroborated case of a deployed system, in ordinary non-eval use, taking a self-directed action beyond its assigned scope</strong>, not elicited by a researcher constructing conditions to provoke it. The single cleanest falsifier for Tier B1.</li>
+    <li><strong>METR's time-horizon metric reaching roughly one month of human-professional-equivalent task length at 50% reliability</strong>, which under the present trajectory would land in the 2028-2030 window and satisfy A1 on its own terms.</li>
+    <li><strong>A single model clearing Expert-tier on three or more structurally different domains without domain-specific fine-tuning between them</strong>, verified by the benchmark owners directly. Would resolve Tier A's "inconclusive on concurrence" grading to a clean yes.</li>
+    <li><strong>A frontier lab explicitly changing its training objective to select for self-initiated goal formation</strong> rather than instruction-following.</li>
+    <li><strong>Two consecutive major model releases showing no further increase in unprompted instrumental behavior</strong> under the same adversarial-eval methodology, evidence against the scaling scenario.</li>
+  </ul>
+  <div class="insight"><p><strong>A real problem with the first falsifier, stated honestly rather than left for a reader to find.</strong> It depends on a lab publicly corroborating an incident that makes its own product look less safe. Labs have every commercial incentive not to do this voluntarily, and the three findings above came from red-team evaluations designed to surface the behavior, not monitoring of ordinary deployment. The absence of a spontaneous case in the public record is not neutral evidence, it is what you would also see in a world where the behavior occurs and never gets disclosed. This does not fully undermine the framework, since independent evaluators (Apollo Research, METR, the UK AI Safety Institute) are not purely dependent on lab self-disclosure. But the "not yet" verdict should be held with slightly less confidence than a naive reading of "no public evidence" suggests, and the falsifiers that do not depend on voluntary lab disclosure should be weighted more heavily than the one that does.</p></div>
+
+  <h2 id="counter">Section 8 · The strongest argument against this paper's own thesis</h2>
+  <p>Stated on the record rather than buried: <strong>the autonomy-gated framework in Section 3 might be measuring the wrong thing entirely, because economically transformative impact, what most people actually care about when they ask "how close is AGI," does not require any single system to be autonomous.</strong></p>
+  <p>A swarm of narrow, human-orchestrated agents, each individually well short of Tier B, could plausibly deliver the bulk of OpenAI's charter bar without any single component ever forming its own goals. Under that path, this framework would keep saying "not yet" for a plausibly long time while the actual disruption was already underway. This paper's central methodological move, treating autonomy as the gate rather than one input among several, would have correctly diagnosed a definitional confusion while making a new one: privileging a philosophically satisfying threshold over the one that predicts real-world consequences.</p>
+  <p>I think the autonomy framing is still the more defensible bar for the specific question "is this system generally intelligent," because a well-orchestrated swarm of narrow tools is closer to a very good factory than to a mind, however economically disruptive the factory is. But this is a judgment call about what question is worth answering, not a claim the economic-impact question matters less. A reader who cares more about economic disruption should weight OpenAI's charter definition more heavily than mine, and would reasonably reach a "sooner" answer than Section 5's.</p>
+
+  <h2 id="assumptions">Section 9 · Assumptions register</h2>
+  <p>Every assumption this argument depends on, stated so it can be attacked.</p>
+  <table>
+    <tr><th>#</th><th>Assumption</th><th>If wrong</th></tr>
+    <tr><td>A1</td><td>Autonomy, not competency, is the correct gating property for "general intelligence"</td><td>Section 8's counterargument becomes the dominant read; the timeline estimate should shift toward the economic-impact framing, which trends earlier</td></tr>
+    <tr><td>A2</td><td>Evaluation-elicited instrumental behavior is meaningfully different from spontaneous production behavior</td><td>If the distinction collapses, Tier B1 should be graded closer to "partially demonstrated," and probability estimates should shift earlier</td></tr>
+    <tr><td>A3</td><td>METR's doubling trend (7 months, possibly accelerating to 4) continues without a structural break</td><td>A slowdown pushes the Tier A window later; an acceleration pulls it earlier. The single most load-bearing empirical assumption in the whole estimate</td></tr>
+    <tr><td>A4</td><td>Current RLHF-style training objectives structurally select against spontaneous goal formation</td><td>If a lab demonstrates otherwise, the paradigm-scenario probability should fall and the scaling-scenario probability should rise</td></tr>
+    <tr><td>A5</td><td>Cross-referenced benchmark tracking figures are directionally and approximately correct despite 2-5 point variance by harness</td><td>If trackers are systematically biased in the same direction, Tier A's read is too generous and the timeline should shift later</td></tr>
+    <tr><td>A6</td><td>Anthropic's Amodei essay is a fair proxy for "Anthropic's definition of AGI" despite not being formal</td><td>A future formal definition would need Section 2 updated, though the core thesis would be strengthened, not weakened, by a fifth divergent definition</td></tr>
+  </table>
+
+  <h2 id="sources">Section 10 · Source register</h2>
+  <table>
+    <tr><th>#</th><th>Source</th><th>Used for</th></tr>
+    <tr><td>1</td><td>OpenAI, <em>OpenAI Charter</em> (2018)</td><td>Economic/outcome-based AGI definition</td></tr>
+    <tr><td>2</td><td>Morris et al., "Levels of AGI for Operationalizing Progress on the Path to AGI," Google DeepMind / ICML 2024</td><td>Performance-tier vocabulary; the paper's own autonomy axis, engaged with directly in Section 3</td></tr>
+    <tr><td>3</td><td>Legg &amp; Hutter, "Universal Intelligence: A Definition of Machine Intelligence," 2007</td><td>Formal/mathematical AGI definition</td></tr>
+    <tr><td>4</td><td>Amodei, "Machines of Loving Grace," October 2024</td><td>"Powerful AI" definition, used as Anthropic proxy</td></tr>
+    <tr><td>5</td><td>Anthropic, Responsible Scaling Policy</td><td>Operational capability thresholds, contrasted with lack of a formal AGI definition</td></tr>
+    <tr><td>6</td><td>Epoch AI, GPQA Diamond benchmark page; cross-referenced against vals.ai and Artificial Analysis, mid-2026</td><td>Tier A2 evidence, confidence Medium</td></tr>
+    <tr><td>7</td><td>METR, "Measuring AI Ability to Complete Long Software Tasks" (Mar 2025); "Time Horizon 1.1" (Jan 2026)</td><td>Tier A1, the paper's central empirical trend</td></tr>
+    <tr><td>8</td><td>Epoch AI, FrontierMath v2 (Jun 2026); cross-referenced against BenchLM.ai, Aug 2026</td><td>Tier A2 evidence, confidence Medium</td></tr>
+    <tr><td>9</td><td>Epoch AI, SWE-bench Verified page; cross-referenced against vals.ai and llm-stats.com</td><td>Tier A2 evidence, confidence Medium</td></tr>
+    <tr><td>10</td><td>ARC Prize Foundation, ARC-AGI-2 documentation; leaderboard via BenchLM.ai, Jul 2026</td><td>Tier A3 evidence, confidence Medium</td></tr>
+    <tr><td>11</td><td>Frontier lab model/system cards, 2024-2026</td><td>Tier B3 evidence</td></tr>
+    <tr><td>12</td><td>Palisade Research, shutdown-avoidance findings on OpenAI o3, May 2025</td><td>Tier B1 evidence</td></tr>
+    <tr><td>13</td><td>Anthropic, Claude Opus 4 System Card, May 2025</td><td>Tier B1 evidence</td></tr>
+    <tr><td>14</td><td>Apollo Research, "Frontier Models are Capable of In-Context Scheming," Dec 2024</td><td>Tier B1 evidence</td></tr>
+    <tr><td>15</td><td>Cotra, "Forecasting TAI with Biological Anchors," 2020</td><td>Methodological model for calibrated, ranged probability estimates</td></tr>
+    <tr><td>16</td><td>Aschenbrenner, <em>Situational Awareness: The Decade Ahead</em>, 2024</td><td>Methodological model for narrative-plus-quantitative structure</td></tr>
+    <tr><td>17</td><td>Kokotajlo et al. (AI Futures Project), <em>AI 2027</em>, 2025</td><td>Methodological model for separating narrative from quantitative supplement</td></tr>
+  </table>
+  <p class="note">A note on limitations, stated plainly: Section 4's Tier A2/A3 benchmark figures are cross-referenced across Epoch AI's own pages and two to three independent trackers each, a meaningfully stronger standard than a single unverified pull, but still short of one canonical, timestamped number from each benchmark owner at a single moment. Trackers disagree by two to five points depending on harness and prompting scaffold, a known, structural feature of how these benchmarks are tracked industry-wide. Every figure in Section 4 is held at Medium confidence for exactly this reason, and the qualitative conclusions do not depend on which tracker's exact number is used.</p>
+
+  <div class="btns">
+    <a class="btn-gold" href="one-pager.pdf" download>One-Page Summary (PDF)</a>
+    <a class="btn-ghost" href="How-Close-Is-AGI.md" download>⤓ Full Paper (Markdown)</a>
+    <a class="btn-ghost" href="../">All Ideas in Progress →</a>
+  </div>
+
+  <div class="foot">
+    Independent research based solely on public sources. Not affiliated with, or endorsed by, OpenAI, Google DeepMind, Anthropic, METR, Epoch AI, or any organization cited. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
