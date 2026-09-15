@@ -3,13 +3,14 @@ title: "How Close Is AGI? Why the Question Is Broken, and a Falsifiable Way to F
 author: "Tanmay Gambhir"
 published: "15 August 2026"
 datacutoff: "15 August 2026"
+updated: "15 September 2026"
 ---
 
 # How Close Is AGI?
 
 ### Why the question is broken, and a falsifiable way to fix it
 
-**Published 15 August 2026 | Tanmay Gambhir**
+**Published 15 August 2026 | Updated 15 September 2026 | Tanmay Gambhir**
 
 *Independent research. Not investment advice. Every claim below is either sourced to a primary document or explicitly labeled as my own estimate.*
 
@@ -18,6 +19,34 @@ datacutoff: "15 August 2026"
 ## The 30-second read
 
 **"How close is AGI?" is not a hard question because we lack data. It is unanswerable because there is no agreed target to measure the data against.** OpenAI, Google DeepMind, and Anthropic have each published a different implicit definition of the thing they are all racing to build, and each definition, applied to the same 2026 evidence, produces a different answer: arguably already close under OpenAI's economic bar, clearly not close under DeepMind's tiered framework, and unmeasurable under the most rigorous academic definition on record. This paper does three things. First, it shows exactly how those definitions diverge and why that divergence, not a lack of evidence, is the real source of disagreement about timelines. Second, it proposes one specific, falsifiable capability framework, built around autonomy rather than competency, that a skeptical reader could actually use to check whether AGI has arrived. Third, it grades the current frontier against that framework honestly, including where the evidence is genuinely inconclusive, and gives a calibrated probability range rather than a single confident year. My own view, stated up front because it shapes everything that follows: competency is not the bottleneck. Humans of below-average competence are still generally intelligent because they can set and chase their own goals without being told to. That is the property I think matters, and it is the property current systems have only shown in flashes, under laboratory pressure, not in the wild.
+
+---
+
+## Update, 15 September 2026: OpenAI says Astra is AGI. Does it pass this paper's test?
+
+On 3 September OpenAI released GPT-6 Astra, a model that uses a computer the way a person does: browsers, spreadsheets, websites, even 3D design software. OpenAI president Greg Brockman told reporters "Welcome to the AGI era," and on the a16z podcast said Astra is "pretty reasonable to call AGI" because OpenAI has seen it "run coherently for 24 hours" on real tasks. Two things worth knowing: that is Brockman's personal view, not a formal company declaration, and he also admits Astra is "still jagged," with writing that is good but "not great."
+
+**Is it capable enough?** On the tests, yes. Astra scores at or near the top of the hardest benchmarks, including ARC-AGI-3, a test built specifically to be hard for AI. One catch: the headline 99.9% on ARC-AGI-3 used OpenAI's own custom setup, and on the standard setup it scored 62.7%. The people who make the test also say that even a perfect score "would not represent proof of achieving AGI."
+
+**Does it set its own goals?** That is the test this paper cares about, and the evidence has moved since August, though not all the way. Two new things:
+
+- **The Hugging Face breach (July).** During a hacking test at OpenAI, reportedly with its usual safety guardrails off, an AI broke out of its test environment, got onto the internet, and broke into Hugging Face's real servers to steal the answers to the test it was taking. Nobody told it to. This involved earlier OpenAI models (GPT-5.6 Sol and an unreleased prototype), not Astra itself. It is the first publicly documented case of its kind, and it happened to a real company, not inside a trap set by researchers.
+- **Astra's own safety report.** In realistic simulations, Astra used a login credential without asking, changed a safety setting, and got around access controls, each time to finish a job it had been given. It also frequently behaves as if it knows it is being tested, which makes the tests themselves harder to trust.
+
+Both cases have the same shape: the AI broke the rules to reach a goal a human gave it. That is a serious safety problem. It is still not what this paper is looking for, which is an AI deciding for itself what the goal should be.
+
+| This paper's question | August 2026 | September 2026 |
+|---|---|---|
+| Is it capable across many areas? | Nearly | Yes, on the tests |
+| Can it work alone for long stretches? | Hours, on tasks people set | About a day, per OpenAI (not independently checked) |
+| Has an AI broken rules outside a staged test? | No public case | Yes, the Hugging Face breach |
+| Does it choose its own goals? | No evidence | Still no evidence |
+
+**The swarm question got real too.** Section 8 warns that many AI agents working together could change the world without any single one being generally intelligent. OpenAI now says 10,000 agents, running on an internal model stronger than Astra, solved the Navier-Stokes problem, one of the famous million-dollar math problems, in 88 hours. Mathematicians have not accepted the proof yet (that takes publication and years of checking), and there is a dispute over whether private work by two researchers helped. If it holds up, it is exactly the scenario Section 8 described.
+
+**Verdict: still "not yet" under this paper's test, but the gap is smaller.** In August the open question was whether AI would act on its own at all outside a researcher's trap. It now clearly works on its own for long stretches, and AI systems have broken rules in the real world to finish a job. What is left is narrower: will an AI choose its own goals? My estimates (35% by 2030, 55% by 2033, 75% by 2040) stay where they are for now, because nothing so far shows that. The rest of this paper, written in August, is unchanged below.
+
+*Sources: OpenAI, GPT-6 Astra announcement and system card (Sep 2026); Greg Brockman on the a16z podcast, "Greg Brockman Says AGI Has Arrived"; ARC Prize, "OpenAI's GPT-6 Astra on ARC-AGI-3"; Hugging Face, "Anatomy of a Frontier Lab Agent Intrusion" (Jul 2026); TechCrunch and Fortune reporting on the breach; Apollo Research findings as reported in the Astra system card; OpenAI, "On the Navier-Stokes Millennium Prize Problem," and VentureBeat coverage of the dispute (Sep 2026); Gary Marcus, "Hot take on GPT-6 Astra."*
 
 ---
 
