@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red-Team Review: Oura IPO Call | Tanmay Gambhir</title>
+<meta name="description" content="Adversarial review of my pre-registered Oura IPO call: the annualisation overstates revenue by about 2.4%, the pass band is too easy, and the multiple was not chosen for Oura but the write-up was.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Red-team: attacking my own Oura IPO call before the price is set">
+<meta property="og:description" content="A pre-registered number can't move after the fact. So where a challenge lands, the corrected figure is recorded next to the call and scored too.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/red-team/oura/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:19px;margin:48px 0 14px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#94A3B8;text-transform:uppercase;letter-spacing:0.04em;margin:24px 0 10px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  ul,ol{padding-left:22px;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  em{color:#94A3B8}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:22px;line-height:1.65}
+  .banner{background:rgba(96,165,250,.06);border-left:3px solid #7FB0F5;border-radius:0 10px 10px 0;padding:18px 22px;margin:16px 0 28px}
+  .banner p{margin:0 0 12px 0;font-size:14px;line-height:1.7;color:#E0E5F0}
+  .banner p:last-child{margin-bottom:0}
+  .banner .blabel{color:#7FB0F5;font-weight:700}
+  .banner ol{margin:6px 0 12px 22px;font-size:13.5px;line-height:1.65;color:#E0E5F0}
+  .banner ol li{margin-bottom:8px}
+  .vnote{background:#1E293B;border:1px solid #334155;border-left:3px solid #D4AF37;border-radius:10px;padding:16px 18px;margin:16px 0}
+  .vnote p{margin:0;font-size:13.5px}
+  .verdict{color:#D4AF37;font-style:italic}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="../../#markets">Market Signals</a>
+  <a href="../../ideas/">Ideas</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<div class="wrap">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">&larr; Red-team overview</a>
+  <div class="kicker" style="margin-top:26px">Adversarial Review · Oura IPO Call · 23 September 2026</div>
+  <h1>Red-Team: Oura IPO Call</h1>
+  <div class="meta">I attacked my own Oura call the way a skeptical investment committee member would, before the price is set. This review has one rule the others didn't: a pre-registered number can't move after the fact, because that is the whole point of writing it down first. So where a challenge lands, the corrected figure is recorded next to the call, and both get scored when Oura prices.</div>
+
+  <div class="vnote"><p>The call stays at <strong>$12.95bn ($40.36 a share)</strong>. One challenge produces a corrected cross-check of <strong>$12.65bn ($39.40 a share)</strong>, recorded here on the same date. When Oura prices, the scorecard reports the error of both, so it shows whether the correction would have helped or hurt.</p></div>
+
+  <h3>Challenges that land (and what they change)</h3>
+  <p><strong>A1. "Multiplying nine months by 4/3 overstates the year."</strong> Oura's first nine months include the holiday quarter, and the last quarter (July to September) is smaller than the average of the other three. Back-testing the same method on FY2025: nine-month revenue of $697.6m &times; 4/3 = $930.1m, against actual FY2025 revenue of $907.9m, so the method overstated the year by 2.4%. If FY2026 has the same shape, full-year revenue is about $1,580.6m, not $1,619.3m, and 8x gives $12.65bn ($39.40 a share). <span class="verdict">Verdict: lands. The fix pushes the value further toward the bottom of the range, still inside it. Recorded as a cross-check next to the call; the call itself does not move. (My arithmetic on S-1/A figures; the seasonal shape of FY2026 is an assumption.)</span></p>
+  <p><strong>A2. "You saw the $40 to $44 range before you ran the model. An 8x multiple on a range that implies 7.9x to 8.7x was always going to look good."</strong> The 8x was not chosen for Oura: it is the app's default and was used on Bending Spoons in July, before Oura's range existed. But the decision to <em>write this case up</em> was made after seeing where it landed. <span class="verdict">Verdict: partly lands. The multiple is clean; the choice of case is not. Selection bias in which calls get published is real, and the only defence is to publish every call made with this method, including the ones that miss. The VC Playbook predictions ledger commits to that.</span></p>
+  <p><strong>A3. "A pass band that covers the entire price range is too easy to pass."</strong> ±10% around $12.95bn runs from $36.33 to $44.40 a share, which contains the whole $40 to $44 range. A "hit" mostly means Oura did not price above its range. <span class="verdict">Verdict: lands. This is why the headline result is the percentage error, not hit or miss. Recorded before pricing so it can't be reframed afterwards.</span></p>
+  <p><strong>A4. "You're using basic shares; headline valuations in the press are usually fully diluted."</strong> The model uses 320.9m shares outstanding after the offering. Options and unvested awards would raise the fully diluted count, and the $16bn+ reported before launch may be on that basis. <span class="verdict">Verdict: lands on comparisons, not on the score. The scorecard multiplies the IPO price by the same basic count, so the error is like for like. Any comparison with a fully diluted headline number has to adjust first, and this page doesn't have the fully diluted count.</span></p>
+
+  <h3>Challenges that don't land</h3>
+  <ul>
+    <li><em>"A revenue multiple ignores profitability."</em> True in general. The point of the test is whether the simplest method gets close. A DCF would need hardware and membership margins that Oura doesn't disclose separately, which would mean estimating the most important input into existence.</li>
+    <li><em>"The scorecard says 'Watch' but you value it at $13bn. Which is it?"</em> They answer different questions. The scorecard is a seed-stage triage tool; on a growth-stage company it is expected to be harsh, exactly as it was on Bending Spoons. It is not a valuation.</li>
+    <li><em>"Score it against the first-day close, that's the real market price."</em> The day-one close reflects a float of about 50m shares out of 320.9m and deliberate underpricing by the banks. The IPO price is the institutional estimate of value, which is the thing being tested.</li>
+  </ul>
+
+  <h3>Revised judgment: Oura</h3>
+  <p>Call: <strong>$12.95bn ($40.36 a share), unchanged and pre-registered.</strong> Cross-check after A1: <strong>$12.65bn ($39.40 a share)</strong>. Both errors get published at pricing. The open question this review can't answer before the price is set: whether the market pays a software-like multiple for a company whose revenue is 80% hardware.</p>
+
+  <div class="btns">
+    <a class="btn-ghost" href="../../oura/">Oura call →</a>
+    <a class="btn-ghost" href="../technogym/">Technogym red-team (the same hardware-vs-software question) →</a>
+    <a class="btn-ghost" href="../">Red-team overview &rarr;</a>
+  </div>
+
+  <div class="foot">
+    Published before pricing, deliberately: the number can't move, so the corrections are recorded next to it.
+    Independent analysis from public sources. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>

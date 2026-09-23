@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oura: a Pre-Registered IPO Call | Tanmay Gambhir</title>
+<meta name="description" content="Oura's Nasdaq IPO, valued before it prices: $12.95bn ($40.36 a share) from an untuned 8x revenue multiple, against a $40-44 range. 80% of revenue is hardware. The error gets published either way.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oura: can an untuned model price an IPO before the market does?">
+<meta property="og:description" content="Called before pricing: $12.95bn, near the bottom of the $40-44 range. The catch: 80% of Oura's revenue is hardware, and 8x is a software multiple.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/oura/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:88px 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:8px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin:46px 0 12px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;color:#F8FAFC;margin:18px 0 6px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  ul{padding-left:22px;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:22px}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
+  .pill-blue{background:rgba(96,165,250,0.10);color:#7FB0F5;border:1px solid rgba(96,165,250,0.35)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
+  th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
+  th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-gold{font-family:'JetBrains Mono',monospace;font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:9px 17px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+  .thesis{background:rgba(212,175,55,.06);border-left:3px solid #D4AF37;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+  .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
+  .thesis p{margin:0;font-size:14.5px;line-height:1.7;color:#E0E5F0}
+  .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .note{font-size:12px;color:#94A3B8;line-height:1.6}
+  sup a{color:#D4AF37;font-family:'JetBrains Mono',monospace;font-size:10px}
+  .src li{font-size:12.5px;color:#94A3B8;line-height:1.6;margin-bottom:6px}
+  .src a{color:#CBD5E1;word-break:break-all}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../">TG · RESEARCH</a>
+  <a href="../#coverage">Coverage</a>
+  <a href="../#modeling">Models</a>
+  <a href="../#industry">Industry</a>
+  <a href="../#markets">Market Signals</a>
+  <a href="../ideas/">Ideas</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<div class="wrap">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">← All research</a>
+  <div class="kicker" style="margin-top:26px">Pre-Registered IPO Call · Comparable-Multiples Valuation · 23 September 2026</div>
+  <h1>Oura Inc. (Nasdaq: OURA, proposed)</h1>
+  <div class="meta">Can a model that knows nothing about hardware price a hardware company's IPO? &nbsp;·&nbsp; <span class="pill pill-gold">CALL · $12.95bn · $40.36/sh</span> &nbsp;<span class="pill pill-blue">AWAITING PRICING</span></div>
+
+  <div class="thesis">
+    <span class="label">The 30-Second Read</span>
+    <p>Oura makes the Oura Ring and is on its Nasdaq roadshow at $40 to $44 a share, which values the company at $12.8bn to $14.1bn. Before it prices, I ran its filing numbers through my own simulator, VC Playbook, with the exact settings I used on Bending Spoons in July and nothing re-tuned. $1.62bn of annualised revenue at 8x gives $12.95bn, or $40.36 a share: near the bottom of the range. The catch is that 80% of Oura's revenue is hardware sold at a 55% gross margin, and 8x is a software multiple. So this tests two things at once: whether a simple, untuned model can price an IPO before the market does, and whether the market will pay software prices for a ring. The error gets published either way.</p>
+  </div>
+
+  <div class="btns">
+    <a class="btn-gold" href="https://vcplaybook.streamlit.app/Case_Studies?study=oura">Beginner walkthrough on VC Playbook →</a>
+    <a class="btn-ghost" href="https://github.com/tanmaygambhir37-design/VC-Playbook/blob/main/data/case_studies/oura.csv">⤓ Model inputs (.csv)</a>
+    <a class="btn-ghost" href="../red-team/oura/">Red-team review →</a>
+  </div>
+  <div class="updated">Written 23 September 2026, before pricing</div>
+
+  <h2>The Call</h2>
+  <p>There is no buy or sell rating on this page. It is a valuation call, made in public before the answer exists.</p>
+  <table>
+    <tr><th>Item</th><th>Value</th></tr>
+    <tr><td>Model value</td><td><strong>$12.95bn</strong>, i.e. <strong>$40.36</strong> a share on 320.9m shares outstanding after the offering<sup><a href="#s1">1</a></sup></td></tr>
+    <tr><td>Scored against</td><td>Final IPO price × shares outstanding, from the final prospectus. The first-day close is recorded, not scored.</td></tr>
+    <tr><td>Headline result</td><td>The percentage error, whatever it is</td></tr>
+    <tr><td>Pass / fail line</td><td>Within ±10%: $11.66bn to $14.25bn, or $36.33 to $44.40 a share</td></tr>
+    <tr><td>Red-team cross-check</td><td>$12.65bn ($39.40 a share) after correcting for seasonality; recorded alongside, scored too, but not the call (<a href="../red-team/oura/" style="color:#D4AF37">why</a>)</td></tr>
+    <tr><td>Proof it came first</td><td>The numbers were fixed in a public, timestamped commit on 23 September 2026 at 16:17 CEST<sup><a href="#s9">9</a></sup></td></tr>
+  </table>
+  <p><strong>Why the IPO price and not the day-one close:</strong> the IPO price is what institutional investors agree the company is worth after a week of meetings, which is the question the model answers. The first day is driven by a small float (about 50m of 320.9m shares trade) and by banks pricing a little low on purpose. Bending Spoons priced at $18.4bn and closed its first day near $25bn; the "within 4%" result there was measured against the $18.4bn.</p>
+  <p><strong>My read on where it prices</strong> (my own probabilities, not a model output): inside the range 55%, above it 30%, below it 15%. The range was set below the $16bn+ figure reported before launch<sup><a href="#s7">7</a></sup>, which suggests the bankers want the book to clear comfortably; above-range is a real possibility, as Bending Spoons showed; below-range is least likely for a company that is profitable and still growing 74%.</p>
+
+  <div style="background:#1E293B;border:1px solid #334155;border-radius:14px;padding:20px 22px;margin:18px 0">
+    <div class="mono" style="font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:6px">Valuation Football Field: equity value ($bn)</div>
+    <svg viewBox="0 0 660 250" style="width:100%;height:auto;display:block" role="img" aria-label="The model's 12.95 billion dollar call against the bankers' 12.84 to 14.12 billion range, the last private round at 11 billion and the 16 billion plus target reported before launch">
+      <g font-family="'JetBrains Mono',monospace" font-size="11" fill="#94A3B8">
+        <text x="10" y="46">Last private round (Oct 2025)</text>
+        <text x="10" y="86">Model ±10% (pass band)</text>
+        <text x="10" y="126">Bankers' range $40–44</text>
+        <text x="10" y="166">Same revenue at 7x–10x</text>
+        <text x="10" y="206">Reported pre-launch target</text>
+      </g>
+      <!-- scale: $10bn → x=250, $17bn → x=640 (55.7 px per $bn) -->
+      <circle cx="305.7" cy="41" r="6" fill="#94A3B8"/>
+      <rect x="342.5" y="72" width="144.3" height="18" rx="4" fill="rgba(212,175,55,0.30)"/>
+      <rect x="408.2" y="112" width="71.3" height="18" rx="4" fill="#334155"/>
+      <rect x="324.7" y="152" width="270.2" height="18" rx="4" fill="#334155"/>
+      <circle cx="584.3" cy="201" r="6" fill="#94A3B8"/>
+      <g font-family="'JetBrains Mono',monospace" font-size="11" fill="#E0E5F0">
+        <text x="316" y="45">11.0</text>
+        <text x="339" y="85" text-anchor="end">11.66</text>
+        <text x="490" y="85">14.25</text>
+        <text x="404" y="125" text-anchor="end">12.84</text>
+        <text x="483" y="125">14.12</text>
+        <text x="321" y="165" text-anchor="end">11.34</text>
+        <text x="599" y="165">16.19</text>
+        <text x="595" y="205">16+</text>
+      </g>
+      <line x1="414.4" y1="18" x2="414.4" y2="222" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="414.4" y="12" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#D4AF37" font-weight="700">call $12.95bn</text>
+      <text x="330" y="242" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#64748B">call sits 3.9% below the range midpoint ($13.48bn) · the range is 1.17x to 1.28x the last private round</text>
+    </svg>
+  </div>
+
+  <h2>The Business</h2>
+  <p>Oura sells a health-tracking ring plus a paid monthly membership that unlocks its sleep, readiness and activity insights. It was founded in Finland in 2013<sup><a href="#s1">1</a></sup> and is run by CEO Tom Hale<sup><a href="#s8">8</a></sup>. At 30 June 2026 it had <strong>5.0m paid members</strong>, double the 2.5m a year earlier, with about <strong>85% 12-month retention</strong> and a daily-to-monthly active user ratio of about 65%<sup><a href="#s1">1</a></sup>. It guides to about 5.7m paid members by the end of its fiscal year on 30 September<sup><a href="#s2">2</a></sup>.</p>
+  <p>The clearest piece of moat is legal, not technical. In September 2025 the US International Trade Commission found that Ultrahuman and RingConn infringed an Oura patent on how the ring is built. Ultrahuman's rings were barred from US import and sale; RingConn settled and now pays Oura royalties under a licence<sup><a href="#s6">6</a></sup>. The bigger competitive question is Apple, Samsung and Google, all of which have added sleep and health features that overlap with Oura's<sup><a href="#s8">8</a></sup>.</p>
+
+  <h2>Financial Quality</h2>
+  <table>
+    <tr><th>$m, fiscal years to 30 Sep</th><th>FY2024</th><th>FY2025</th><th>9M FY25</th><th>9M FY26</th></tr>
+    <tr><td>Revenue</td><td>406.8</td><td>907.9</td><td>697.6</td><td>1,214.5</td></tr>
+    <tr><td>Growth</td><td>n/a</td><td>+123%</td><td>n/a</td><td>+74%</td></tr>
+    <tr><td>Gross margin</td><td>64.9%</td><td>51.9%</td><td>51%</td><td>55%</td></tr>
+    <tr><td>Sales &amp; marketing</td><td>n/a</td><td>n/a</td><td>140.3</td><td>257.9</td></tr>
+    <tr><td>Adjusted EBITDA</td><td>n/a</td><td>n/a</td><td>83.5 (12.0%)</td><td>106.7 (8.8%)</td></tr>
+    <tr><td>Net income</td><td>3.6</td><td>0.0</td><td>1.6</td><td>60.8</td></tr>
+  </table>
+  <p class="note">Source: S-1/A<sup><a href="#s1">1</a></sup>. Confidence: High (SEC registration statement; the nine-month figures are unaudited interim results). Gross margin for FY2024 and FY2025 is my arithmetic on disclosed gross profit ($264.1m and $471.0m). EBITDA margins are my arithmetic. "n/a" means not taken from the filing for this page, not that it is undisclosed.</p>
+  <div class="insight">
+    <p><strong>Three things the table says that the headline growth rate doesn't.</strong> First, gross margin fell 13 points in FY2025, from 64.9% to 51.9%, in the year revenue more than doubled, and has only recovered to 55%. The filing figures don't tell me the cause, so I don't assign one. Second, adjusted EBITDA grew 28% while revenue grew 74%, so the adjusted margin fell from 12.0% to 8.8%; sales and marketing grew 84%, faster than revenue. Third, net income jumped from $1.6m to $60.8m in the same period that the adjusted EBITDA margin fell. Those two can both be true only if the change sits below operating profit or inside the adjustments. I have not reconciled that line by line, so I treat the net-income jump as <strong>Medium</strong> confidence as evidence of durable profitability, even though the number itself is High confidence.</p>
+  </div>
+  <p>A separate item that looks alarming and isn't: the filing shows a <strong>$924.3m net loss attributable to common stockholders</strong> for the nine months, driven by a $985.0m "deemed dividend" to preferred stockholders<sup><a href="#s1">1</a></sup><sup><a href="#s3">3</a></sup>. That is an accounting entry tied to the pre-IPO preferred share structure, not an operating loss.</p>
+
+  <h2>Hardware or Subscription? The Question the Price Is Really Asking</h2>
+  <p>Over the nine months, hardware brought in $974.0m and membership $240.5m: <strong>80% / 20%</strong><sup><a href="#s1">1</a></sup>. Annualised, membership is about $321m a year. Divided by members, that is roughly <strong>$64 to $86 per member per year</strong>, depending on whether you use the June 2026 count (5.0m) or a simple average of the June 2025 and June 2026 counts (3.75m). That range is my arithmetic and Low confidence; Oura does not disclose average revenue per member.</p>
+  <p>The bankers' range implies 7.9x to 8.7x annualised revenue. That is a multiple usually paid for subscription businesses, applied to a company whose revenue is four-fifths hardware at a 55% gross margin. Either the membership layer is worth far more than its 20% share of revenue suggests, or the range is generous.</p>
+  <div class="insight">
+    <p>This is the same question as my <a href="../technogym/" style="color:#D4AF37">Technogym DCF</a>: should a hardware maker get software multiples? There, isolating the software business on its own margins changed the answer. Here I can't do that, because Oura does not disclose gross margin separately for hardware and membership (<strong>Not Disclosed</strong>). The honest version of this page says so rather than estimating a split into existence. Once Oura reports as a public company, it becomes the first clean public comparable for "hardware plus membership", which is the open question on my <a href="../ideas/" style="color:#D4AF37">Ideas</a> page about Garmin and Peloton.</p>
+  </div>
+
+  <h2>The Deal</h2>
+  <table>
+    <tr><th>Item</th><th>Detail</th><th>Source · Confidence</th></tr>
+    <tr><td>Shares offered</td><td>50.0m: 13.5m new (primary), 36.5m sold by existing holders (secondary), so 73% secondary. Underwriters' option for 7.5m more.</td><td>[2] High</td></tr>
+    <tr><td>Use of the company's proceeds</td><td>Mainly tax withholding on employee RSUs settled at the IPO: about $526m of about $533m net proceeds</td><td>[1][3] High (purpose) · [4] Medium (amounts)</td></tr>
+    <tr><td>Largest seller named</td><td>Forerunner Ventures, selling its whole 9.3% stake, about $1.2bn</td><td>[4] Medium</td></tr>
+    <tr><td>Last private rounds</td><td>Series D at $5.2bn (Dec 2024); Series E at $11bn (Oct 2025), led by Fidelity</td><td>[5] Medium</td></tr>
+    <tr><td>Reported pre-launch target</td><td>$16bn+, per press reports citing Bloomberg</td><td>[7] Low</td></tr>
+  </table>
+  <p>Put together: the company raises almost no net cash for itself, most of the shares come from existing investors, and the range came in below the reported target and only 1.2x to 1.3x the price paid eleven months earlier. None of that is a red flag on its own. It does mean this IPO is mostly a liquidity event, and it explains why the bankers may have set the range to clear rather than to stretch.</p>
+
+  <h2>What Would Change My Mind</h2>
+  <p>These are about the company over the next twelve months, separate from the pricing call.</p>
+  <p><strong>More bullish if:</strong> paid members reach the 5.7m guided for 30 September; membership rises above 20% of revenue; gross margin keeps recovering toward the FY2024 level of 65%; the adjusted EBITDA margin stops falling.</p>
+  <p><strong>More bearish if:</strong> the member guide is missed; gross margin stalls at about 55% while sales and marketing keeps outgrowing revenue; a large competitor ring (Samsung's is the obvious one) gains traction in the US despite the patent position; the first public quarters show growth decelerating faster than the 123% to 74% step already visible.</p>
+
+  <h2 id="scorecard">Scorecard <span class="pill pill-blue" style="font-size:11px;vertical-align:middle">PENDING</span></h2>
+  <table>
+    <tr><th>Test</th><th>Called (23 Sep 2026)</th><th>Actual</th><th>Result</th></tr>
+    <tr><td>Market value at IPO price</td><td>$12.95bn</td><td>to be filled after pricing</td><td></td></tr>
+    <tr><td>Model error (headline)</td><td>n/a</td><td>to be filled</td><td></td></tr>
+    <tr><td>Cross-check error ($12.65bn)</td><td>n/a</td><td>to be filled</td><td></td></tr>
+    <tr><td>Inside ±10% band ($36.33 to $44.40)</td><td>Yes</td><td>to be filled</td><td></td></tr>
+    <tr><td>Day-one close (recorded, not scored)</td><td>n/a</td><td>to be filled</td><td></td></tr>
+  </table>
+  <p class="note">Filled from the final prospectus once Oura prices, whatever it says. If the range is revised before pricing, the call stays at $12.95bn and the revision is noted here.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ol class="src">
+    <li id="s1">Oura Inc., Form S-1/A, 21 September 2026. <a href="https://www.sec.gov/Archives/edgar/data/0002133022/000119312526396051/d119865ds1a.htm">sec.gov</a></li>
+    <li id="s2">Oura Inc., Form FWP (IPO launch), 22 September 2026. <a href="https://www.sec.gov/Archives/edgar/data/0002133022/000119312526396384/d79478dfwp.htm">sec.gov</a></li>
+    <li id="s3">Oura Inc., Form S-1, 3 September 2026. <a href="https://www.sec.gov/Archives/edgar/data/2133022/000119312526381855/d119865ds1.htm">sec.gov</a></li>
+    <li id="s4">TechCrunch, "Oura's $2.2B IPO is mostly a payday for existing shareholders", 21 September 2026 (independent press). <a href="https://techcrunch.com/2026/09/21/ouras-2-2b-ipo-is-mostly-a-payday-for-existing-shareholders/">techcrunch.com</a></li>
+    <li id="s5">CNBC, "Oura reaches $11 billion valuation with new $900 million fundraise", 14 October 2025 (independent press). <a href="https://www.cnbc.com/2025/10/14/oura-ringmaker-valuation-fundraise.html">cnbc.com</a></li>
+    <li id="s6">Oura press release via Business Wire, ITC ruling against Ultrahuman and RingConn, 9 September 2025 (company-published); Oura blog on the RingConn settlement (company-published). <a href="https://www.businesswire.com/news/home/20250909387922/en/U.S.-International-Trade-Commission-Rules-in-Favor-of-URA-in-Patent-Case-Against-Ultrahuman-and-RingConn">businesswire.com</a> · <a href="https://ouraring.com/blog/oura-itc-case/">ouraring.com</a></li>
+    <li id="s7">Tech Funding News, "Oura targets $3B US IPO at $16B+ valuation" (secondary report citing Bloomberg). <a href="https://techfundingnews.com/oura-targets-3b-ipo-at-16b-valuation/">techfundingnews.com</a></li>
+    <li id="s8">CNN Business, interview with Oura CEO Tom Hale on competition from Apple, Samsung and Google, 17 December 2025 (independent press). <a href="https://www.cnn.com/2025/12/17/tech/oura-ring-ceo-interview-apple-samsung-google">cnn.com</a></li>
+    <li id="s9">VC Playbook commit fixing the call, 23 September 2026, 16:17 CEST. <a href="https://github.com/tanmaygambhir37-design/VC-Playbook/commit/2c3ffebbd713f08c1df08e0cc30e89582f937a3c">github.com</a></li>
+  </ol>
+
+  <div class="btns">
+    <a class="btn-gold" href="https://vcplaybook.streamlit.app/Case_Studies?study=oura">Beginner walkthrough on VC Playbook →</a>
+    <a class="btn-ghost" href="../red-team/oura/">Read the red-team review →</a>
+  </div>
+
+  <div class="foot">
+    Independent analysis from public sources. Not affiliated with, or endorsed by, Oura or any company covered. Nothing here is investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
