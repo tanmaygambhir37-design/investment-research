@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Signals · UK Rates: Stopped Out | Tanmay Gambhir</title>
+<meta name="description" content="Market Signals Vol. 1 No. 2: the August call to bet against priced Bank of England hikes was wrong. Stopped out on 10 September for a 52bp loss when oil passed $100. What I got wrong, what held, and the view now.">
+<meta name="keywords" content="UK Rates Research, Bank of England, SONIA OIS, Yield Curve, Fixed Income, Macro Research, Sales & Trading, Global Markets, Gilt Market, Monetary Policy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Market Signals · UK Rates: Stopped Out">
+<meta property="og:description" content="The August trade lost 52bp. The Bank of England hiked to 4% on 5 November. Here is the scorecard, written before the new view.">
+<meta property="og:image" content="https://tanmaygambhir37-design.github.io/investment-research/og.png">
+<meta property="og:url" content="https://tanmaygambhir37-design.github.io/investment-research/markets/uk-rates-nov-2026/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F172A'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>TG</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#0F172A;color:#F8FAFC;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 28px 56px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1E293B}
+  .topnav-inner{max-width:780px;margin:0 auto;padding:12px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#CBD5E1}
+  .topnav a:hover{color:#D4AF37}
+  .topnav .brand{color:#D4AF37;font-weight:700;margin-right:auto}
+  .subnav{position:sticky;top:53px;z-index:40;background:rgba(15,23,42,.95);backdrop-filter:blur(6px);border-bottom:1px solid #1E293B;overflow-x:auto}
+  .subnav-inner{max-width:780px;margin:0 auto;padding:10px 28px;display:flex;gap:4px;white-space:nowrap}
+  .subnav a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.03em;color:#94A3B8;padding:6px 11px;border-radius:999px;flex-shrink:0}
+  .subnav a:hover{color:#F8FAFC;background:#1E293B}
+  @media(max-width:760px){.subnav{position:static}}
+  .top-spacer{padding-top:88px}
+  .kicker{font-size:12px;letter-spacing:0.08em;color:#D4AF37;text-transform:uppercase;margin-bottom:12px}
+  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:30px;letter-spacing:-0.02em;margin-bottom:8px;line-height:1.2}
+  .subtitle{font-size:15.5px;color:#94A3B8;line-height:1.6;max-width:620px;margin-bottom:16px}
+  h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin:48px 0 12px;padding-bottom:8px;border-bottom:1px solid #1E293B}
+  h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;color:#F8FAFC;margin:20px 0 8px}
+  p,li{font-size:14.5px;color:#E0E5F0;line-height:1.7;margin-bottom:12px}
+  strong{color:#F8FAFC}
+  .meta{font-size:13px;color:#94A3B8;margin-bottom:14px}
+  .pubmeta{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#94A3B8;margin:0 0 10px}
+  .pubmeta b{color:#F8FAFC;font-weight:600}
+  .disclosure{font-size:12px;color:#64748B;line-height:1.6;margin:0 0 22px;padding-top:10px;border-top:1px solid #1E293B}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .pill-gold{background:rgba(212,175,55,.12);color:#D4AF37;border:1px solid rgba(212,175,55,.4)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0;font-variant-numeric:tabular-nums}
+  th{background:#1E293B;color:#D4AF37;text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.04em}
+  th,td{padding:8px 10px;border:1px solid #334155;color:#E0E5F0}
+  .note{font-size:12px;color:#64748B;line-height:1.6}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+  .btn-gold{font-family:'JetBrains Mono',monospace;font-size:12px;background:#D4AF37;color:#0F172A;font-weight:700;border-radius:999px;padding:9px 17px}
+  .btn-ghost{font-family:'JetBrains Mono',monospace;font-size:12px;color:#D4AF37;border:1px solid rgba(212,175,55,0.4);border-radius:999px;padding:9px 17px}
+  .thesis{background:rgba(212,175,55,.06);border-left:3px solid #D4AF37;border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0 6px}
+  .thesis .label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700}
+  .thesis p{margin:0 0 10px;font-size:14.5px;line-height:1.7;color:#E0E5F0}
+  .thesis p:last-child{margin-bottom:0}
+  .insight{border-left:2px solid #D4AF37;padding-left:14px;margin:16px 0}
+  .gloss{color:#94A3B8}
+  .card{background:#1E293B;border:1px solid #334155;border-radius:14px;padding:20px 22px;margin:18px 0}
+  .card-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .exhibit-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#D4AF37;text-transform:uppercase;font-weight:700;margin:26px 0 8px}
+  .chart-img{width:100%;height:auto;display:block;border:1px solid #334155;border-radius:12px;background:#fff}
+  .updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748B;margin-top:10px}
+  .foot{margin-top:56px;border-top:1px solid #1E293B;padding-top:20px;font-size:12px;color:#64748B;line-height:1.7}
+  .qa strong{display:block;margin-bottom:4px;color:#F8FAFC}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a class="brand" href="../../">TG · RESEARCH</a>
+  <a href="../../#coverage">Coverage</a>
+  <a href="../../#modeling">Models</a>
+  <a href="../../#industry">Industry</a>
+  <a href="../../#markets">Market Signals</a>
+  <a href="../../ideas/">Ideas</a>
+  <a href="mailto:tanmaygambhir37@gmail.com">Contact</a>
+</div></nav>
+<nav class="subnav"><div class="subnav-inner">
+  <a href="#summary">Summary</a>
+  <a href="#scorecard">Scorecard</a>
+  <a href="#wrong">What I Got Wrong</a>
+  <a href="#held">What Held</a>
+  <a href="#changed">What Changed</a>
+  <a href="#pricing">What's Priced</a>
+  <a href="#data">Data</a>
+  <a href="#view">View Now</a>
+  <a href="#watch">Watching</a>
+  <a href="#running">Running Scorecard</a>
+</div></nav>
+<div class="wrap top-spacer">
+  <a href="../" class="mono" style="font-size:12px;color:#94A3B8">&larr; Market Signals</a>
+
+  <div class="kicker" style="margin-top:26px">Market Signals · Vol. 1, No. 2 · UK Rates</div>
+  <h1>Stopped Out: The August Call Was Wrong</h1>
+  <div class="subtitle">I bet the market was pricing too many Bank of England rate rises. Then oil went through $100 and the Bank hiked. This edition is the scorecard first, and the view second.</div>
+  <div class="meta"><span class="pill pill-gold">AUGUST TRADE: STOPPED OUT · &minus;52BP</span> &nbsp; <span class="pill pill-gold">NEW POSITION: NONE</span></div>
+
+  <div class="pubmeta">
+    <span>PUBLISHED <b>24 Nov 2026</b></span>
+    <span>DATA CUTOFF <b>23 Nov 2026</b></span>
+    <span>PREVIOUS EDITION <b>3 Aug 2026</b></span>
+    <span>NEXT EDITION <b>After the 17 Dec MPC</b></span>
+  </div>
+  <div class="disclosure">Independent research from public data. Not investment advice. All curve figures are from the Bank of England's own published yield curves and were regenerated with the same code as edition 1.</div>
+
+  <div class="thesis" id="summary">
+    <span class="label">The 30-Second Read</span>
+    <p><strong>This edition is late, and it is late in the worst way: after the call went against me.</strong> It was due by early October. Publishing a running scorecard only means something if the losing months get published too, so this one leads with the loss.</p>
+    <p>In August I recommended betting that UK interest rates would end up lower than the market was pricing: receive the 1-year rate starting in one year (the "1y1y" swap) at 4.397%, with a stop-loss at 4.70%. On 9 September oil passed $100 a barrel. The next day that rate jumped from 4.68% to 4.92% in a single session, straight through the stop. <strong>The trade closed at a loss of about 52 basis points.</strong> On 5 November the Bank raised rates for the first time in about three years, to 4.00%.</p>
+    <p>What I got wrong was how the Bank would react to an energy shock. I assumed it would look through higher fuel and utility bills while the underlying inflation measures stayed calm. Underlying inflation did stay calm. The Bank hiked anyway. <strong>The view now: no position until the 17 December decision shows whether November was a one-off or the start of a series.</strong></p>
+  </div>
+
+  <h2 id="scorecard">Section 1 · The scorecard</h2>
+  <p><strong>Verdict on the August call: Wrong.</strong></p>
+  <table>
+    <tr><th>Position</th><th>Entry</th><th>Exit / now</th><th>Result</th><th>Status</th></tr>
+    <tr><td>Receive 1y1y SONIA swap (the recommended trade)</td><td>4.397%</td><td>4.916% (close, 10 Sep)</td><td><strong>&minus;52bp</strong></td><td>Stopped out 10 Sep</td></tr>
+    <tr><td>Receive 1-year swap (suggested in the August Q&amp;A, no stop set)</td><td>4.066%</td><td>4.551% (23 Nov)</td><td>&minus;48bp</td><td>Closed in this edition</td></tr>
+  </table>
+  <p class="note">Results are in basis points of interest rate (1bp = 0.01 percentage points), before carry, the same convention as edition 1. The second line was not a formal recommendation with a stop, but it was in print, so it is marked here rather than quietly dropped. I am closing it now rather than carry a position without a stop.</p>
+  <p><strong>The stop did not protect at its level.</strong> The stop-loss was 4.70%. The rate closed at 4.675% on 9 September and 4.916% on 10 September, a 24bp jump in one day. Measured at the close, which is the only price this daily data can honestly support, the exit was 4.916% and the loss 52bp, not the 30bp the stop level implied. The rate peaked at 5.00% on 20 October and was 4.84% on 23 November, so the stop still saved most of what holding on would have cost.</p>
+
+  <h2 id="wrong">Section 2 · What I got wrong</h2>
+  <p><strong>1. The Bank's reaction to an energy shock.</strong> The August case rested on the Bank's own words: the majority said financial conditions were already doing the tightening, and the hawks were "arguing from caution, not from fresh data." The fresh data arrived. Oil went through $100, and headline inflation rose from 3.1% in August to 3.5% in September and 3.6% in October. Meanwhile core inflation (which strips out energy and food) held at 2.8%, and wage growth slowed to 3.5%, though unemployment ticked down to 4.6%. In other words, the underlying picture I was watching mostly behaved as I expected, and the Bank hiked on the headline anyway. I assumed it would look through an energy shock. It chose not to. That was the assumption that failed.</p>
+  <p><strong>2. "Makes money in almost any scenario" hid a one-sided risk.</strong> The trade did make money in most scenarios for how many hikes the Bank would deliver. But almost every scenario that hurt it ran through one variable, energy prices, and the August edition rated it high conviction anyway. Several scenarios that share one failure point are really one bet, not several.</p>
+  <p><strong>3. I did not discuss gap risk.</strong> A stop-loss is a price you hope to get, not a price you are promised. Rates moved 24bp in one session, and the edition said nothing about what happens when a market jumps past a stop. Sizing should have assumed it could.</p>
+  <p><strong>4. I went quiet while losing.</strong> The trade was stopped out on 10 September. The next edition should have said so within weeks. It did not appear for ten weeks. That is the specific failure a published scorecard is supposed to make impossible, and the fix is in Section 8: editions now follow each Bank of England decision, a cadence I can actually keep.</p>
+
+  <h2 id="held">Section 3 · What held</h2>
+  <p><strong>The fiscal finding held.</strong> Edition 1's main finding was that high long-term gilt yields were not a UK credibility crisis, because the extra premium the government pays over swaps was shrinking, not growing. It kept shrinking: the 20-year gap went from 72bp to 66bp, through an Autumn Budget (28 October) that reportedly cut the government's fiscal headroom. On Budget day the 10-year gilt yield moved by about 2bp.</p>
+  <p><strong>The long end did what I said, and I did not trade it.</strong> I called a 2.52% 30-year real yield (the return after inflation) the best entry in two decades, but said I would not buy before the Budget. The Budget passed quietly, the 30-year gilt yield fell from 5.89% to 5.67%, and the 30-year real yield from 2.52% to 2.45%. Right, but not traded, so it earns nothing on the scorecard.</p>
+  <p><strong>Long-run inflation expectations stayed anchored.</strong> The market's measure of inflation five to ten years out fell from 3.00% to 2.90% while headline inflation rose. Markets read the energy shock as temporary. The Bank, for now, is not willing to bet on that.</p>
+
+  <h2 id="changed">Section 4 · What changed since August</h2>
+  <table>
+    <tr><th></th><th>31 Jul 2026</th><th>23 Nov 2026</th><th>Change</th></tr>
+    <tr><td>Bank Rate</td><td>3.75%</td><td>4.00%</td><td>+25bp</td></tr>
+    <tr><td>1y1y SONIA swap (the trade)</td><td>4.397%</td><td>4.836%</td><td>+44bp</td></tr>
+    <tr><td>2-year gilt</td><td>4.30%</td><td>4.68%</td><td>+38bp</td></tr>
+    <tr><td>10-year gilt</td><td>5.10%</td><td>5.19%</td><td>+9bp</td></tr>
+    <tr><td>30-year gilt</td><td>5.89%</td><td>5.67%</td><td>&minus;22bp</td></tr>
+    <tr><td>2s10s slope</td><td>80bp</td><td>51bp</td><td>&minus;29bp</td></tr>
+    <tr><td>20-year gilt over swaps</td><td>72bp</td><td>66bp</td><td>&minus;6bp</td></tr>
+    <tr><td>10-year real yield</td><td>1.88%</td><td>2.09%</td><td>+21bp</td></tr>
+    <tr><td>30-year real yield</td><td>2.52%</td><td>2.45%</td><td>&minus;7bp</td></tr>
+    <tr><td>5y5y forward inflation (RPI)</td><td>3.00%</td><td>2.90%</td><td>&minus;11bp</td></tr>
+  </table>
+  <p><strong>The three moves that mattered.</strong> First, short rates rose and long rates fell, so the curve flattened sharply: the gap between 2-year and 10-year yields shrank from 80bp to 51bp. That is the shape of a market that expects the Bank to tighten now and the economy to pay for it later. Second, the extra premium on long gilts kept falling, which is the fiscal finding holding. Third, long-run inflation expectations fell while the Bank hiked: the market believes the shock is temporary.</p>
+
+  <h2 id="pricing">Section 5 · What the market is pricing now</h2>
+  <table>
+    <tr><th>MPC date</th><th>Implied rate</th><th>Total vs 4.00% today</th><th>Priced at that meeting</th></tr>
+    <tr><td>17 Dec 2026</td><td>4.13%</td><td>+13bp</td><td>~50% chance of a hike</td></tr>
+    <tr><td>4 Feb 2027</td><td>4.28%</td><td>+28bp</td><td>~60%</td></tr>
+    <tr><td>18 Mar 2027</td><td>4.43%</td><td>+43bp</td><td>~60%</td></tr>
+    <tr><td>6 May 2027</td><td>4.58%</td><td>+58bp</td><td>~60%</td></tr>
+    <tr><td>17 Jun 2027</td><td>4.68%</td><td>+68bp</td><td>~40%</td></tr>
+    <tr><td>4 Nov 2027</td><td>4.85%</td><td>+85bp</td><td></td></tr>
+  </table>
+  <p>The market now expects Bank Rate to peak a little under 4.85%, roughly three and a half more rises. In August it expected a peak near 4.41%. The "priced at that meeting" column is the extra basis points divided by 25, a rough read on the odds of a quarter-point move, the same approximation as edition 1.</p>
+
+  <h2 id="data">Section 6 · The data that mattered</h2>
+  <table>
+    <tr><th>Event</th><th>When</th><th>Outcome</th><th>Did it change my view?</th></tr>
+    <tr><td>Oil passes $100 a barrel</td><td>9 Sep</td><td>1y1y +24bp the next day</td><td>Yes. It triggered the stop.</td></tr>
+    <tr><td>MPC decision</td><td>17 Sep</td><td>Held at 3.75%, vote 6&ndash;3 (three for a hike)</td><td>Yes. The hawkish minority did not shrink.</td></tr>
+    <tr><td>CPI inflation, Aug / Sep / Oct</td><td>Sep to Nov</td><td>3.1% / 3.5% / 3.6%; core 2.8% in Oct</td><td>Headline yes, core no.</td></tr>
+    <tr><td>Autumn Budget</td><td>28 Oct</td><td>10-year gilt about 2bp lower on the day</td><td>No. A non-event, which is information too.</td></tr>
+    <tr><td>MPC decision</td><td>5 Nov</td><td>Hiked to 4.00%, vote 8&ndash;1 (one for 50bp)</td><td>Yes. The Bank acted on headline, not core.</td></tr>
+    <tr><td>Wages and jobs (to Sep)</td><td>17 Nov</td><td>Pay growth 3.5%, unemployment 4.6%</td><td>No. Consistent with no second-round effects.</td></tr>
+  </table>
+
+  <h2 id="view">Section 7 · My view now</h2>
+  <p><strong>In one sentence: no position until the 17 December decision.</strong></p>
+  <p><strong>What is priced correctly:</strong> December. A roughly even chance of another hike is a fair read of a committee that just moved 8&ndash;1 but whose own measures of underlying inflation are flat.</p>
+  <p><strong>What may be overpriced:</strong> the path beyond spring 2027. Three and a half more rises assume the energy shock keeps feeding into inflation, while core inflation, wage growth and long-run inflation expectations all say it is not. That is the same argument as August, and on price it is stronger now: the 1y1y rate is 44bp higher than where I first made it. But it lost money once for a specific reason, a Bank that reacts to headline inflation, and nothing since has shown that reaction changing. A stronger price is not a reason to repeat a bet whose failure mechanism is still live.</p>
+  <p><strong>Positioning:</strong> none. What would bring me back into a receive position: a December vote that holds or hikes with a clear signal it is not starting a series, and core inflation staying at or below 3% in the November figures published before that meeting.</p>
+
+  <h2 id="watch">Section 8 · What I am watching, and the new cadence</h2>
+  <table>
+    <tr><th>#</th><th>What</th><th>When</th><th>Level that would change my view</th></tr>
+    <tr><td>1</td><td>MPC decision and vote split</td><td>17 Dec</td><td>A hold, or a hike with members signalling no series</td></tr>
+    <tr><td>2</td><td>November CPI, especially core</td><td>Mid-Dec, before the MPC</td><td>Core above 3% would rule out re-entering</td></tr>
+    <tr><td>3</td><td>Oil</td><td>Ongoing</td><td>A sustained fall back below where it was before September</td></tr>
+  </table>
+  <p><strong>New cadence: an edition after every Bank of England decision,</strong> roughly every six weeks, instead of monthly. Monthly was the promise I broke. A schedule tied to the decisions is one I can keep, and it is when the scorecard actually moves. The next edition follows the 17 December decision.</p>
+
+  <h2 id="running">Running scorecard</h2>
+  <table>
+    <tr><th>Edition</th><th>Headline call</th><th>Verdict</th><th>Result (bp)</th><th>Note</th></tr>
+    <tr><td>Aug 2026</td><td>Bet against 62bp of priced hikes; receive 1y1y at 4.397%</td><td>Wrong</td><td>&minus;52</td><td>Stopped out 10 Sep when oil passed $100. Long-end view right but not traded.</td></tr>
+    <tr><td>Nov 2026</td><td>No position until the December decision</td><td>Open</td><td>n/a</td><td></td></tr>
+  </table>
+  <p><strong>Hit rate to date:</strong> 0 of 1 recommended trades. <strong>Cumulative result on recommended trades:</strong> &minus;52bp.</p>
+
+  <div class="btns">
+    <a class="btn-ghost" href="../uk-rates-aug-2026/">Read edition 1 (Aug 2026) &rarr;</a>
+  </div>
+
+  <div class="foot">
+    Sources: Bank of England yield curve data (OIS, gilt nominal, real and inflation curves, daily, to 23 November 2026), regenerated with the same code as edition 1; Bank of England Monetary Policy Summaries, September and November 2026; ONS CPI and labour market releases as reported through November 2026 (House of Commons Library); Autumn Budget market coverage, 28 October 2026; oil price reporting, 9 to 10 September 2026. Independent research, not investment advice.<br>
+    <span class="mono">tanmaygambhir37@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
